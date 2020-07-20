@@ -1,0 +1,42 @@
+{
+  "name": "npm-ts-template",
+  "version": "0.0.0",
+  "description": "A template typescript-based npm packages",
+  "main": "dist/cjs/index.js",
+  "esnext": "dist/es/index.js",
+  "types": "dist/es/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "test": "exit 0",
+    "build": "rollup --config",
+    "dev": "npm run build -- --watch",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justintaddei/npm-ts-template.git"
+  },
+  "keywords": [],
+  "author": "Justin Taddei <justin@justintaddei.com> (https://justintaddei.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justintaddei/npm-ts-template/issues"
+  },
+  "homepage": "https://github.com/justintaddei/npm-ts-template#readme",
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "rollup": "^2.6.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "tslint": "^6.1.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  }
+}
