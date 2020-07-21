@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "v-wave": "^1.0.3",
+    "v-wave": "^1.0.4",
     "vue": "^2.6.11"
   },
   "devDependencies": {
