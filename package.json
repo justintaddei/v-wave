@@ -14,7 +14,7 @@
     "test": "exit 0",
     "build": "rollup --config",
     "dev": "npm run build -- --watch",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
