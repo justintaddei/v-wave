@@ -34,7 +34,10 @@
     "v-ripple",
     "vue-ripple",
     "v-ripple-effect",
-    "v-ripple-directive"
+    "v-ripple-directive",
+    "material",
+    "material ripple",
+    "animation"
   ],
   "author": "Justin Taddei <justin@justintaddei.com> (https://justintaddei.com/)",
   "license": "MIT",
