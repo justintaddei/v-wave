@@ -1,10 +1,10 @@
-<p style="text-align: center;">
+<p align="center">
 <img src="https://raw.githubusercontent.com/justintaddei/v-wave/assets/logo-small.png">
 </p>
 
-<h1 style="text-align: center;">v-wave</h1>
+<h2 align="center">v-wave</h2>
 
-<p style="text-align: center;">
+<p align="center">
 The material-ripple directive for Vue that actually works
 </p>
 
