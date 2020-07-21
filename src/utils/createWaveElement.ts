@@ -10,9 +10,9 @@ export const createWaveElement = (x: number, y: number, size: number, options: I
   waveElement.style.left = `${x}px`
   waveElement.style.backgroundColor = options.color
   waveElement.style.borderRadius = '50%'
-  waveElement.style.opacity = '0.2'
+  waveElement.style.opacity = `${options.initialOpacity}`
   waveElement.style.transform = `translate(-50%,-50%) scale(0)`
-  waveElement.style.transition = `transform ${options.duration}s ease-out, opacity ${options.duration}s ease-out`
+  waveElement.style.transition = `transform ${options.duration}s ${options.easing}, opacity ${options.duration}s ${options.easing}`
 
   return waveElement
 }

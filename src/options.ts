@@ -30,6 +30,13 @@ interface IVWaveDirectiveOptions {
    * 0.4
    */
   duration: number
+  /**
+   * Any valid CSS `<timing-function>`
+   *
+   * @default
+   * 'ease-out'
+   */
+  easing: string
 }
 
 interface IVWavePluginOptions extends IVWaveDirectiveOptions {
@@ -57,7 +64,8 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   color: 'currentColor',
   initialOpacity: 0.2,
   finalOpacity: 0.1,
-  duration: 0.4
+  duration: 0.4,
+  easing: 'ease-out'
 }
 
 export { DEFAULT_PLUGIN_OPTIONS, IVWavePluginOptions, IVWaveDirectiveOptions }
