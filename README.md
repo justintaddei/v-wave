@@ -1,10 +1,10 @@
-<p align="center">
+<p style="text-align: center;">
 <img src="https://raw.githubusercontent.com/justintaddei/v-wave/assets/logo-small.png">
 </p>
 
-<h1 align="center">v-wave</h1>
+<h1 style="text-align: center;">v-wave</h1>
 
-<p align="center">
+<p style="text-align: center;">
 The material-ripple directive for Vue that actually works
 </p>
 
@@ -96,9 +96,9 @@ export default {
  . . .
 
  Vue.use(VWave, {
-    color: 'red'
-    startingOpacity: 0.5
-    easing: 'ease-in'
+    color: 'red',
+    startingOpacity: 0.5,
+    easing: 'ease-in',
  })
 ```
 
@@ -110,12 +110,12 @@ or
 // nuxt.config.js
 
 export default {
-    modules: ['v-wave/nuxt],
+    modules: ['v-wave/nuxt'],
 
     vWave: {
-        color: 'red'
-        startingOpacity: 0.5
-        easing: 'ease-in'
+        color: 'red',
+        startingOpacity: 0.5,
+        easing: 'ease-in',
     }
 }
 
@@ -125,9 +125,9 @@ export default {
 
 ```html
 <button v-wave="{
-    color: 'red'
-    startingOpacity: 0.5
-    easing: 'ease-in'
+    color: 'red',
+    startingOpacity: 0.5,
+    easing: 'ease-in',
 }">
 Click me!
 </button>
