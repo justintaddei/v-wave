@@ -24,7 +24,12 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
   el.appendChild(waveContainer)
 
   let shouldDissolveWave = false
-  const releaseWave = () => {
+  const releaseWave = (e?: any) => {
+    if (typeof e !== 'undefined') {
+      document.removeEventListener('pointerup', releaseWave)
+      document.removeEventListener('pointercancel', releaseWave)
+    }
+
     if (shouldDissolveWave) dissolveWave()
     else shouldDissolveWave = true
   }
@@ -32,9 +37,6 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
   const dissolveWave = () => {
     waveEl.style.transition = 'opacity 150ms linear'
     waveEl.style.opacity = '0'
-
-    document.removeEventListener('pointerup', releaseWave)
-    document.removeEventListener('pointercancel', releaseWave)
 
     setTimeout(() => waveContainer.remove(), 150)
   }
@@ -46,7 +48,7 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
     waveEl.style.transform = `translate(-50%,-50%) scale(1)`
     waveEl.style.opacity = `${options.finalOpacity}`
 
-    setTimeout(releaseWave, options.duration * 1000)
+    setTimeout(() => releaseWave(), options.duration * 1000)
   })
 }
 
