@@ -20,7 +20,7 @@ The material-ripple directive for Vue that actually works
 
 Because every ripple-plugin I've tried to use in the past either didn't work, or was missing basic features.
 
-**Here's what you can example from this plugin:**
+**Here's what you can expect from this plugin:**
 
 - It works.
 - The wave appears on `pointerdown` instead of `pointerup`  
@@ -32,8 +32,7 @@ Because every ripple-plugin I've tried to use in the past either didn't work, or
 - Works with fixed, absolute, relative, and statically positioned elements.
 - Will handle independent border-radii (e.g. `border-radius: 5px 20px 15px 30px`) perfectly fine.
 
-
-**Don't believe me?**  
+If you have a feature request or you found a bug, please raise an issue!
 
 **See for yourself:**
 
