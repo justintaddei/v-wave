@@ -1,3 +1,5 @@
+import { IVWaveDirectiveOptions } from '../options'
+
 /**
  * Creates a container element for the wave.
  * @param el The element that the wave will appear on
@@ -17,7 +19,6 @@ export const createContainer = ({
   waveContainer.style.position = 'absolute'
   waveContainer.style.borderRadius = `${borderTopLeftRadius} ${borderTopRightRadius} ${borderBottomRightRadius} ${borderBottomLeftRadius}`
   waveContainer.style.overflow = 'hidden'
-  waveContainer.style.zIndex = '1000'
   waveContainer.style.pointerEvents = 'none'
   return waveContainer
 }
