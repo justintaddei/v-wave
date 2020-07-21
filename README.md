@@ -1,11 +1,12 @@
-<center>
+<p align="center">
 <img src="https://raw.githubusercontent.com/justintaddei/v-wave/assets/logo-small.png">
+</p>
 
-# v-wave
+<h1 align="center">v-wave</h1>
 
+<p align="center">
 The material-ripple directive for Vue that actually works
-
-<br/>
+</p>
 
 ![](https://img.shields.io/github/issues-raw/justintaddei/v-wave.svg?style=flat)
 ![](https://img.shields.io/npm/v/v-wave.svg?style=flat)
@@ -14,7 +15,6 @@ The material-ripple directive for Vue that actually works
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 ![](https://img.shields.io/badge/language-typescript-blue.svg?style=flat)
 
-</center>
 
 ## Why did I make this? 
 
