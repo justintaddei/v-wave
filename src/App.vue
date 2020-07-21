@@ -53,19 +53,16 @@ export default {
 }
 
 .demo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 64px 256px;
+  text-align: center;
+  padding: 64px 10%;
 
   .box {
+    display: inline-flex;
     margin: 32px;
     width: 200px;
     height: 200px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 
-    display: flex;
     justify-content: center;
     align-items: center;
   }
