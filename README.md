@@ -26,7 +26,6 @@ Because every ripple-plugin I've tried to use in the past either didn't work, or
 - The wave appears on `pointerdown` instead of `pointerup`  
   *(you might think that's an obvious choice... but you'd be wrong).*
 - There is a small delay before the ripple appears, during which the animation will be canceled if the user moves the pointer (e.g. scrolling on a mobile phone). This is similar to how native Android ripples work.
-- Handles touch input just as well as it does mouse input.
 - Uses CSS transforms instead of `width` and `height`.
 - Doesn't effect the appearance of the element you apply it to (won't explode when used on an element with  `display: flex`).
 - Guesses the color of the wave automatically by default (using `currentColor`).
@@ -188,12 +187,14 @@ Click me!
     **Note:**  
     The wave will not appear until after the delay, meaning a delay greater than 100ms can make the site feel sluggish.
 
+---
 
 ## Advanced
 
 ### Changing the directive's name
 
-Pass a new name for the directive using the `directive` option:
+If you are migrating from another ripple directive you can change the name of the directive v-wave uses if you want to avoid changing it in your source code.  
+Simply pass a new name for the directive using the `directive` option:
 
 ```js
 //main.js
@@ -211,3 +212,5 @@ Now you can use the plugin like so:
 ```html
 <button v-ripple>Click me!</button>
 ```
+
+Keep in mind that this option can only be set globally (i.e. it cannot be set on individual directives).
