@@ -37,6 +37,16 @@ interface IVWaveDirectiveOptions {
    * 'ease-out'
    */
   easing: string
+  /**
+   * The delay, in milliseconds, during which the animation will be canceled if the user moves their figure/pointer (e.g. while scrolling).
+   *
+   * @note
+   * The wave will not appear until after the delay, meaning a delay greater than 100ms can make the site feel sluggish.
+   *
+   * @default
+   * 75
+   */
+  cancellationPeriod: number
 }
 
 interface IVWavePluginOptions extends IVWaveDirectiveOptions {
@@ -65,7 +75,8 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   initialOpacity: 0.2,
   finalOpacity: 0.1,
   duration: 0.4,
-  easing: 'ease-out'
+  easing: 'ease-out',
+  cancellationPeriod: 75
 }
 
 export { DEFAULT_PLUGIN_OPTIONS, IVWavePluginOptions, IVWaveDirectiveOptions }

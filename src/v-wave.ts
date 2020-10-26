@@ -44,12 +44,27 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
   document.addEventListener('pointerup', releaseWave)
   document.addEventListener('pointercancel', releaseWave)
 
-  requestAnimationFrame(() => {
-    waveEl.style.transform = `translate(-50%,-50%) scale(1)`
-    waveEl.style.opacity = `${options.finalOpacity}`
+  const token = setTimeout(() => {
+    document.removeEventListener('pointercancel', cancelWave)
 
-    setTimeout(() => releaseWave(), options.duration * 1000)
-  })
+    requestAnimationFrame(() => {
+      waveEl.style.transform = `translate(-50%,-50%) scale(1)`
+      waveEl.style.opacity = `${options.finalOpacity}`
+
+      setTimeout(() => releaseWave(), options.duration * 1000)
+    })
+  }, options.cancellationPeriod)
+
+  const cancelWave = () => {
+    clearTimeout(token)
+
+    waveContainer.remove()
+    document.removeEventListener('pointerup', releaseWave)
+    document.removeEventListener('pointercancel', releaseWave)
+    document.removeEventListener('pointercancel', cancelWave)
+  }
+
+  document.addEventListener('pointercancel', cancelWave)
 }
 
 export { wave }

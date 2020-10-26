@@ -25,6 +25,7 @@ Because every ripple-plugin I've tried to use in the past either didn't work, or
 - It works.
 - The wave appears on `pointerdown` instead of `pointerup`  
   *(you might think that's an obvious choice... but you'd be wrong).*
+- There is a small delay before the ripple appears, during which the animation will be canceled if the user moves the pointer (e.g. scrolling on a mobile phone). This is similar to how native Android ripples work.
 - Handles touch input just as well as it does mouse input.
 - Uses CSS transforms instead of `width` and `height`.
 - Doesn't effect the appearance of the element you apply it to (won't explode when used on an element with  `display: flex`).
@@ -135,13 +136,14 @@ Click me!
 
 
 ### Summary
-| Name             | Type     |     Default      |
-| ---------------- | -------- | :--------------: |
-| `color`          | `string` | `"currentColor"` |
-| `initialOpacity` | `number` |      `0.2`       |
-| `finialOpacity`  | `number` |      `0.1`       |
-| `duration`       | `number` |      `0.4`       |
-| `easing`         | `string` |    `ease-out`    |
+| Name                 | Type     |     Default      |
+| -------------------- | -------- | :--------------: |
+| `color`              | `string` | `"currentColor"` |
+| `initialOpacity`     | `number` |      `0.2`       |
+| `finialOpacity`      | `number` |      `0.1`       |
+| `duration`           | `number` |      `0.4`       |
+| `easing`             | `string` |    `ease-out`    |
+| `cancellationPeriod` | `number` |       `75`       |
 
 
 
@@ -176,6 +178,15 @@ Click me!
 - *default:* `"ease-out"`  
   
     Any valid CSS `<timing-function>`
+
+#### cancellationPeriod  
+- **type:** `number`  
+- *default:* `75`  
+  
+    The delay, *in milliseconds*, during which the animation will be canceled by the user moving their figure/pointer (e.g. while scrolling on a mobile phone).
+
+    **Note:**  
+    The wave will not appear until after the delay, meaning a delay greater than 100ms can make the site feel sluggish.
 
 
 ## Advanced
