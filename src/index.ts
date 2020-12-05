@@ -1,18 +1,18 @@
-import { PluginObject } from 'vue/types/plugin'
+import { Plugin } from 'vue'
 import { DEFAULT_PLUGIN_OPTIONS, IVWaveDirectiveOptions, IVWavePluginOptions } from './options'
 import { wave } from './v-wave'
 
 const optionMap = new WeakMap<HTMLElement, Partial<IVWaveDirectiveOptions>>()
 
 const VWave = {
-  install(Vue, globalUserOptions = {}) {
+  install(app, globalUserOptions: Partial<IVWavePluginOptions> = {}) {
     if (this.installed) return
     this.installed = true
 
     const globalOptions = { ...DEFAULT_PLUGIN_OPTIONS, ...globalUserOptions }
 
-    Vue.directive(globalOptions.directive, {
-      inserted(el, { value }) {
+    app.directive(globalOptions.directive, {
+      mounted(el, { value }) {
         optionMap.set(el, value ?? {})
 
         el.addEventListener('pointerdown', (event) => {
@@ -22,12 +22,12 @@ const VWave = {
           })
         })
       },
-      update(el, { value }) {
+      updated(el, { value }) {
         optionMap.set(el, value ?? {})
       }
     })
   }
-} as PluginObject<Partial<IVWavePluginOptions>>
+} as Plugin & { installed: boolean }
 
 if (typeof window !== 'undefined' && (window as any).Vue) {
   ;(window as any).Vue.use(VWave)
