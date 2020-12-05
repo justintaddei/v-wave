@@ -15,6 +15,10 @@ The material-ripple directive for Vue that actually works
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 ![](https://img.shields.io/badge/language-typescript-blue.svg?style=flat)
 
+# Experimental support for Vue 3
+```sh
+$ npm i v-wave@next
+```
 
 ## Why did I make this? 
 
