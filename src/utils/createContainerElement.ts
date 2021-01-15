@@ -1,5 +1,3 @@
-import { IVWaveDirectiveOptions } from '../options'
-
 /**
  * Creates a container element for the wave.
  * @param el The element that the wave will appear on
