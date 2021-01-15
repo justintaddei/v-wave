@@ -1,6 +1,6 @@
-import { magnitude } from './magnitude'
+import { magnitude } from '@/utils/magnitude'
 
-export function getDistanceToFurthestCorner(x: number, y: number, width: number, height: number) {
+export function getDistanceToFurthestCorner(x: number, y: number, { width, height }: DOMRect) {
   const topLeft = magnitude(x, y, 0, 0)
   const topRight = magnitude(x, y, width, 0)
   const bottomLeft = magnitude(x, y, 0, height)
