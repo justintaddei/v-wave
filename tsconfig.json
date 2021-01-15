@@ -3,12 +3,17 @@
     "target": "es6",
     "module": "es2015",
     "lib": ["DOM", "es2015"],
-    "removeComments": true,
+    "removeComments": false,
     "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
-    "noImplicitAny": false
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
