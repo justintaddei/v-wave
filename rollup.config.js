@@ -3,6 +3,14 @@ import pkg from './package.json'
 import { uglify } from 'rollup-plugin-uglify'
 import resolve from '@rollup/plugin-node-resolve'
 
+const nonESBuildTSConfig = {
+  target: 'es5',
+  removeComments: true,
+  declaration: false
+}
+
+const external = Object.keys(pkg.peerDependencies ?? {})
+
 export default [
   {
     input: './src/index.ts',
@@ -16,7 +24,7 @@ export default [
         }
       })
     ],
-
+    external,
     output: [
       {
         file: pkg.module,
@@ -29,10 +37,25 @@ export default [
     plugins: [
       typescript({
         tsconfigOverride: {
-          compilerOptions: {
-            target: 'es5',
-            declaration: false
-          }
+          compilerOptions: nonESBuildTSConfig
+        }
+      })
+    ],
+    external,
+    output: [
+      {
+        file: pkg.main,
+        exports: 'default',
+        format: 'cjs'
+      }
+    ]
+  },
+  {
+    input: './src/index.ts',
+    plugins: [
+      typescript({
+        tsconfigOverride: {
+          compilerOptions: nonESBuildTSConfig
         }
       }),
       uglify({
@@ -45,12 +68,14 @@ export default [
         mainFields: ['unpkg']
       })
     ],
-
+    external,
     output: [
       {
-        file: pkg.main,
+        file: pkg.unpkg,
         format: 'iife',
-        name: 'VWave'
+        globals: { vue: 'Vue' },
+        extend: true,
+        name: 'window.VWave'
       }
     ]
   }

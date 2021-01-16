@@ -1,4 +1,4 @@
-import { IVWaveDirectiveOptions } from '../options'
+import { IVWaveDirectiveOptions } from '@/options'
 
 export const createWaveElement = (x: number, y: number, size: number, options: IVWaveDirectiveOptions) => {
   const waveElement = document.createElement('div')
