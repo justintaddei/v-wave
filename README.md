@@ -15,10 +15,7 @@ The material-ripple directive for Vue that actually works
 ![License](https://img.shields.io/npm/l/v-wave.svg?style=flat)
 ![Language](https://img.shields.io/badge/language-typescript-blue.svg?style=flat)
 
-# Experimental support for Vue 3
-```sh
-$ npm i v-wave@next
-```
+### Support for both Vue 2 and Vue 3!
 
 ## Why did I make this? 
 
@@ -26,7 +23,7 @@ Because every ripple-plugin I've tried to use in the past either didn't work, or
 
 **Here's what you can expect from this plugin:**
 
-- It works.
+- It works ([see for yourself](https://justintaddei.github.io/v-wave)).
 - The wave appears on `pointerdown` instead of `pointerup`  
   *(you might think that's an obvious choice... but you'd be wrong).*
 - There is a small delay before the ripple appears, during which the animation will be canceled if the user moves the pointer (e.g. scrolling on a mobile phone). This is similar to how native Android ripples work.
@@ -36,12 +33,11 @@ Because every ripple-plugin I've tried to use in the past either didn't work, or
 - Works with fixed, absolute, relative, and statically positioned elements.
 - Will handle independent border-radii (e.g. `border-radius: 5px 20px 15px 30px`) perfectly fine.
 
-If you have a feature request or you found a bug, please raise an issue!
+If you have a feature request or you found a bug, please open an issue!
 
-**See for yourself:**
 
-## [Live Demo](https://justintaddei.github.io/v-wave)
-> Source code for the example can be found on the [example branch.](https://github.com/justintaddei/v-wave/tree/example)
+## [[ Live Demo ]](https://justintaddei.github.io/v-wave)
+> Source code for the demo page can be found on the [example branch.](https://github.com/justintaddei/v-wave/tree/example)
 
 ## Install
 
@@ -60,12 +56,23 @@ or
 
 **Vue**
 ```js
-//main.js
+// Vue 2
 
 import Vue from 'vue'
 import VWave from 'v-wave'
 
 Vue.use(VWave)
+```
+```js
+// Vue 3
+
+import {createApp} from 'vue'
+import VWave from 'v-wave'
+import App from './App.vue'
+
+createApp(App)
+  .use(VWave)
+  .mount('#app')
 ```
 
 or
@@ -97,13 +104,13 @@ export default {
 
 ```js
 // main.js
- . . .
+. . .
 
- Vue.use(VWave, {
+.use(VWave, {
     color: 'red',
     startingOpacity: 0.5,
     easing: 'ease-in',
- })
+})
 ```
 
 or
