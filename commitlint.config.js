@@ -6,7 +6,12 @@ module.exports = {
   },
   ignores: [
     (commit) => {
+      // WIP: commits
       return /^WIP(:\s(.|\n)+)?$/.test(commit.trim())
+    },
+    (commit) => {
+      // $ npm version commits (1.1.0)
+      return /^\d+\.\d+\.\d+.*$/.test(commit.trim())
     }
   ]
 }
