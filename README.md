@@ -17,9 +17,6 @@ The material-ripple directive for Vue that actually works
 
 ### Support for both Vue 2 and Vue 3!
 
-> ## Vue 3
-> Experimental support for Vue 3 is available by installing `v-wave@next`
-
 ## Why did I make this? 
 
 Because every ripple-plugin I've tried to use in the past either didn't work, or was missing basic features.
