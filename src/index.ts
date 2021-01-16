@@ -1,6 +1,5 @@
 import { DEFAULT_PLUGIN_OPTIONS, IVWaveDirectiveOptions, IVWavePluginOptions } from '@/options'
 import { hooks } from '@/utils/hookKeys'
-import { isVue3 } from '@/utils/isVue3'
 import { wave } from '@/v-wave'
 import { Plugin } from 'vue'
 
@@ -30,9 +29,5 @@ const VWave = {
     })
   }
 } as Plugin & { installed: boolean }
-
-if (!isVue3 && typeof window !== 'undefined' && (window as any).Vue) {
-  ;(window as any).Vue.use(VWave)
-}
 
 export default VWave
