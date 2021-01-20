@@ -44,7 +44,7 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
 
     setTimeout(() => {
       waveContainer.remove()
-      if (originalPositionValue) el.style.position = originalPositionValue
+      el.style.position = originalPositionValue
     }, 150)
   }
 
