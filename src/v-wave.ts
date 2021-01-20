@@ -18,7 +18,11 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
   const waveEl = createWaveElement(x, y, size, options)
 
   // We reply on absolute positioning, so we need to make sure `el`'s position is non-static
-  if (computedStyles.position === 'static') el.style.position = 'relative'
+  let originalPositionValue = ''
+  if (computedStyles.position === 'static') {
+    if (el.style.position) originalPositionValue = el.style.position
+    el.style.position = 'relative'
+  }
 
   waveContainer.appendChild(waveEl)
   el.appendChild(waveContainer)
@@ -38,7 +42,10 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
     waveEl.style.transition = 'opacity 150ms linear'
     waveEl.style.opacity = '0'
 
-    setTimeout(() => waveContainer.remove(), 150)
+    setTimeout(() => {
+      waveContainer.remove()
+      if (originalPositionValue) el.style.position = originalPositionValue
+    }, 150)
   }
 
   document.addEventListener('pointerup', releaseWave)
