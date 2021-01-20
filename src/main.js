@@ -1,11 +1,9 @@
-import Vue from "vue";
-import App from "./App.vue";
-import VWave from "v-wave";
+import VWave from 'v-wave'
+import { createApp } from 'vue'
+import App from './App.vue'
 
-Vue.use(VWave);
+const app = createApp(App)
 
-Vue.config.productionTip = false;
+app.use(VWave)
 
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+app.mount('#app')

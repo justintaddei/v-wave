@@ -1,5 +1,9 @@
 # example
 
+## TO-DO
+
+This example was written very quickly, the code needs to be cleaned up a lot.
+
 ## Project setup
 ```
 npm install
