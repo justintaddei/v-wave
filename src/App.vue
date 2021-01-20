@@ -137,7 +137,7 @@ export default {
   margin-top: 60px;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
-  margin-bottom: 1000px;
+  margin-bottom: 256px;
 }
 
 img {
