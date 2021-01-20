@@ -22,6 +22,12 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
   if (computedStyles.position === 'static') {
     if (el.style.position) originalPositionValue = el.style.position
     el.style.position = 'relative'
+
+    // Keep track of how many waves are active on this element
+
+    let count = +(el.dataset.vWaveCountInternal ?? 1)
+    count++
+    el.dataset.vWaveCountInternal = count.toString()
   }
 
   waveContainer.appendChild(waveEl)
@@ -44,7 +50,15 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
 
     setTimeout(() => {
       waveContainer.remove()
-      el.style.position = originalPositionValue
+
+      let count = +(el.dataset.vWaveCountInternal ?? 1)
+      count--
+
+      if (count > 0) el.dataset.vWaveCountInternal = count.toString()
+      else {
+        delete el.dataset.vWaveCountInternal
+        el.style.position = originalPositionValue
+      }
     }, 150)
   }
 
