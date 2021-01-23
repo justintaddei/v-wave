@@ -22,7 +22,7 @@ The material-ripple directive for Vue that actually works
 
 Because every ripple-plugin I've tried to use in the past either didn't work, or was missing basic features.
 
-<sub>Also available for React: [v-wave](https://github.com/justintaddei/use-wave)</sub>
+<sub>Also available for React: [use-wave](https://github.com/justintaddei/use-wave)</sub>
 
 **Here's what you can expect from this plugin:**
 
