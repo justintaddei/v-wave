@@ -10,10 +10,7 @@
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "./"
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]

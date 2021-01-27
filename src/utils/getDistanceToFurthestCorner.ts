@@ -1,4 +1,4 @@
-import { magnitude } from '@/utils/magnitude'
+import { magnitude } from './magnitude'
 
 export function getDistanceToFurthestCorner(x: number, y: number, { width, height }: DOMRect) {
   const topLeft = magnitude(x, y, 0, 0)

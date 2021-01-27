@@ -1,4 +1,4 @@
-import { isVue3 } from '@/utils/isVue3'
+import { isVue3 } from './isVue3'
 
 const hooks = {
   mounted: isVue3 ? 'mounted' : 'inserted',
