@@ -18,5 +18,9 @@ export const createContainer = ({
   waveContainer.style.borderRadius = `${borderTopLeftRadius} ${borderTopRightRadius} ${borderBottomRightRadius} ${borderBottomLeftRadius}`
   waveContainer.style.overflow = 'hidden'
   waveContainer.style.pointerEvents = 'none'
+
+  // Meet Safari, the new IE 💩
+  waveContainer.style.webkitMaskImage = '-webkit-radial-gradient(white, black)'
+
   return waveContainer
 }
