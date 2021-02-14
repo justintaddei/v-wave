@@ -111,7 +111,7 @@ export default {
 
 .use(VWave, {
     color: 'red',
-    startingOpacity: 0.5,
+    initialOpacity: 0.5,
     easing: 'ease-in',
 })
 ```
@@ -128,7 +128,7 @@ export default {
 
     vWave: {
         color: 'red',
-        startingOpacity: 0.5,
+        initialOpacity: 0.5,
         easing: 'ease-in',
     }
 }
@@ -140,7 +140,7 @@ export default {
 ```html
 <button v-wave="{
     color: 'red',
-    startingOpacity: 0.5,
+    initialOpacity: 0.5,
     easing: 'ease-in',
 }">
 Click me!
