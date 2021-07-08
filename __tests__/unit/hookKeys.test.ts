@@ -1,25 +1,23 @@
-const setVue3 = (isVue3: boolean) => {
-  jest.resetModules()
-  jest.mock('@/utils/isVue3', () => ({
-    isVue3
-  }))
-}
-
 describe('hookKeys', () => {
-  test('uses Vue 3 lifecycle hooks when in Vue 3 runtime', () => {
-    setVue3(false)
-    const { hooks } = require('../../src/utils/hookKeys')
+  beforeAll(() => {
+    jest.resetModules()
+    jest.mock('@/utils/isVue3', () => ({
+      isVue3: (vue: string) => vue === '3'
+    }))
+  })
 
-    expect(hooks).toEqual({
+  test('uses Vue 2 lifecycle hooks when in Vue 2 runtime', () => {
+    const { getHooks } = require('../../src/utils/hookKeys')
+
+    expect(getHooks('2')).toEqual({
       mounted: 'inserted',
       updated: 'componentUpdated'
     })
   })
   test('uses Vue 3 lifecycle hooks when in Vue 3 runtime', () => {
-    setVue3(true)
-    const { hooks } = require('../../src/utils/hookKeys')
+    const { getHooks } = require('../../src/utils/hookKeys')
 
-    expect(hooks).toEqual({
+    expect(getHooks('3')).toEqual({
       mounted: 'mounted',
       updated: 'updated'
     })
