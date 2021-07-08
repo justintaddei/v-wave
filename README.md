@@ -42,6 +42,8 @@ If you have a feature request or you found a bug, please open an issue!
 ## [[ Live Demo ]](https://justintaddei.github.io/v-wave)  <!-- omit in toc -->
 > Source code for the demo page can be found on the [example branch.](https://github.com/justintaddei/v-wave/tree/example)
 
+### Contents
+
 - [Install](#install)
 - [Register the plugin](#register-the-plugin)
 - [Usage](#usage)
