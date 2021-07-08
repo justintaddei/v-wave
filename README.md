@@ -16,9 +16,9 @@ The material-ripple directive for Vue that actually works
 ![License](https://img.shields.io/npm/l/v-wave.svg?style=flat)
 ![Language](https://img.shields.io/badge/language-typescript-blue.svg?style=flat)
 
-### Support for both Vue 2 and Vue 3!
+> ### Support for both Vue 2 and Vue 3! <!-- omit in toc -->
 
-## Why did I make this? 
+## Why did I make this?  <!-- omit in toc -->
 
 Because every ripple-plugin I've tried to use in the past either didn't work, or was missing basic features.
 
@@ -39,8 +39,27 @@ Because every ripple-plugin I've tried to use in the past either didn't work, or
 If you have a feature request or you found a bug, please open an issue!
 
 
-## [[ Live Demo ]](https://justintaddei.github.io/v-wave)
+## [[ Live Demo ]](https://justintaddei.github.io/v-wave)  <!-- omit in toc -->
 > Source code for the demo page can be found on the [example branch.](https://github.com/justintaddei/v-wave/tree/example)
+
+- [Install](#install)
+- [Register the plugin](#register-the-plugin)
+- [Usage](#usage)
+- [Options](#options)
+  - [Setting options globally](#setting-options-globally)
+  - [Setting options per-directive](#setting-options-per-directive)
+  - [Summary](#summary)
+  - [Details](#details)
+    - [color](#color)
+    - [initialOpacity](#initialopacity)
+    - [finalOpacity](#finalopacity)
+    - [duration](#duration)
+    - [easing](#easing)
+    - [cancellationPeriod](#cancellationperiod)
+  - [Disabling the directive](#disabling-the-directive)
+- [Advanced](#advanced)
+  - [Changing the directive's name](#changing-the-directives-name)
+- [License](#license)
 
 ## Install
 
@@ -99,9 +118,7 @@ export default {
 
 ## Options
 
-### Usage with options
-
-#### Global options
+### Setting options globally
 
 **Vue**
 
@@ -135,7 +152,7 @@ export default {
 
 ```
 
-#### Per-directive options
+### Setting options per-directive
 
 ```html
 <button v-wave="{
@@ -202,6 +219,17 @@ Click me!
     The wave will not appear until after the delay, meaning a delay greater than 100ms can make the site feel sluggish.
 
 ---
+
+### Disabling the directive
+
+If you need to temporarily disable the wave effect, simply pass `false` to the directive.
+
+> Note that v-wave checks for strict `false` equality (`=== false`).  
+> Using any other *falsely* value will **not** disable the directive.  
+
+```html
+<button v-wave="false">Click me!</button>
+```
 
 ## Advanced
 
