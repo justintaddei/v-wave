@@ -1,4 +1,5 @@
 import * as _vue from 'vue'
+import { App } from 'vue'
 
 interface Vue2 {
   default: {
@@ -6,11 +7,6 @@ interface Vue2 {
   }
 }
 
-// Make copy to prevent import warning in Vue 2
-const vue = { ..._vue } as Vue2 | typeof _vue
-
-const { version } = 'version' in vue ? vue : vue.default
-
-const isVue3 = version[0] === '3'
+const isVue3 = (app: Vue2 | App): app is App => 'config' in app && 'globalProperties' in app.config
 
 export { isVue3 }
