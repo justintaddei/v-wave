@@ -52,7 +52,7 @@
   "homepage": "https://github.com/justintaddei/v-wave#readme",
   "devDependencies": {
     "@commitlint/cli": "^12.0.0",
-    "@commitlint/config-conventional": "^12.0.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@types/jest": "^26.0.20",
     "husky": "^7.0.1",
