@@ -1,6 +1,6 @@
 import { DEFAULT_PLUGIN_OPTIONS, IVWaveDirectiveOptions, IVWavePluginOptions } from 'src/options'
 import { getHooks } from 'src/utils/hookKeys'
-import { wave } from 'src/v-wave'
+import { wave } from 'src/wave'
 import { App, Plugin } from 'vue'
 
 const optionMap = new WeakMap<HTMLElement, Partial<IVWaveDirectiveOptions> | false>()
