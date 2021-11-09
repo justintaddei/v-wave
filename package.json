@@ -17,7 +17,7 @@
     "dev": "npm run build -- --watch",
     "format": "prettier --write \"src/**/*.(t|j)s\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
+    "prepare": "npm run build  && husky install",
     "prepublishOnly": "npm test && npm run lint",
     "release": "npm run lint && npm run format && npm run test && standard-version"
   },
@@ -66,7 +66,7 @@
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.3.5",
-    "vue": "^3.0.5"
+    "vue": "^3.2.20"
   },
   "peerDependencies": {
     "vue": "^2.0.0 || ^3.0.0"

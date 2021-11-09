@@ -9,10 +9,11 @@ The material-ripple directive for Vue that actually works
 </p>
 
 ![Checks](https://github.com/justintaddei/v-wave/workflows/checks/badge.svg)
-![Issues](https://img.shields.io/github/issues-raw/justintaddei/v-wave.svg?style=flat)
+[![Issues](https://img.shields.io/github/issues-raw/justintaddei/v-wave.svg?style=flat)](https://github.com/justintaddei/v-wave/issues)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/v-wave?color=%234c1&label=gzipped)
 ![NPM version](https://img.shields.io/npm/v/v-wave.svg?style=flat)
-![Downloads](https://img.shields.io/npm/dt/v-wave.svg?style=flat)
+![Downloads per month](https://img.shields.io/npm/dm/v-wave.svg?style=flat)
+![Total downloads](https://img.shields.io/npm/dt/v-wave.svg?style=flat&label=total+downloads)
 ![License](https://img.shields.io/npm/l/v-wave.svg?style=flat)
 ![Language](https://img.shields.io/badge/language-typescript-blue.svg?style=flat)
 
