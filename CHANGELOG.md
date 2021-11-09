@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/justintaddei/v-wave/compare/v1.3.1...v1.3.2) (2021-11-09)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 2.2.0 to 2.3.0 ([1cabf0f](https://github.com/justintaddei/v-wave/commits/1cabf0f7d9ba0008bf07203001a9d115167ac743))
+* **deps:** bump actions/setup-node from 2.3.0 to 2.4.0 ([f737cdf](https://github.com/justintaddei/v-wave/commits/f737cdfa6ece0edf76160e683687224b6d00064f))
+* **deps:** bump actions/setup-node from 2.4.0 to 2.4.1 ([1707ece](https://github.com/justintaddei/v-wave/commits/1707ece66712c7d0ef5a3a79a85ff5548d191ed9))
+* **deps:** bump path-parse from 1.0.6 to 1.0.7 ([05713d3](https://github.com/justintaddei/v-wave/commits/05713d305547c29eadb0bd577038358ecde97985))
+* ts error in Vue2 when `skipLibCheck: true` ([e5f4987](https://github.com/justintaddei/v-wave/commits/e5f4987f970320452736784e31843e9ea35bb20a)), closes [#191](https://github.com/justintaddei/v-wave/issues/191)
+
 ### [1.3.1](https://github.com/justintaddei/v-wave/compare/v1.3.0...v1.3.1) (2021-07-22)
 
 
