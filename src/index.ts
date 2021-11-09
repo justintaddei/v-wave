@@ -1,12 +1,17 @@
 import { DEFAULT_PLUGIN_OPTIONS, IVWaveDirectiveOptions, IVWavePluginOptions } from 'src/options'
 import { getHooks } from 'src/utils/hookKeys'
 import { wave } from 'src/wave'
-import { App, Plugin } from 'vue'
+import { App } from 'vue'
 
 const optionMap = new WeakMap<HTMLElement, Partial<IVWaveDirectiveOptions> | false>()
 
-const VWave = {
-  install(app: App, globalUserOptions: Partial<IVWavePluginOptions> = {}) {
+interface VWaveInstallObject {
+  install: (app: any, globalUserOptions: Partial<IVWavePluginOptions>) => void
+  installed: boolean
+}
+
+const VWave: VWaveInstallObject = {
+  install(app: App, globalUserOptions = {}) {
     if (this.installed) return
     this.installed = true
 
@@ -33,7 +38,8 @@ const VWave = {
         optionMap.set(el, value ?? {})
       }
     })
-  }
-} as Plugin & { installed: boolean }
+  },
+  installed: false
+}
 
 export default VWave
