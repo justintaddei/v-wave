@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://github.com/justintaddei/v-wave/compare/v1.3.2...v1.3.3) (2021-11-16)
+
+
+### Bug Fixes
+
+* remove baseUrl from tsconfig ([8f8b11e](https://github.com/justintaddei/v-wave/commits/8f8b11ee1593d5381e70acb91452bfa66a6ac8ca)), closes [#191](https://github.com/justintaddei/v-wave/issues/191)
+
 ### [1.3.2](https://github.com/justintaddei/v-wave/compare/v1.3.1...v1.3.2) (2021-11-09)
 
 
