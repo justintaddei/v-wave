@@ -9,8 +9,7 @@
     "outDir": "./dist",
     "strict": true,
     "noImplicitAny": true,
-    "esModuleInterop": true,
-    "baseUrl": "./"
+    "esModuleInterop": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
