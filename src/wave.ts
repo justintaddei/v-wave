@@ -1,8 +1,8 @@
-import { createContainer } from 'src/utils/createContainerElement'
-import { createWaveElement } from 'src/utils/createWaveElement'
-import { getDistanceToFurthestCorner } from 'src/utils/getDistanceToFurthestCorner'
-import { getRelativePointer } from 'src/utils/getRelativePointer'
-import { decrementWaveCount, deleteWaveCount, getWaveCount, incrementWaveCount } from 'src/utils/wave-count'
+import { createContainer } from './utils/createContainerElement'
+import { createWaveElement } from './utils/createWaveElement'
+import { getDistanceToFurthestCorner } from './utils/getDistanceToFurthestCorner'
+import { getRelativePointer } from './utils/getRelativePointer'
+import { decrementWaveCount, deleteWaveCount, getWaveCount, incrementWaveCount } from './utils/wave-count'
 import { IVWaveDirectiveOptions } from './options'
 
 const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOptions) => {
