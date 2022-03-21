@@ -1,9 +1,9 @@
+import { IVWaveDirectiveOptions } from './options'
 import { createContainer } from './utils/createContainerElement'
 import { createWaveElement } from './utils/createWaveElement'
 import { getDistanceToFurthestCorner } from './utils/getDistanceToFurthestCorner'
 import { getRelativePointer } from './utils/getRelativePointer'
 import { decrementWaveCount, deleteWaveCount, getWaveCount, incrementWaveCount } from './utils/wave-count'
-import { IVWaveDirectiveOptions } from './options'
 
 const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOptions) => {
   const rect = el.getBoundingClientRect()
@@ -43,7 +43,7 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
   }
 
   const dissolveWave = () => {
-    waveEl.style.transition = 'opacity 150ms linear'
+    waveEl.style.transition = `opacity ${options.dissolveDuration}s linear`
     waveEl.style.opacity = '0'
 
     setTimeout(() => {
@@ -56,7 +56,7 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
         // Only reset the style after all active waves have been removed
         el.style.position = originalPositionValue
       }
-    }, 150)
+    }, options.dissolveDuration * 1000)
   }
 
   document.addEventListener('pointerup', releaseWave)

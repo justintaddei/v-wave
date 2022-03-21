@@ -31,6 +31,14 @@ interface IVWaveDirectiveOptions {
    */
   duration: number
   /**
+   * The duration of the "dissolve animation" in seconds.
+   * This is the fade-out animation that plays once the wave has reached its maximum size.
+   *
+   * @default
+   * 0.15
+   */
+  dissolveDuration: number
+  /**
    * Any valid CSS `<timing-function>`
    *
    * @default
@@ -98,6 +106,7 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   initialOpacity: 0.2,
   finalOpacity: 0.1,
   duration: 0.4,
+  dissolveDuration: 0.15,
   easing: 'ease-out',
   cancellationPeriod: 75,
   trigger: 'auto',
