@@ -15,7 +15,7 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
   // We're creating a container for the "wave" with `overflow: hidden`
   // because if we were to set `overflow: hidden` on `el` we
   // risk altering its appearance.
-  const waveContainer = createContainer(computedStyles)
+  const waveContainer = createContainer(computedStyles, options.tagName)
   const waveEl = createWaveElement(x, y, size, options)
 
   // Keep track of how many waves are active on this element.

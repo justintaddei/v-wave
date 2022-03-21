@@ -59,6 +59,7 @@ If you have a feature request or you found a bug, please open an issue!
     - [easing](#easing)
     - [cancellationPeriod](#cancellationperiod)
     - [trigger](#trigger)
+    - [tagName](#tagname)
   - [Using triggers](#using-triggers)
   - [Disabling the directive](#disabling-the-directive)
 - [Advanced](#advanced)
@@ -179,6 +180,7 @@ Click me!
 | `easing`             | `string`                      |    `ease-out`    |
 | `cancellationPeriod` | `number`                      |       `75`       |
 | `trigger`            | `string \| boolean \| "auto"` |     `"auto"`     |
+| `tagName`            | `string`                      |     `"div"`      |
 
 
 
@@ -222,6 +224,7 @@ Click me!
 
     **Note:**  
     The wave will not appear until after the delay, meaning a delay greater than 100ms can make the site feel sluggish.
+
 #### trigger  
 - **type:** `string | boolean | "auto"`  
 - *default:* `"auto"`  
@@ -238,6 +241,12 @@ Click me!
         Any string other than `"auto"` will be treated as an ID. `v-wave` will only activate when a `v-wave-trigger` with a matching ID receives a `pointerdown` event.  
 
         > This is different from the other values as it allows you to place the trigger element anywhere in the dom, while the others require the trigger to be a descendant.
+
+#### tagName  
+- **type:** `string`  
+- *default:* `"div"`  
+  
+    Sets the tag name of the element used as the wave container. This is is useful in scenarios where the default `div` may interfere with `:last-of-type` selectors.
 
 ---
 

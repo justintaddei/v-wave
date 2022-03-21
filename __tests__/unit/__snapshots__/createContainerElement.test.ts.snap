@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`createContainerElement returns a <div> 1`] = `
+exports[`createContainerElement returns a an element based on \`tagName\` 1`] = `
 <div
-  style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute; border-radius: undefined undefined undefined undefined; overflow: hidden; pointer-events: none; webkit-mask-image: -webkit-radial-gradient(white, black);"
+  style="top: 0px; left: 0px; width: 100%; height: 100%; display: block; position: absolute; border-radius: undefined undefined undefined undefined; overflow: hidden; pointer-events: none; webkit-mask-image: -webkit-radial-gradient(white, black);"
+/>
+`;
+
+exports[`createContainerElement returns a an element based on \`tagName\` 2`] = `
+<span
+  style="top: 0px; left: 0px; width: 100%; height: 100%; display: block; position: absolute; border-radius: undefined undefined undefined undefined; overflow: hidden; pointer-events: none; webkit-mask-image: -webkit-radial-gradient(white, black);"
 />
 `;
