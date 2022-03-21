@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`markWaveBoundary sets dataset to the id when the trigger is an id 1`] = `
+<div
+  data-v-wave-boundary="stringId"
+/>
+`;
+
+exports[`markWaveBoundary sets dataset to true when trigger is not an id 1`] = `
+<div
+  data-v-wave-boundary="true"
+/>
+`;

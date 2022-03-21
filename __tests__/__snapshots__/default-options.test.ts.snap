@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`has documented default options 1`] = `
+Object {
+  "cancellationPeriod": 75,
+  "color": "currentColor",
+  "directive": "wave",
+  "duration": 0.4,
+  "easing": "ease-out",
+  "finalOpacity": 0.1,
+  "initialOpacity": 0.2,
+  "trigger": "auto",
+}
+`;

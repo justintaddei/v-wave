@@ -47,6 +47,22 @@ interface IVWaveDirectiveOptions {
    * 75
    */
   cancellationPeriod: number
+
+  /**
+   * Sets the behavior of the wave when used with triggers.
+   *
+   * Possible values:
+   * - `false`: disables the use of triggers.
+   *   - if a `v-wave-trigger` (without an ID) is present in the dom tree of this element, it will be ignored (i.e. `v-wave` always behaves as if there's no trigger).
+   * - `true`: requires a trigger to activate the wave.
+   *   - `v-wave` assumes the presence of a `v-wave-trigger` (without an ID) in its dom tree. The wave will only active for `pointerdown` events on the trigger element.
+   * - `"auto"`: if a `v-wave-trigger` (without an ID) is present in the dom-tree of the v-wave element, it behaves as `trigger: true`, otherwise it behaves as `trigger: false`.
+   * - `string`: any string other than `"auto"` will be treated as an ID. `v-wave` will only activate when a `v-wave-trigger` with a matching ID receives a `pointerdown` event.
+   *
+   * @default
+   * "auto"
+   */
+  trigger: string | boolean
 }
 
 interface IVWavePluginOptions extends IVWaveDirectiveOptions {
@@ -76,7 +92,8 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   finalOpacity: 0.1,
   duration: 0.4,
   easing: 'ease-out',
-  cancellationPeriod: 75
+  cancellationPeriod: 75,
+  trigger: 'auto'
 }
 
 export { DEFAULT_PLUGIN_OPTIONS, IVWavePluginOptions, IVWaveDirectiveOptions }

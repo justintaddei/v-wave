@@ -9,6 +9,7 @@ The material-ripple directive for Vue that actually works
 </p>
 
 ![Checks](https://github.com/justintaddei/v-wave/workflows/checks/badge.svg)
+![Vue Support](https://img.shields.io/badge/vue-2%20&%203-1cb884.svg?style=flat)
 [![Issues](https://img.shields.io/github/issues-raw/justintaddei/v-wave.svg?style=flat)](https://github.com/justintaddei/v-wave/issues)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/v-wave?color=%234c1&label=gzipped)
 ![NPM version](https://img.shields.io/npm/v/v-wave.svg?style=flat)
@@ -16,8 +17,6 @@ The material-ripple directive for Vue that actually works
 ![Total downloads](https://img.shields.io/npm/dt/v-wave.svg?style=flat&label=total+downloads)
 ![License](https://img.shields.io/npm/l/v-wave.svg?style=flat)
 ![Language](https://img.shields.io/badge/language-typescript-blue.svg?style=flat)
-
-> ### Support for both Vue 2 and Vue 3! <!-- omit in toc -->
 
 ## Why did I make this?  <!-- omit in toc -->
 
@@ -59,6 +58,8 @@ If you have a feature request or you found a bug, please open an issue!
     - [duration](#duration)
     - [easing](#easing)
     - [cancellationPeriod](#cancellationperiod)
+    - [trigger](#trigger)
+  - [Using triggers](#using-triggers)
   - [Disabling the directive](#disabling-the-directive)
 - [Advanced](#advanced)
   - [Changing the directive's name](#changing-the-directives-name)
@@ -169,14 +170,15 @@ Click me!
 
 
 ### Summary
-| Name                 | Type     |     Default      |
-| -------------------- | -------- | :--------------: |
-| `color`              | `string` | `"currentColor"` |
-| `initialOpacity`     | `number` |      `0.2`       |
-| `finialOpacity`      | `number` |      `0.1`       |
-| `duration`           | `number` |      `0.4`       |
-| `easing`             | `string` |    `ease-out`    |
-| `cancellationPeriod` | `number` |       `75`       |
+| Name                 | Type                          |     Default      |
+| -------------------- | ----------------------------- | :--------------: |
+| `color`              | `string`                      | `"currentColor"` |
+| `initialOpacity`     | `number`                      |      `0.2`       |
+| `finialOpacity`      | `number`                      |      `0.1`       |
+| `duration`           | `number`                      |      `0.4`       |
+| `easing`             | `string`                      |    `ease-out`    |
+| `cancellationPeriod` | `number`                      |       `75`       |
+| `trigger`            | `string \| boolean \| "auto"` |     `"auto"`     |
 
 
 
@@ -220,8 +222,49 @@ Click me!
 
     **Note:**  
     The wave will not appear until after the delay, meaning a delay greater than 100ms can make the site feel sluggish.
+#### trigger  
+- **type:** `string | boolean | "auto"`  
+- *default:* `"auto"`  
+
+    Sets the behavior of the wave when used with triggers.
+  
+    - `false`  
+        Disables the use of triggers. If a `v-wave-trigger` (without an ID) is present in the dom tree of this element, it will be ignored (i.e. `v-wave` always behaves as if there's no trigger).
+    - `true`  
+        Requires a trigger to activate the wave. `v-wave` assumes the presence of a `v-wave-trigger` (without an ID) in its dom tree. The wave will only active for `pointerdown` events on the trigger element.
+    - `"auto"`  
+        If a `v-wave-trigger` (without an ID) is present in the dom-tree of the v-wave element, it behaves as `trigger: true`, otherwise it behaves as `trigger: false`.
+    - `string`  
+        Any string other than `"auto"` will be treated as an ID. `v-wave` will only activate when a `v-wave-trigger` with a matching ID receives a `pointerdown` event.  
+
+        > This is different from the other values as it allows you to place the trigger element anywhere in the dom, while the others require the trigger to be a descendant.
 
 ---
+
+### Using triggers
+
+Triggers allow you to activate a wave on an element when, and only when, a different element receives input.
+
+
+In the following example, the wave will only active for the label element when the user clicks or taps on the `<img/>`.
+
+```html
+<label v-wave>
+    <span>Password</span>
+    <input :type="showPassword ? 'text' : 'password'" />
+    <img v-wave-trigger src="eye.svg" @click="() => showPassword = !showPassword" />
+</label>
+```
+
+In this next example, clicking one of the buttons will active the wave on the other button.
+
+```html
+<button v-wave="{trigger: 'button2'}" v-wave-trigger:button1>Button 1</button>
+
+<button v-wave="{trigger: 'button1'}" v-wave-trigger:button2>Button 2</button>
+```
+
+> Triggers that use an ID support many-to-many relationships. See the grid example on the [example page](https://justintaddei.github.io/v-wave).
 
 ### Disabling the directive
 

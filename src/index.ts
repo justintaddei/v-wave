@@ -1,7 +1,9 @@
+import { App, DirectiveBinding } from 'vue'
 import { DEFAULT_PLUGIN_OPTIONS, IVWaveDirectiveOptions, IVWavePluginOptions } from './options'
 import { getHooks } from './utils/hookKeys'
+import { markWaveBoundary } from './utils/markWaveBoundary'
+import { triggerIsID } from './utils/triggerIsID'
 import { wave } from './wave'
-import { App } from 'vue'
 
 const optionMap = new WeakMap<HTMLElement, Partial<IVWaveDirectiveOptions> | false>()
 
@@ -16,26 +18,57 @@ const VWave: VWaveInstallObject = {
     this.installed = true
 
     const globalOptions = { ...DEFAULT_PLUGIN_OPTIONS, ...globalUserOptions }
-
     const hooks = getHooks(app)
 
     app.directive(globalOptions.directive, {
-      [hooks.mounted](el: HTMLElement, { value }: any) {
-        optionMap.set(el, value ?? {})
+      [hooks.mounted](el: HTMLElement, { value = {} }: DirectiveBinding<Partial<IVWaveDirectiveOptions> | false>) {
+        optionMap.set(el, value)
+
+        markWaveBoundary(el, (value && value.trigger) ?? globalOptions.trigger)
 
         el.addEventListener('pointerdown', (event) => {
-          const options = optionMap.get(el)!
+          if (optionMap.get(el) === false) return
 
-          if (options === false) return
+          const options = { ...globalOptions, ...optionMap.get(el)! }
 
-          wave(event, el, {
-            ...globalOptions,
-            ...options
-          })
+          if (options.trigger === false) return wave(event, el, options)
+
+          if (triggerIsID(options.trigger)) return
+          const trigger = el.querySelector('[data-v-wave-trigger="true"]')
+          if (!trigger && options.trigger === true) return
+          if (trigger && !event.composedPath().includes(trigger)) return
+
+          wave(event, el, options)
         })
       },
-      [hooks.updated](el: HTMLElement, { value }: any) {
-        optionMap.set(el, value ?? {})
+      [hooks.updated](el: HTMLElement, { value = {} }: DirectiveBinding<Partial<IVWaveDirectiveOptions> | false>) {
+        optionMap.set(el, value)
+        markWaveBoundary(el, (value && value.trigger) ?? globalOptions.trigger)
+      }
+    })
+
+    const handleTrigger = (event: PointerEvent) => {
+      const trigger = (event.currentTarget as HTMLElement).dataset.vWaveTrigger
+
+      const associatedElements = document.querySelectorAll(
+        `[data-v-wave-boundary="${trigger}"]`
+      ) as NodeListOf<HTMLElement>
+
+      associatedElements.forEach((el) => wave(event, el, { ...globalOptions, ...optionMap.get(el) }))
+    }
+
+    app.directive(`${globalOptions.directive}-trigger`, {
+      [hooks.mounted](el: HTMLElement, { arg: trigger = 'true' }: DirectiveBinding) {
+        el.dataset.vWaveTrigger = trigger
+
+        if (trigger !== 'true') el.addEventListener('pointerdown', handleTrigger)
+      },
+
+      [hooks.updated](el: HTMLElement, { arg: trigger = 'true' }: DirectiveBinding) {
+        el.dataset.vWaveTrigger = trigger
+
+        if (trigger === 'true') el.removeEventListener('pointerdown', handleTrigger)
+        else el.addEventListener('pointerdown', handleTrigger)
       }
     })
   },
