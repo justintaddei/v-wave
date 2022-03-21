@@ -11,6 +11,9 @@ export default defineConfig({
       transformMixedEsModules: true
     }
   },
+  optimizeDeps: {
+    exclude: ['v-wave']
+  },
   plugins: [vue()],
   resolve: {
     alias: {

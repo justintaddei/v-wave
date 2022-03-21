@@ -1,64 +1,131 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-let code = ref(`
-<!-- Edit me -->
+let example1 = ref(`
+<!-- Edit me (all options are set to their default) -->
 <div
   class="box"
   v-wave="{
     color: 'currentColor',
     easing: 'ease-out',
     duration: 0.4,
+    dissolveDuration: 0.15,
     initialOpacity: 0.2,
     finalOpacity: 0.1,
-    cancellationPeriod: 75
+    cancellationPeriod: 75,
+    trigger: 'auto',
+    tagName: 'div'
   }"
 >
   Click here
 </div>`)
 
-let updateCode = (_code: string) => (code.value = _code)
+let example2 = ref(`
+<label
+  v-wave
+  class="text-input"
+>
+  <input type="text" placeholder="Search" />
+  
+  <!-- Only show the wave when the trigger is clicked -->
+  <img v-wave-trigger src="./imgs/search.svg" />
+</label>`)
+
+let updateExample1 = (_code: string) => (example1.value = _code)
+let updateExample2 = (_code: string) => (example2.value = _code)
+
+let randomColorValue = () => Math.random() * 255
+
+let randomColor = () => `rgb(${randomColorValue()}, ${randomColorValue()}, ${randomColorValue()})`
+
+let gridDemoWaveOptions = { color: '#09f', duration: 2, initialOpacity: 0.1, finalOpacity: 0.7, trigger: 'gridDemo' }
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <h1>v-wave</h1>
-  <div class="badges">
-    <img src="https://github.com/justintaddei/v-wave/workflows/Tests/badge.svg" alt="" />
-    <img src="https://img.shields.io/github/issues-raw/justintaddei/v-wave.svg?style=flat" alt="" />
-    <img src="https://img.shields.io/npm/v/v-wave.svg?style=flat" alt="" />
-  </div>
-  <p>The material-ripple directive for Vue that actually works</p>
-  <p><a href="https://github.com/justintaddei/v-wave">Back to Github</a></p>
-  <br />
-  <div class="editor">
-    <div class="editorWrapper">
-      <VueLiveEditor :code="code" @change="updateCode" />
+  <main>
+    <img v-wave-trigger alt="Vue logo" src="./assets/logo.png" />
+    <h1>v-wave</h1>
+    <div class="badges">
+      <img src="https://github.com/justintaddei/v-wave/workflows/Tests/badge.svg" alt="" />
+      <img src="https://img.shields.io/github/issues-raw/justintaddei/v-wave.svg?style=flat" alt="" />
+      <img src="https://img.shields.io/npm/v/v-wave.svg?style=flat" alt="" />
     </div>
-    <div class="previewWrapper">
-      <VueLivePreview :code="code" />
+    <p>The material-ripple directive for Vue that actually works</p>
+    <p><a href="https://github.com/justintaddei/v-wave">Back to Github</a></p>
+    <br />
+    <div class="editor">
+      <div class="editorWrapper">
+        <VueLiveEditor :code="example1" @change="updateExample1" />
+      </div>
+      <div class="previewWrapper">
+        <VueLivePreview :code="example1" />
+      </div>
     </div>
-  </div>
-  <div class="otherExamples">
-    <h2>Other Examples</h2>
-    <div v-wave class="box">Default</div>
-    <div style="color: #fff; background: #333" v-wave class="box">default (currentColor demo)</div>
-    <div style="border-radius: 50% 10px" v-wave="{ color: '#09f', initialOpacity: 0.7, finalOpacity: 0.5 }" class="box">
-      border-radius
+    <div class="otherExamples">
+      <h2>Basic Examples</h2>
+      <div v-wave class="box">default</div>
+      <div style="color: #fff; background: #333" v-wave class="box">default (currentColor demo)</div>
+      <div
+        style="border-radius: 50% 10px"
+        v-wave="{ color: '#09f', initialOpacity: 0.7, finalOpacity: 0.5, dissolveDuration: 0.3 }"
+        class="box"
+      >
+        border-radius
+      </div>
+      <div
+        v-wave="{
+          duration: 2,
+          color: 'radial-gradient(closest-side, #fff, #1cb884)',
+          initialOpacity: 0.7,
+          finalOpacity: 0.3,
+          easing: 'cubic-bezier(0,.57,.89,0)'
+        }"
+        class="box"
+      >
+        radial-gradient
+      </div>
     </div>
-    <div
-      v-wave="{
-        duration: 2,
-        color: 'radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c)',
-        initialOpacity: 0.7,
-        finalOpacity: 0.3,
-        easing: 'cubic-bezier(0,.57,.89,0)'
-      }"
-      class="box"
-    >
-      radial-gradient
+
+    <div class="triggerExamples">
+      <h2>Examples using triggers</h2>
+      <div class="editor">
+        <div class="editorWrapper">
+          <VueLiveEditor :code="example2" @change="updateExample2" />
+        </div>
+        <div class="previewWrapper">
+          <VueLivePreview :code="example2" />
+        </div>
+      </div>
+      <h4>Just an example of the flexibility that triggers provide (click/tap any box)</h4>
+      <div class="waveGrid">
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+        <div v-wave-trigger:gridDemo v-wave="gridDemoWaveOptions" class="box small" />
+      </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <style>
@@ -66,14 +133,20 @@ let updateCode = (_code: string) => (code.value = _code)
   box-sizing: border-box;
 }
 
-#app {
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   text-align: center;
   color: #2c3e50;
-  margin: 60px 32px 0 32px;
+  padding: 60px 32px 0 32px;
   user-select: none;
 }
 
@@ -165,6 +238,56 @@ let updateCode = (_code: string) => (code.value = _code)
   height: 200px;
   padding: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.triggerExamples {
+  display: grid;
+  place-items: center;
+  gap: 64px;
+}
+
+.triggerExamples .editor {
+  min-width: 100%;
+}
+
+.text-input {
+  display: grid;
+  grid-template: 1fr / 1fr auto;
+  place-items: center;
+  padding: 0 16px;
+  height: 48px;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.text-input:focus-within {
+  border: 2px solid #333;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.text-input > input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: inherit;
+}
+
+.text-input > img {
+  cursor: pointer;
+}
+
+.waveGrid {
+  display: inline-grid;
+  grid-template: repeat(5, auto) / repeat(5, auto);
+  place-items: center;
+  gap: 32px;
+}
+
+.waveGrid .box.small {
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 </style>
