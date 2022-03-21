@@ -56,6 +56,7 @@ If you have a feature request or you found a bug, please open an issue!
     - [initialOpacity](#initialopacity)
     - [finalOpacity](#finalopacity)
     - [duration](#duration)
+    - [dissolveDuration](#dissolveduration)
     - [easing](#easing)
     - [cancellationPeriod](#cancellationperiod)
     - [trigger](#trigger)
@@ -177,6 +178,7 @@ Click me!
 | `initialOpacity`     | `number`                      |      `0.2`       |
 | `finialOpacity`      | `number`                      |      `0.1`       |
 | `duration`           | `number`                      |      `0.4`       |
+| `dissolveDuration`   | `number`                      |      `0.15`      |
 | `easing`             | `string`                      |    `ease-out`    |
 | `cancellationPeriod` | `number`                      |       `75`       |
 | `trigger`            | `string \| boolean \| "auto"` |     `"auto"`     |
@@ -210,6 +212,13 @@ Click me!
   
     The duration of the wave animation in seconds.
 
+#### dissolveDuration  
+- **type:** `number`  
+- *default:* `0.15`  
+  
+    The duration of the "dissolve animation" in seconds.  
+    > This is the fade-out animation that plays once the wave has reached its maximum size.
+
 #### easing  
 - **type:** `string`  
 - *default:* `"ease-out"`  
@@ -222,8 +231,8 @@ Click me!
   
     The delay, *in milliseconds*, during which the animation will be canceled by the user moving their figure/pointer (e.g. while scrolling on a mobile phone).
 
-    **Note:**  
-    The wave will not appear until after the delay, meaning a delay greater than 100ms can make the site feel sluggish.
+    > **Note:**  
+    > The wave will not appear until after the delay, meaning a delay greater than 100ms can make the site feel sluggish.
 
 #### trigger  
 - **type:** `string | boolean | "auto"`  

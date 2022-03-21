@@ -5,6 +5,7 @@ Object {
   "cancellationPeriod": 75,
   "color": "currentColor",
   "directive": "wave",
+  "dissolveDuration": 0.15,
   "duration": 0.4,
   "easing": "ease-out",
   "finalOpacity": 0.1,
