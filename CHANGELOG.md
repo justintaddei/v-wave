@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/justintaddei/v-wave/compare/v1.3.3...v1.4.0) (2022-03-21)
+
+
+### Features
+
+* dissolveDuration ([290c3ef](https://github.com/justintaddei/v-wave/commits/290c3efca9b4cbd03d549eb68eadd90295fc1555))
+* tagName ([ac810b7](https://github.com/justintaddei/v-wave/commits/ac810b7859040854f9c3aa4cab9e006b6a69c093))
+* wave triggers ([d90e5d8](https://github.com/justintaddei/v-wave/commits/d90e5d8adb0d73d962e73e28e8ce99aa7826fa11))
+
+
+### Bug Fixes
+
+* **deps:** bump actions/cache from 2.1.6 to 2.1.7 ([dc4b9a7](https://github.com/justintaddei/v-wave/commits/dc4b9a7ae0745ef473e910a884f11c81f8c59e76))
+* **deps:** bump actions/setup-node from 2.4.1 to 2.5.0 ([50e10d9](https://github.com/justintaddei/v-wave/commits/50e10d9e646a16ebdc831f71708f8849e22eb42f))
+* **deps:** bump actions/setup-node from 2.5.0 to 2.5.1 ([91a45f7](https://github.com/justintaddei/v-wave/commits/91a45f704b08434314dbba711d9c73171bc9e5ca))
+* **deps:** bump actions/setup-node from 2.5.1 to 3.0.0 ([0f3d3b1](https://github.com/justintaddei/v-wave/commits/0f3d3b19821e07018c0bde66bd119e4717cce77b))
+* **deps:** bump dependabot/fetch-metadata from 1.1.0 to 1.1.1 ([1f02689](https://github.com/justintaddei/v-wave/commits/1f02689f7b47887542c95e1a7983c00541d0a1f6))
+* **deps:** bump dependabot/fetch-metadata from 1.1.1 to 1.2.0 ([36d5088](https://github.com/justintaddei/v-wave/commits/36d508831866cd69999c5d450da1b2ba9429a40a))
+* **deps:** bump dependabot/fetch-metadata from 1.2.0 to 1.2.1 ([6345896](https://github.com/justintaddei/v-wave/commits/634589607e8c20fb169cf78fcafed177a9b55748))
+* **deps:** bump dependabot/fetch-metadata from 1.2.1 to 1.3.0 ([05996e7](https://github.com/justintaddei/v-wave/commits/05996e7fb176ce3d2477fa3b111ee83971e0fa76))
+
 ### [1.3.3](https://github.com/justintaddei/v-wave/compare/v1.3.2...v1.3.3) (2021-11-16)
 
 
