@@ -63,6 +63,13 @@ interface IVWaveDirectiveOptions {
    * "auto"
    */
   trigger: string | boolean
+
+  /**
+   * Sets the tag name of the element used as the wave container. This is is useful in scenarios where the default `div` may interfere with `:last-of-type` selectors.
+   *
+   * @default
+   */
+  tagName: string
 }
 
 interface IVWavePluginOptions extends IVWaveDirectiveOptions {
@@ -93,7 +100,8 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   duration: 0.4,
   easing: 'ease-out',
   cancellationPeriod: 75,
-  trigger: 'auto'
+  trigger: 'auto',
+  tagName: 'div'
 }
 
 export { DEFAULT_PLUGIN_OPTIONS, IVWavePluginOptions, IVWaveDirectiveOptions }
