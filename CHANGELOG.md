@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/justintaddei/v-wave/compare/v1.4.0...v1.5.0) (2022-05-21)
+
+
+### Features
+
+* support local directives ([d021ec9](https://github.com/justintaddei/v-wave/commits/d021ec9b700eded869867c60c1df017fddc78d75)), closes [#312](https://github.com/justintaddei/v-wave/issues/312)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/cache from 2.1.7 to 3 ([829168c](https://github.com/justintaddei/v-wave/commits/829168c408f3c30aad2dca741d70d7da8a6e737a))
+* **deps:** bump actions/setup-node from 3.0.0 to 3.1.0 ([7b91f02](https://github.com/justintaddei/v-wave/commits/7b91f0287c83f3b364b8d47fc9e58ac46c79728e))
+* **deps:** bump actions/setup-node from 3.1.0 to 3.1.1 ([7e27a90](https://github.com/justintaddei/v-wave/commits/7e27a9043d3b2a9f28bdd4c42a85ab01548d0276))
+* **deps:** bump actions/setup-node from 3.1.1 to 3.2.0 ([3456701](https://github.com/justintaddei/v-wave/commits/345670135bd6cc944ede54286a97aecde76a6b4d))
+* **deps:** bump dependabot/fetch-metadata from 1.3.0 to 1.3.1 ([1177cec](https://github.com/justintaddei/v-wave/commits/1177cec8959aeb61a947765b08e2e56cebb8d56d))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([872e763](https://github.com/justintaddei/v-wave/commits/872e7634b44ac1959c0d540faf33ed36da7d2c09))
+
 ## [1.4.0](https://github.com/justintaddei/v-wave/compare/v1.3.3...v1.4.0) (2022-03-21)
 
 
