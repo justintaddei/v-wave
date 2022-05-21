@@ -89,7 +89,7 @@ After installing and registering the plugin, this is all you need to get started
 
 ### Via NPM
 
-<small>See: [Vue](#vue----omit-in-toc), [Nuxt](#nuxt----omit-in-toc)</small>
+<small>See: [Vue](#vue-), [Nuxt](#nuxt-)</small>
 
 ```sh
 $ npm i v-wave
@@ -156,7 +156,7 @@ Vue.use(VWave)
 
 ### Configuring globally
 
-<small>See: [Vue](#vue----omit-in-toc-1), [Nuxt](#nuxt----omit-in-toc-1)</small>
+<small>See: [Vue](#vue--1), [Nuxt](#nuxt--1)</small>
 
 #### Vue <!-- omit in toc -->
 
