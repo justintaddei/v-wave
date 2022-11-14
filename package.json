@@ -58,7 +58,7 @@
     "husky": "^8.0.0",
     "jest": "^27.3.1",
     "prettier": "^2.2.1",
-    "rollup": "^2.36.1",
+    "rollup": "^3.3.0",
     "rollup-plugin-typescript2": "^0.34.0",
     "rollup-plugin-uglify": "^6.0.4",
     "standard-version": "^9.1.0",
