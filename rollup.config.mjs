@@ -1,6 +1,6 @@
 import typescript from 'rollup-plugin-typescript2'
-import pkg from './package.json'
-import { uglify } from 'rollup-plugin-uglify'
+import pkg from './package.json' assert { type: 'json' }
+import terser from '@rollup/plugin-terser'
 import resolve from '@rollup/plugin-node-resolve'
 
 const nonESBuildTSConfig = {
@@ -58,8 +58,7 @@ export default [
           compilerOptions: nonESBuildTSConfig
         }
       }),
-      uglify({
-        sourcemap: false,
+      terser({
         output: {
           comments: 'all'
         }
