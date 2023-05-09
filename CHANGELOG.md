@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/justintaddei/v-wave/compare/v1.5.0...v1.5.1) (2023-05-09)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 3.2.0 to 3.3.0 ([cc02afc](https://github.com/justintaddei/v-wave/commits/cc02afca2e0796af9ce0883ba9a7fccaec32b2cf))
+* **deps:** bump actions/setup-node from 3.3.0 to 3.4.1 ([e0b70f9](https://github.com/justintaddei/v-wave/commits/e0b70f9837ce4458aa1b8bfbd2fbb305583437d4))
+* **deps:** bump actions/setup-node from 3.4.1 to 3.5.0 ([2c384ba](https://github.com/justintaddei/v-wave/commits/2c384ba1c2f39db8a554cc044aac1ba204f75707))
+* **deps:** bump actions/setup-node from 3.5.0 to 3.5.1 ([9299027](https://github.com/justintaddei/v-wave/commits/9299027a12a1e7c591b75787e365b30bc4873ca2))
+* **deps:** bump actions/setup-node from 3.5.1 to 3.6.0 ([173f4a8](https://github.com/justintaddei/v-wave/commits/173f4a8a00bce54822596113edb13ae886e6d732))
+* **deps:** bump dependabot/fetch-metadata from 1.3.1 to 1.3.2 ([08741fc](https://github.com/justintaddei/v-wave/commits/08741fc835402fa7d2ae2e70ab90d85974ed2b6c))
+* **deps:** bump dependabot/fetch-metadata from 1.3.2 to 1.3.3 ([12c635c](https://github.com/justintaddei/v-wave/commits/12c635ca0526fbe4ffc5f5a37d2936cd451e6f86))
+* **deps:** bump dependabot/fetch-metadata from 1.3.3 to 1.3.4 ([4615575](https://github.com/justintaddei/v-wave/commits/461557594912f8a9f0ed2e4129cb005e1ad9433f))
+* **deps:** bump dependabot/fetch-metadata from 1.3.4 to 1.3.5 ([e8cb451](https://github.com/justintaddei/v-wave/commits/e8cb451f0ef8190c70b9cc4e039d853232a97e2d))
+* **deps:** bump dependabot/fetch-metadata from 1.3.5 to 1.3.6 ([98d02e2](https://github.com/justintaddei/v-wave/commits/98d02e214effe29a5aaca18fbff5ff39ea4e794a))
+* **deps:** bump dependabot/fetch-metadata from 1.3.6 to 1.4.0 ([c3ef927](https://github.com/justintaddei/v-wave/commits/c3ef9270ff9b000a2761e3d79a6780c03e87086d))
+* **deps:** bump json5 from 2.1.3 to 2.2.3 ([2613566](https://github.com/justintaddei/v-wave/commits/261356632c7e30a35e7a8cfeecc4415ef77098a8))
+* **deps:** bump minimatch from 3.0.4 to 3.1.2 ([8fd4f1e](https://github.com/justintaddei/v-wave/commits/8fd4f1e89097998e275a3933389294f51ea6d6fd))
+
 ## [1.5.0](https://github.com/justintaddei/v-wave/compare/v1.4.0...v1.5.0) (2022-05-21)
 
 
