@@ -23,8 +23,7 @@ The material-ripple directive for Vue that actually works
 <details>
     <summary><h3 style="display:inline;">Why did I make this?</h3></summary>
 
-<br />
-Because every ripple-plugin I've tried to use in the past either didn't work, or was missing basic features. 
+<br />Because every ripple plugin I've tried to use in the past either didn't work or was missing basic features. 
 
 **Here's what you can expect from this plugin:**
 
@@ -33,7 +32,7 @@ Because every ripple-plugin I've tried to use in the past either didn't work, or
   *(you might think that's an obvious choice... but you'd be wrong).*
 - There is a small delay before the ripple appears, during which the animation will be canceled if the user moves the pointer (e.g. scrolling on a mobile phone). This is similar to how native Android ripples work.
 - Uses CSS transforms instead of `width` and `height`.
-- Doesn't effect the appearance of the element you apply it to (won't explode when used on an element with  `display: flex`).
+- Doesn't affect the appearance of the element you apply it to (won't explode when used on an element with `display: flex`).
 - Guesses the color of the wave automatically by default (using `currentColor`).
 - Works with fixed, absolute, relative, and statically positioned elements.
 - Will handle independent border-radii (e.g. `border-radius: 5px 20px 15px 30px`) perfectly fine.
@@ -469,7 +468,7 @@ Click here
 - `false`  
     Disables the use of triggers. If a `v-wave-trigger` (without an ID) is present in the dom tree of this element, it will be ignored (i.e. `v-wave` always behaves as if there's no trigger).
 - `true`  
-    Requires a trigger to activate the ripple. `v-wave` assumes the presence of a `v-wave-trigger` (without an ID) in its dom tree. The ripple will only active for `pointerdown` events on the trigger element.
+    Requires a trigger to activate the ripple. `v-wave` assumes the presence of a `v-wave-trigger` (without an ID) in its dom tree. The ripple will only activate for `pointerdown` events on the trigger element.
 - `"auto"`  
     If a `v-wave-trigger` (without an ID) is present in the dom-tree of the v-wave element, it behaves as `trigger: true`, otherwise it behaves as `trigger: false`.
 - `string`  
@@ -509,7 +508,7 @@ Click here
 Triggers allow you to activate a wave on an element when, and only when, a different element receives input.
 
 
-In the following example, the wave will only active for the label element when the user clicks or taps on the `<img/>`.
+In the following example, the wave will only activate for the label element when the user clicks or taps on the `<img/>`.
 
 ```html
 <label v-wave>
@@ -519,7 +518,7 @@ In the following example, the wave will only active for the label element when t
 </label>
 ```
 
-In this next example, clicking one of the buttons will active the wave on the other button.
+In this next example, clicking one of the buttons will activate the wave on the other button.
 
 ```html
 <button v-wave="{trigger: 'button2'}" v-wave-trigger:button1>Button 1</button>
