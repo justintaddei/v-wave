@@ -19,7 +19,8 @@
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build  && husky install",
     "prepublishOnly": "npm test && npm run lint",
-    "release": "npm run lint && npm run format && npm run test && standard-version"
+    "release": "npm run lint && npm run format && npm run test && standard-version",
+    "postinstall": "node ./nuxt/v3/postinstall.js"
   },
   "husky": {
     "hooks": {
