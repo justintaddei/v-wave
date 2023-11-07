@@ -105,3 +105,4 @@ const VWave: VWaveInstallObject & { createLocalWaveDirective: typeof createDirec
 }
 
 export default VWave
+export { IVWaveDirectiveOptions, IVWavePluginOptions }
