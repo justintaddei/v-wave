@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0-beta.1](https://github.com/justintaddei/v-wave/compare/v1.6.0-beta.0...v1.6.0-beta.1) (2023-11-07)
+
+
+### Bug Fixes
+
+* error in projects without both deps and devDeps ([6071008](https://github.com/justintaddei/v-wave/commits/60710088cac620900990e90b5cb4b000aea068bd))
+
 ## [1.6.0-beta.0](https://github.com/justintaddei/v-wave/compare/v1.5.1...v1.6.0-beta.0) (2023-11-07)
 
 
