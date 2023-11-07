@@ -3,7 +3,7 @@ const path = require('path')
 
 const pkg = require(path.join(process.env.INIT_CWD, 'package.json'))
 
-const nuxtVersion = pkg.dependencies.nuxt ?? pkg.devDependencies.nuxt
+const nuxtVersion = pkg.dependencies?.nuxt ?? pkg.devDependencies?.nuxt
 
 if (!nuxtVersion || /2\.\d+\.\d+/.test(nuxtVersion)) {
   process.exit(0)
