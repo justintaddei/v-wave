@@ -2,6 +2,7 @@
   "name": "v-wave",
   "version": "1.6.0-beta.1",
   "description": "The material-ripple directive for Vue that actually works",
+  "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "unpkg": "dist/iife/index.js",
@@ -19,8 +20,7 @@
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build  && husky install",
     "prepublishOnly": "npm test && npm run lint",
-    "release": "npm run lint && npm run format && npm run test && standard-version",
-    "postinstall": "node ./nuxt/v3/postinstall.js"
+    "release": "npm run lint && npm run format && npm run test && standard-version"
   },
   "husky": {
     "hooks": {
@@ -72,5 +72,8 @@
   },
   "peerDependencies": {
     "vue": "^2.0.0 || ^3.0.0"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.8.2"
   }
 }
