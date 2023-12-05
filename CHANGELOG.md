@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0-beta.3](https://github.com/justintaddei/v-wave/compare/v1.6.0-beta.1...v1.6.0-beta.3) (2023-12-05)
+
+
+### Features
+
+* add support for Nuxt 3 ([182bd51](https://github.com/justintaddei/v-wave/commits/182bd51d1b76728956d4bdfcabd4fbaa9450f9f6))
+
 ## [1.6.0-beta.2](https://github.com/justintaddei/v-wave/compare/v1.6.0-beta.1...v1.6.0-beta.2) (2023-12-05)
 
 
