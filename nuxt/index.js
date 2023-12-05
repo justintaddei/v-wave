@@ -1,14 +1,27 @@
-const { resolve } = require('path')
+import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import pkg from '../package.json'
+import { isNuxt2 } from '@nuxt/kit'
 
-module.exports = function nuxtVWave(moduleOptions) {
-  const options = Object.assign({}, this.options.vWave, moduleOptions)
+export default defineNuxtModule({
+  meta: {
+    name: 'v-wave',
+    version: pkg.version,
+    configKey: 'vWave',
+    compatibility: {
+      nuxt: '^3.0.0 || ^2.16.0',
+      bridge: true
+    }
+  },
+  setup(options, nuxt) {
+    const { resolve } = createResolver(import.meta.url)
 
-  this.addPlugin({
-    ssr: false,
-    src: resolve(__dirname, 'plugin.js'),
-    fileName: 'v-wave-plugin.js',
-    options
-  })
-}
+    if (isNuxt2()) {
+      nuxt.options.publicRuntimeConfig.vWave = options
+    } else {
 
-module.exports.meta = require('../package.json')
+      nuxt.options.runtimeConfig.public.vWave = options
+    }
+
+    addPlugin(resolve('./plugin.js'))
+  }
+})
