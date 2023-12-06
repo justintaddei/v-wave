@@ -7,11 +7,7 @@ export default defineNuxtModule({
   setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    if (isNuxt2()) {
-      nuxt.options.publicRuntimeConfig.vWave = options
-    } else {
-      nuxt.options.runtimeConfig.public.vWave = options
-    }
+    nuxt.options.runtimeConfig.public.vWave = options
 
     addPlugin(resolve('./runtime/plugin.js'))
   }
