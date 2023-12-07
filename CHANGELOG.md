@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/justintaddei/v-wave/compare/v1.5.1...v2.0.0) (2023-12-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Nuxt 2 module entry moved from `v-wave/nuxt` to `v-wave/nuxt/v2`
+
+### Features
+
+* add support Nuxt 3 ([c3b8576](https://github.com/justintaddei/v-wave/commits/c3b857633daf5b5a912562d711e4a50c1ab7388d))
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 3.6.0 to 3.7.0 ([ad71e13](https://github.com/justintaddei/v-wave/commits/ad71e133ca626ed52f0bb011cc5f62de88f625f8))
+* **deps:** bump actions/setup-node from 3.7.0 to 3.8.0 ([5d0418e](https://github.com/justintaddei/v-wave/commits/5d0418eff59606c869592f6a287afd8a51386295))
+* **deps:** bump actions/setup-node from 3.8.0 to 3.8.1 ([06b684f](https://github.com/justintaddei/v-wave/commits/06b684fb9a4b7ee943abdc412c60835a1ba14e4e))
+* **deps:** bump actions/setup-node from 3.8.1 to 4.0.0 ([5d1fca2](https://github.com/justintaddei/v-wave/commits/5d1fca28b3289aea937ff879c3d682443e9261ad))
+* **deps:** bump dependabot/fetch-metadata from 1.4.0 to 1.5.0 ([8652b17](https://github.com/justintaddei/v-wave/commits/8652b177d6f95352f1b6ad015a5033a046864e29))
+* **deps:** bump dependabot/fetch-metadata from 1.5.0 to 1.5.1 ([d1f3c6d](https://github.com/justintaddei/v-wave/commits/d1f3c6d32aa0f3c2cd9c71d1390bdb2e9b5c6513))
+* **deps:** bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 ([5b91361](https://github.com/justintaddei/v-wave/commits/5b91361a07399c9143bc133335f94d23c33f1dad))
+* **deps:** bump tough-cookie from 4.1.2 to 4.1.3 ([17d64c2](https://github.com/justintaddei/v-wave/commits/17d64c22b5fef5ca66b0d341d61b9f85a835c6cd))
+* error in projects without both deps and devDeps ([f0e8d17](https://github.com/justintaddei/v-wave/commits/f0e8d1718c2176e62de1bb019a6ea7fbe9944524))
+
 ## [1.6.0-beta.3](https://github.com/justintaddei/v-wave/compare/v1.6.0-beta.1...v1.6.0-beta.3) (2023-12-05)
 
 
