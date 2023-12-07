@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0-beta.3](https://github.com/justintaddei/v-wave/compare/v1.6.0-beta.1...v1.6.0-beta.3) (2023-12-05)
+
+
+### Features
+
+* add support for Nuxt 3 ([182bd51](https://github.com/justintaddei/v-wave/commits/182bd51d1b76728956d4bdfcabd4fbaa9450f9f6))
+
+## [1.6.0-beta.2](https://github.com/justintaddei/v-wave/compare/v1.6.0-beta.1...v1.6.0-beta.2) (2023-12-05)
+
+
+### Features
+
+* add support for Nuxt 3 ([ee3ea2a](https://github.com/justintaddei/v-wave/commits/ee3ea2a522e09cf668c9284c0b159f9a4b8d779b))
+
+## [1.6.0-beta.1](https://github.com/justintaddei/v-wave/compare/v1.6.0-beta.0...v1.6.0-beta.1) (2023-11-07)
+
+
+### Bug Fixes
+
+* error in projects without both deps and devDeps ([6071008](https://github.com/justintaddei/v-wave/commits/60710088cac620900990e90b5cb4b000aea068bd))
+
+## [1.6.0-beta.0](https://github.com/justintaddei/v-wave/compare/v1.5.1...v1.6.0-beta.0) (2023-11-07)
+
+
+### Features
+
+* add support for nuxt3 via postinstall script ([352cf03](https://github.com/justintaddei/v-wave/commits/352cf035e5c41c2c73d840733e8230568bc4886d))
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 3.6.0 to 3.7.0 ([ad71e13](https://github.com/justintaddei/v-wave/commits/ad71e133ca626ed52f0bb011cc5f62de88f625f8))
+* **deps:** bump actions/setup-node from 3.7.0 to 3.8.0 ([5d0418e](https://github.com/justintaddei/v-wave/commits/5d0418eff59606c869592f6a287afd8a51386295))
+* **deps:** bump actions/setup-node from 3.8.0 to 3.8.1 ([06b684f](https://github.com/justintaddei/v-wave/commits/06b684fb9a4b7ee943abdc412c60835a1ba14e4e))
+* **deps:** bump actions/setup-node from 3.8.1 to 4.0.0 ([5d1fca2](https://github.com/justintaddei/v-wave/commits/5d1fca28b3289aea937ff879c3d682443e9261ad))
+* **deps:** bump dependabot/fetch-metadata from 1.4.0 to 1.5.0 ([8652b17](https://github.com/justintaddei/v-wave/commits/8652b177d6f95352f1b6ad015a5033a046864e29))
+* **deps:** bump dependabot/fetch-metadata from 1.5.0 to 1.5.1 ([d1f3c6d](https://github.com/justintaddei/v-wave/commits/d1f3c6d32aa0f3c2cd9c71d1390bdb2e9b5c6513))
+* **deps:** bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 ([5b91361](https://github.com/justintaddei/v-wave/commits/5b91361a07399c9143bc133335f94d23c33f1dad))
+* **deps:** bump tough-cookie from 4.1.2 to 4.1.3 ([17d64c2](https://github.com/justintaddei/v-wave/commits/17d64c22b5fef5ca66b0d341d61b9f85a835c6cd))
+
 ### [1.5.1](https://github.com/justintaddei/v-wave/compare/v1.5.0...v1.5.1) (2023-05-09)
 
 

@@ -2,7 +2,8 @@
   "name": "v-wave",
   "version": "1.5.1",
   "description": "The material-ripple directive for Vue that actually works",
-  "main": "dist/cjs/index.js",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
   "module": "dist/es/index.js",
   "unpkg": "dist/iife/index.js",
   "types": "dist/types/",
@@ -71,5 +72,8 @@
   },
   "peerDependencies": {
     "vue": "^2.0.0 || ^3.0.0"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.8.2"
   }
 }

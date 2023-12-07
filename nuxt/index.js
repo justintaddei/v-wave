@@ -1,14 +1,14 @@
-const { resolve } = require('path')
+import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { isNuxt2 } from '@nuxt/kit'
+import config from './meta.json'
 
-module.exports = function nuxtVWave(moduleOptions) {
-  const options = Object.assign({}, this.options.vWave, moduleOptions)
+export default defineNuxtModule({
+  meta: config,
+  setup(options, nuxt) {
+    const { resolve } = createResolver(import.meta.url)
 
-  this.addPlugin({
-    ssr: false,
-    src: resolve(__dirname, 'plugin.js'),
-    fileName: 'v-wave-plugin.js',
-    options
-  })
-}
+    nuxt.options.runtimeConfig.public.vWave = options
 
-module.exports.meta = require('../package.json')
+    addPlugin(resolve('./runtime/plugin.js'))
+  }
+})
