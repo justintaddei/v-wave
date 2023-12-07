@@ -1,5 +1,4 @@
 import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
-import { isNuxt2 } from '@nuxt/kit'
 import config from './meta.json'
 
 export default defineNuxtModule({
