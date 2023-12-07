@@ -126,8 +126,14 @@ or
 ```js
 // nuxt.config.js
 
+// Nuxt 3
 export default {
     modules: ['v-wave/nuxt']
+}
+
+// Nuxt 2
+export default {
+    modules: ['v-wave/nuxt/v2']
 }
 ```
 
