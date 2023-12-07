@@ -1,15 +1,17 @@
 {
   "name": "v-wave",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The material-ripple directive for Vue that actually works",
   "type": "module",
   "main": "dist/cjs/index.cjs",
   "module": "dist/es/index.js",
   "unpkg": "dist/iife/index.js",
   "types": "dist/types/",
+  "web-types": "./web-types.json",
   "files": [
     "dist/**/*",
-    "nuxt/**/*"
+    "nuxt/**/*",
+    "web-types.json"
   ],
   "scripts": {
     "test": "jest",
