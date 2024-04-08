@@ -3,7 +3,7 @@ import { defineNuxtPlugin, useRuntimeConfig } from '#imports'
 
 export default defineNuxtPlugin((app) => {
   const options = useRuntimeConfig().public.vWave
-  
+
   const directive = options.directive || 'wave'
 
   const { vWave, vWaveTrigger } = VWave.createLocalWaveDirective(options, app.vueApp)
