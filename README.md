@@ -23,13 +23,13 @@ The material-ripple directive for Vue that actually works
 <details>
     <summary><h3 style="display:inline;">Why did I make this?</h3></summary>
 
-<br />Because every ripple plugin I've tried to use in the past either didn't work or was missing basic features. 
+<br />Because every ripple plugin I've tried to use in the past either didn't work or was missing basic features.
 
 **Here's what you can expect from this plugin:**
 
 - It works ([see for yourself](https://justintaddei.github.io/v-wave)).
 - The wave appears on `pointerdown` instead of `pointerup`  
-  *(you might think that's an obvious choice... but you'd be wrong).*
+  _(you might think that's an obvious choice... but you'd be wrong)._
 - There is a small delay before the ripple appears, during which the animation will be canceled if the user moves the pointer (e.g. scrolling on a mobile phone). This is similar to how native Android ripples work.
 - Uses CSS transforms instead of `width` and `height`.
 - Doesn't affect the appearance of the element you apply it to (won't explode when used on an element with `display: flex`).
@@ -39,7 +39,7 @@ The material-ripple directive for Vue that actually works
 
 </details>
 
-## [[ Live Demo ]](https://justintaddei.github.io/v-wave)  <!-- omit in toc -->
+## [[Live Demo]](https://justintaddei.github.io/v-wave) <!-- omit in toc -->
 
 ## Quick start <!-- omit in toc -->
 
@@ -55,6 +55,7 @@ After installing and registering the plugin, this is all you need to get started
 > You can change the look and feel of the ripple on a [per-element basis](#configuring-locally), or by modifying the [global defaults](#configuring-globally).
 
 ## Contents <!-- omit in toc -->
+
 - [Installation](#installation)
   - [Via NPM](#via-npm)
   - [Via CDN](#via-cdn)
@@ -95,6 +96,7 @@ $ npm i v-wave
 ```
 
 #### Vue <!-- omit in toc -->
+
 ```js
 import { createApp } from 'vue'
 import VWave from 'v-wave'
@@ -153,7 +155,7 @@ Vue.use(VWave)
 
 </details>
 
----  
+---
 
 ## Configuration
 
@@ -173,9 +175,9 @@ import App from './App.vue'
 const app = createApp(App)
 
 app.use(VWave, {
-    color: 'red',
-    initialOpacity: 0.5,
-    easing: 'ease-in',
+  color: 'red',
+  initialOpacity: 0.5,
+  easing: 'ease-in'
 })
 ```
 
@@ -189,9 +191,9 @@ import Vue from 'vue'
 import VWave from 'v-wave'
 
 Vue.use(VWave, {
-    color: 'red',
-    initialOpacity: 0.5,
-    easing: 'ease-in',
+  color: 'red',
+  initialOpacity: 0.5,
+  easing: 'ease-in'
 })
 ```
 
@@ -200,28 +202,31 @@ Vue.use(VWave, {
 or
 
 #### Nuxt <!-- omit in toc -->
+
 ```js
 // nuxt.config.js
 
 export default {
-    modules: ['v-wave/nuxt'],
-    vWave: {
-        color: 'red',
-        initialOpacity: 0.5,
-        easing: 'ease-in',
-    }
+  modules: ['v-wave/nuxt'],
+  vWave: {
+    color: 'red',
+    initialOpacity: 0.5,
+    easing: 'ease-in'
+  }
 }
 ```
 
 ### Configuring locally
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     color: 'red',
     initialOpacity: 0.5,
     easing: 'ease-in',
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
@@ -250,7 +255,7 @@ Click here
 #### color
 
 - **type:** `string` ([`background` shorthand syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/background#formal_syntax))
-- *default:* `"currentColor"`
+- _default:_ `"currentColor"`
 
 > Sets the background of the ripple.  
 > Supports any value that the CSS `background` property does.
@@ -263,10 +268,12 @@ Click here
 #### Simple color <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     color: 'red',
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
@@ -275,10 +282,12 @@ Click here
 #### Gradient <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     color: 'radial-gradient(closest-side, #fff, #00f, #fff)',
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
@@ -287,10 +296,12 @@ Click here
 #### Image <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     color: 'no-repeat url(https://...) 0 0 / cover',
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
@@ -298,11 +309,10 @@ Click here
 
 </details>
 
-
 #### initialOpacity
 
 - **type:** `number`
-- *default:* `0.2`
+- _default:_ `0.2`
 
 > The opacity of the ripple when it first appears.
 
@@ -314,35 +324,37 @@ Click here
 #### initialOpacity of 1 <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     initialOpacity: 1,
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
 ![](https://raw.githubusercontent.com/justintaddei/v-wave/assets/color-initial-opacity-1.gif)
 
-
 #### initialOpacity of 0 <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     initialOpacity: 0,
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
 ![](https://raw.githubusercontent.com/justintaddei/v-wave/assets/color-initial-opacity-0.gif)
-
 
 </details>
 
 #### finalOpacity
 
 - **type:** `number`
-- *default:* `0.1`
+- _default:_ `0.1`
 
 > The opacity the ripple should be when it has stopped moving.
 
@@ -354,35 +366,37 @@ Click here
 #### finalOpacity of 1 <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     finalOpacity: 1,
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
 ![](https://raw.githubusercontent.com/justintaddei/v-wave/assets/color-final-opacity-1.gif)
 
-
 #### finalOpacity of 0 <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     finalOpacity: 0,
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
 ![](https://raw.githubusercontent.com/justintaddei/v-wave/assets/color-final-opacity-0.gif)
-
 
 </details>
 
 #### duration
 
 - **type:** `number` (seconds)
-- *default:* `0.4`
+- _default:_ `0.4`
 
 > The duration of the ripple in seconds.  
 > The total duration is `duration + dissolveDuration`
@@ -393,10 +407,12 @@ Click here
 #### duration of 3 seconds <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     duration: 3,
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
@@ -407,7 +423,7 @@ Click here
 #### dissolveDuration
 
 - **type:** `number` (seconds)
-- *default:* `0.15`
+- _default:_ `0.15`
 
 > The duration of the "dissolve animation" in seconds.  
 > This is the fade-out animation that plays once the wave has reached its maximum size.  
@@ -419,10 +435,12 @@ Click here
 #### dissolve duration of 3 seconds <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     dissolveDuration: 3,
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
@@ -433,7 +451,7 @@ Click here
 #### easing
 
 - **type:** `string` ([`<easing-function>`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function))
-- *default:* `"ease-out"`
+- _default:_ `"ease-out"`
 
 > Any valid CSS `<easing-function>` ([see more](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function))
 
@@ -443,10 +461,12 @@ Click here
 #### cubic-bezier <!-- omit in toc -->
 
 ```html
-<button v-wave="{
+<button
+  v-wave="{
     easing: 'cubic-bezier(0,.57,.89,0)',
-}">
-Click here
+}"
+>
+  Click here
 </button>
 ```
 
@@ -457,31 +477,29 @@ Click here
 #### cancellationPeriod
 
 - **type:** `number` (milliseconds)
-- *default:* `75`
+- _default:_ `75`
 
-> The delay, in milliseconds, during which the animation will be canceled if the user moves their figure/pointer (e.g. while scrolling on a mobile device).  
+> The delay, in milliseconds, during which the animation will be canceled if the user moves their figure/pointer (e.g. while scrolling on a mobile device).
 
 > **Note:** The ripple will not appear until after the delay. This means a delay greater than 100ms can feel sluggish.
-
 
 #### trigger
 
 - **type:** `"auto" | string | boolean`
-- *default:* `"auto"`
+- _default:_ `"auto"`
 
 > Sets the behavior of the wave when used with triggers. (See the [dedication section](#using-triggers) on triggers for more details).
 
 - `false`  
-    Disables the use of triggers. If a `v-wave-trigger` (without an ID) is present in the dom tree of this element, it will be ignored (i.e. `v-wave` always behaves as if there's no trigger).
+   Disables the use of triggers. If a `v-wave-trigger` (without an ID) is present in the dom tree of this element, it will be ignored (i.e. `v-wave` always behaves as if there's no trigger).
 - `true`  
-    Requires a trigger to activate the ripple. `v-wave` assumes the presence of a `v-wave-trigger` (without an ID) in its dom tree. The ripple will only activate for `pointerdown` events on the trigger element.
+   Requires a trigger to activate the ripple. `v-wave` assumes the presence of a `v-wave-trigger` (without an ID) in its dom tree. The ripple will only activate for `pointerdown` events on the trigger element.
 - `"auto"`  
-    If a `v-wave-trigger` (without an ID) is present in the dom-tree of the v-wave element, it behaves as `trigger: true`, otherwise it behaves as `trigger: false`.
+   If a `v-wave-trigger` (without an ID) is present in the dom-tree of the v-wave element, it behaves as `trigger: true`, otherwise it behaves as `trigger: false`.
 - `string`  
-    Any string other than `"auto"` will be treated as an ID. `v-wave` will only activate when a `v-wave-trigger` with a matching ID receives a `pointerdown` event.  
+   Any string other than `"auto"` will be treated as an ID. `v-wave` will only activate when a `v-wave-trigger` with a matching ID receives a `pointerdown` event.
 
-    > This is different from the other values as it allows you to place the trigger element anywhere in the dom, while the others require the trigger to be a descendant.
-
+  > This is different from the other values as it allows you to place the trigger element anywhere in the dom, while the others require the trigger to be a descendant.
 
 <details>
     <summary>Expand example</summary>
@@ -491,7 +509,7 @@ Click here
 ```html
 <label v-wave>
   <input type="text" placeholder="Search" />
-  
+
   <!-- Only show the wave when the trigger is clicked -->
   <img v-wave-trigger src="search.svg" />
 </label>
@@ -501,10 +519,11 @@ Click here
 
 </details>
 
-#### tagName  
-- **type:** `string`  
-- *default:* `"div"`  
-  
+#### tagName
+
+- **type:** `string`
+- _default:_ `"div"`
+
 > Sets the tag name of the element used as the wave container. This is is useful in scenarios where the default `div` may interfere with `:last-of-type` or similar selectors.
 
 ---
@@ -513,14 +532,13 @@ Click here
 
 Triggers allow you to activate a wave on an element when, and only when, a different element receives input.
 
-
 In the following example, the wave will only activate for the label element when the user clicks or taps on the `<img/>`.
 
 ```html
 <label v-wave>
-    <span>Password</span>
-    <input :type="showPassword ? 'text' : 'password'" />
-    <img v-wave-trigger src="eye.svg" @click="() => showPassword = !showPassword" />
+  <span>Password</span>
+  <input :type="showPassword ? 'text' : 'password'" />
+  <img v-wave-trigger src="eye.svg" @click="() => showPassword = !showPassword" />
 </label>
 ```
 
@@ -539,12 +557,11 @@ In this next example, clicking one of the buttons will activate the wave on the 
 If you need to temporarily disable the wave effect, simply pass `false` to the directive.
 
 > Note that v-wave checks for strict `false` equality (`=== false`).  
-> Using any other *falsely* value will **not** disable the directive.  
+> Using any other _falsely_ value will **not** disable the directive.
 
 ```html
 <button v-wave="false">Click me!</button>
 ```
-
 
 ## Advanced
 
@@ -554,12 +571,14 @@ If you need to temporarily disable the wave effect, simply pass `false` to the d
 
 ```html
 <script>
-import VWave from 'v-wave'
-const { vWave, vWaveTrigger } = VWave.createLocalWaveDirective({/* global options */})
+  import VWave from 'v-wave'
+  const { vWave, vWaveTrigger } = VWave.createLocalWaveDirective({
+    /* global options */
+  })
 </script>
 
 <template>
-   <button v-wave>Click me!</button>
+  <button v-wave>Click me!</button>
 </template>
 ```
 
@@ -567,15 +586,17 @@ const { vWave, vWaveTrigger } = VWave.createLocalWaveDirective({/* global option
 
 ```html
 <script>
-import VWave from 'v-wave'
-const { wave, waveTrigger } = VWave.createLocalWaveDirective({/* global options */})
+  import VWave from 'v-wave'
+  const { wave, waveTrigger } = VWave.createLocalWaveDirective({
+    /* global options */
+  })
 
-export default {
-  directives: {
+  export default {
+    directives: {
       wave,
       waveTrigger
+    }
   }
-}
 </script>
 
 <template>
@@ -590,21 +611,27 @@ If you are using Vue 2, you need to pass `"vue2"` as the second argument to `cre
 
 ```html
 <script>
-import VWave from 'v-wave'
-const { wave, waveTrigger } = VWave.createLocalWaveDirective({/* global options */}, 'vue2') // this is the difference
+  import VWave from 'v-wave'
+  const { wave, waveTrigger } = VWave.createLocalWaveDirective(
+    {
+      /* global options */
+    },
+    'vue2'
+  ) // this is the difference
 
-export default {
-  directives: {
+  export default {
+    directives: {
       wave,
       waveTrigger
+    }
   }
-}
 </script>
 
 <template>
   <button v-wave>Click me!</button>
 </template>
 ```
+
 </details>
 
 ### Changing the directive's name
@@ -619,7 +646,7 @@ import Vue from 'vue'
 import VWave from 'v-wave'
 
 Vue.use(VWave, {
-    directive: 'ripple'
+  directive: 'ripple'
 })
 ```
 
@@ -635,7 +662,7 @@ Now you can use the plugin like so:
 
 This project is distributed under the [MIT License](https://github.com/justintaddei/v-wave/blob/master/LICENSE.md).
 
-### The MIT License (MIT)  <!-- omit in toc -->
+### The MIT License (MIT) <!-- omit in toc -->
 
 Copyright (c) 2021 Justin Taddei
 
