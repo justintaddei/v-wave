@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.1](https://github.com/justintaddei/v-wave/compare/v2.0.0...v2.0.1) (2024-06-26)
+
+
+### Bug Fixes
+
+* **deps:** bump @nuxt/kit from 3.10.0 to 3.10.1 ([a3cddb0](https://github.com/justintaddei/v-wave/commit/a3cddb0769751f7354954d174958ef96bddc6bbc))
+* **deps:** bump @nuxt/kit from 3.10.1 to 3.10.2 ([f5ab3f0](https://github.com/justintaddei/v-wave/commit/f5ab3f0effb7863dac9016e75f35bf1de1cfe2fe))
+* **deps:** bump @nuxt/kit from 3.10.2 to 3.10.3 ([384cec7](https://github.com/justintaddei/v-wave/commit/384cec7246fbfdbad404921c501759628979fda6))
+* **deps:** bump @nuxt/kit from 3.10.3 to 3.11.0 ([6491b64](https://github.com/justintaddei/v-wave/commit/6491b64ae3a62814b2884107744405593e2bf74d))
+* **deps:** bump @nuxt/kit from 3.11.0 to 3.11.1 ([8c36a57](https://github.com/justintaddei/v-wave/commit/8c36a57c47569b3f2fbabc9aca9438d05da30967))
+* **deps:** bump @nuxt/kit from 3.11.1 to 3.11.2 ([de7b11d](https://github.com/justintaddei/v-wave/commit/de7b11d9fb3f9c952dc8d7d9699cc317fc2641b6))
+* **deps:** bump @nuxt/kit from 3.11.2 to 3.12.1 ([a2c7602](https://github.com/justintaddei/v-wave/commit/a2c7602af65b7b53f51cfc9fce99d6e88b643fb3))
+* **deps:** bump @nuxt/kit from 3.12.1 to 3.12.2 ([e61e144](https://github.com/justintaddei/v-wave/commit/e61e14485b3ea36e19581916b957adaf765bf085))
+* **deps:** bump @nuxt/kit from 3.8.2 to 3.9.0 ([0892877](https://github.com/justintaddei/v-wave/commit/0892877f06b26b299141b516ddf8763592de99cd))
+* **deps:** bump @nuxt/kit from 3.9.0 to 3.9.1 ([3d5c566](https://github.com/justintaddei/v-wave/commit/3d5c5662386bd0982163ff9dcfcdf121bcd840d3))
+* **deps:** bump @nuxt/kit from 3.9.1 to 3.9.2 ([8dab91f](https://github.com/justintaddei/v-wave/commit/8dab91faaeb31e26f16fe59335d886c529920be4))
+* **deps:** bump @nuxt/kit from 3.9.2 to 3.9.3 ([88c4ecf](https://github.com/justintaddei/v-wave/commit/88c4ecf8f18c34a5ce35e8cfc7d5709f849f9bd2))
+* **deps:** bump @nuxt/kit from 3.9.3 to 3.10.0 ([a2ddcce](https://github.com/justintaddei/v-wave/commit/a2ddcce607c2c765c5e8e89962ca8feb8ebb1211))
+* **deps:** bump actions/cache from 3 to 4 ([eef04f1](https://github.com/justintaddei/v-wave/commit/eef04f123e519afa56e0e9fb942e66f2aade4fb8))
+* **deps:** bump actions/setup-node from 4.0.0 to 4.0.1 ([f0f55aa](https://github.com/justintaddei/v-wave/commit/f0f55aa32b071edefac39ed92e7f10afc89ee59d))
+* **deps:** bump actions/setup-node from 4.0.1 to 4.0.2 ([c6c7dc3](https://github.com/justintaddei/v-wave/commit/c6c7dc3cb292a9e979a3433bf8d106b3a088091c))
+* **deps:** bump braces from 3.0.2 to 3.0.3 ([6d0cf8c](https://github.com/justintaddei/v-wave/commit/6d0cf8c39164037e12e5afdef39b2b864bb22c1f))
+* **deps:** bump dependabot/fetch-metadata from 1.6.0 to 2.0.0 ([4dce01e](https://github.com/justintaddei/v-wave/commit/4dce01eeb707e4bcab842cf43999451374a9d4af))
+* **deps:** bump dependabot/fetch-metadata from 2.0.0 to 2.1.0 ([e42ad21](https://github.com/justintaddei/v-wave/commit/e42ad217d9b7a9fd12dcf52fbf159cbf1daf1da2))
+* **deps:** bump tar from 6.2.0 to 6.2.1 ([c06fa35](https://github.com/justintaddei/v-wave/commit/c06fa35416232ae84942702d2fd5de7b1bc1ae94))
+
 ## [2.0.0](https://github.com/justintaddei/v-wave/compare/v1.5.1...v2.0.0) (2023-12-07)
 
 ### ⚠ BREAKING CHANGES
