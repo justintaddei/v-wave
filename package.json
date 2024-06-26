@@ -1,6 +1,6 @@
 {
   "name": "v-wave",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "The material-ripple directive for Vue that actually works",
   "type": "module",
   "main": "dist/cjs/index.cjs",
