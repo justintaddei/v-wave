@@ -239,17 +239,19 @@ export default {
 
 ### Summary
 
-| Name                                      |     Default      | Type                          |
-| ----------------------------------------- | :--------------: | ----------------------------- |
-| [color](#color)                           | `"currentColor"` | `string`                      |
-| [initialOpacity](#initialopacity)         |      `0.2`       | `number`                      |
-| [finalOpacity](#finalopacity)             |      `0.1`       | `number`                      |
-| [duration](#duration)                     |      `0.4`       | `number`                      |
-| [dissolveDuration](#dissolveduration)     |      `0.15`      | `number`                      |
-| [easing](#easing)                         |    `ease-out`    | `string`                      |
-| [cancellationPeriod](#cancellationperiod) |       `75`       | `number`                      |
-| [trigger](#trigger)                       |     `"auto"`     | `string \| boolean \| "auto"` |
-| [tagName](#tagname)                       |     `"div"`      | `string`                      |
+| Name                                                  |     Default      | Type                          |
+| ----------------------------------------------------- | :--------------: | ----------------------------- |
+| [color](#color)                                       | `"currentColor"` | `string`                      |
+| [initialOpacity](#initialopacity)                     |      `0.2`       | `number`                      |
+| [finalOpacity](#finalopacity)                         |      `0.1`       | `number`                      |
+| [duration](#duration)                                 |      `0.4`       | `number`                      |
+| [dissolveDuration](#dissolveduration)                 |      `0.15`      | `number`                      |
+| [easing](#easing)                                     |    `ease-out`    | `string`                      |
+| [cancellationPeriod](#cancellationperiod)             |       `75`       | `number`                      |
+| [trigger](#trigger)                                   |     `"auto"`     | `string \| boolean \| "auto"` |
+| [disabled](#disabled)                                 |     `false`      | `boolean`                     |
+| [respectDisabledAttribute](#respectdisabledattribute) |      `true`      | `boolean`                     |
+| [tagName](#tagname)                                   |     `"div"`      | `string`                      |
 
 ### Details
 
