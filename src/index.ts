@@ -1,11 +1,11 @@
-import type { App, Directive, DirectiveBinding } from 'vue'
+import type { App, Directive } from 'vue'
 import { DEFAULT_PLUGIN_OPTIONS, IVWaveDirectiveOptions, IVWavePluginOptions } from './options'
 import { getHooks } from './utils/hookKeys'
 import { markWaveBoundary } from './utils/markWaveBoundary'
 import { triggerIsID } from './utils/triggerIsID'
 import { wave } from './wave'
 
-const optionMap = new WeakMap<HTMLElement, Partial<IVWaveDirectiveOptions> | false>()
+const optionMap = new WeakMap<HTMLElement, Partial<IVWaveDirectiveOptions>>()
 
 interface VWaveInstallObject {
   install: (app: any, globalUserOptions: Partial<IVWavePluginOptions>) => void
@@ -37,8 +37,8 @@ const createDirective = (
     associatedElements.forEach((el) => wave(event, el, { ...globalOptions, ...optionMap.get(el) }))
   }
 
-  const waveDirective: Directive = {
-    [hooks.mounted](el: HTMLElement, { value = {} }: DirectiveBinding<Partial<IVWaveDirectiveOptions> | false>) {
+  const waveDirective: Directive<HTMLElement, Partial<IVWaveDirectiveOptions>> = {
+    [hooks.mounted](el, { value = {} }) {
       optionMap.set(el, value)
 
       markWaveBoundary(el, (value && value.trigger) ?? globalOptions.trigger)
@@ -58,20 +58,20 @@ const createDirective = (
         wave(event, el, options)
       })
     },
-    [hooks.updated](el: HTMLElement, { value = {} }: DirectiveBinding<Partial<IVWaveDirectiveOptions> | false>) {
+    [hooks.updated](el, { value = {} }) {
       optionMap.set(el, value)
       markWaveBoundary(el, (value && value.trigger) ?? globalOptions.trigger)
     },
   }
 
-  const triggerDirective: Directive = {
-    [hooks.mounted](el: HTMLElement, { arg: trigger = 'true' }: DirectiveBinding) {
+  const triggerDirective: Directive<HTMLElement> = {
+    [hooks.mounted](el, { arg: trigger = 'true' }) {
       el.dataset.vWaveTrigger = trigger
 
       if (trigger !== 'true') el.addEventListener('pointerdown', handleTrigger)
     },
 
-    [hooks.updated](el: HTMLElement, { arg: trigger = 'true' }: DirectiveBinding) {
+    [hooks.updated](el, { arg: trigger = 'true' }) {
       el.dataset.vWaveTrigger = trigger
 
       if (trigger === 'true') el.removeEventListener('pointerdown', handleTrigger)

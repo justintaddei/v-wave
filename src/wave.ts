@@ -6,6 +6,10 @@ import { getRelativePointer } from './utils/getRelativePointer'
 import { decrementWaveCount, deleteWaveCount, getWaveCount, incrementWaveCount } from './utils/wave-count'
 
 const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOptions) => {
+  if (options.disabled) return
+
+  if (options.respectDisabledAttribute && el.hasAttribute('disabled')) return
+
   const rect = el.getBoundingClientRect()
   const computedStyles = window.getComputedStyle(el)
 
