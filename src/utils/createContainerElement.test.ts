@@ -1,4 +1,5 @@
-import { createContainer } from '../../src/utils/createContainerElement'
+import { expect, test } from 'vitest'
+import { createContainer } from './createContainerElement'
 
 test('createContainerElement returns a an element based on `tagName`', () => {
   expect(createContainer({} as CSSStyleDeclaration, 'div')).toMatchSnapshot()

@@ -1,4 +1,5 @@
-import { triggerIsID } from '../../src/utils/triggerIsID'
+import { expect, test } from 'vitest'
+import { triggerIsID } from './triggerIsID'
 
 test('markWaveBoundary', () => {
   expect(triggerIsID('auto')).toEqual(false)

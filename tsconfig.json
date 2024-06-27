@@ -4,13 +4,14 @@
     "module": "es2015",
     "lib": ["DOM", "es2015"],
     "removeComments": false,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
     "noImplicitAny": true,
-    "esModuleInterop": true
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*", "nuxt"]
+  "exclude": ["node_modules", "nuxt"]
 }

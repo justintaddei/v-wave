@@ -1,4 +1,5 @@
-import { markWaveBoundary } from '../../src/utils/markWaveBoundary'
+import { describe, expect, test } from 'vitest'
+import { markWaveBoundary } from './markWaveBoundary'
 
 describe('markWaveBoundary', () => {
   test('sets dataset to true when trigger is not an id', () => {

@@ -1,4 +1,5 @@
-import { decrementWaveCount, deleteWaveCount, getWaveCount, incrementWaveCount } from '../../src/utils/wave-count'
+import { describe, expect, test } from 'vitest'
+import { decrementWaveCount, deleteWaveCount, getWaveCount, incrementWaveCount } from './wave-count'
 
 const WAVE_COUNT = 'vWaveCountInternal'
 

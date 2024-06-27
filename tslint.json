@@ -1,7 +1,0 @@
-{
-  "extends": ["tslint:recommended", "tslint-config-prettier"],
-  "rules": {
-    "no-console": true,
-    "only-arrow-functions": false
-  }
-}
