@@ -2,7 +2,7 @@ name: Publish
 
 on:
   workflow_run:
-    workflows: [CI]
+    workflows: [Checks]
     branches: [master]
     types: [completed]
 

@@ -1,6 +1,6 @@
-name: Dependabot auto-approve
-
-on: pull_request_target
+name: Dependabot auto-approve & auto-merge
+on: 
+  pull_request:
 
 permissions:
   pull-requests: write
@@ -9,30 +9,25 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
+    # Checking the author will prevent this Action run failing on non-Dependabot PRs
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v2.1.0
+        id: dependabot-metadata
+        uses: dependabot/fetch-metadata@v1
         with:
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
-
-      - name: Approve PR
-        run: gh pr review --approve "$PR_URL"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: actions/checkout@v4
+      - name: Approve a PR
+        run: 
+          gh pr review --approve "$PR_URL"
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Enable auto-merge for Dependabot PRs
-        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
+        # Only auto merge non-major dependency upgrade
+        if: ${{ steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major' }}
         run: gh pr merge --auto --merge "$PR_URL"
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      - name: Tag me in the PR if it's a major release
-        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-major'}}
-        run: gh pr comment "$PR_URL" --body "@justintaddei, this is major release. Your approval is needed before merging."
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
