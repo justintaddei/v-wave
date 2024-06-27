@@ -74,6 +74,7 @@ After installing and registering the plugin, this is all you need to get started
     - [trigger](#trigger)
     - [disabled](#disabled)
     - [respectDisabledAttribute](#respectdisabledattribute)
+    - [stopPropagation](#stoppropagation)
     - [tagName](#tagname)
   - [Using triggers](#using-triggers)
 - [Advanced](#advanced)
@@ -251,6 +252,7 @@ export default {
 | [trigger](#trigger)                                   |     `"auto"`     | `string \| boolean \| "auto"` |
 | [disabled](#disabled)                                 |     `false`      | `boolean`                     |
 | [respectDisabledAttribute](#respectdisabledattribute) |      `true`      | `boolean`                     |
+| [stopPropagation](#stoppropagation)                   |     `false`      | `boolean`                     |
 | [tagName](#tagname)                                   |     `"div"`      | `string`                      |
 
 ### Details
@@ -542,6 +544,13 @@ export default {
 <!-- The wave *will* appear on this button -->
 <button v-wave="{respectDisabledAttribute: false}" disabled>Click me!</button>
 ```
+
+#### stopPropagation
+
+- **type:** `boolean`
+- _default:_ `false`
+
+> Prevents the `pointerdown` event from propagating to parent elements.
 
 #### tagName
 
