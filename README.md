@@ -8,15 +8,14 @@
 The material-ripple directive for Vue that actually works
 </p>
 
-![Checks](https://github.com/justintaddei/v-wave/workflows/checks/badge.svg)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/justintaddei/v-wave/main.yml?logo=github&label=checks)
 ![Vue Support](https://img.shields.io/badge/vue-2%20&%203-1cb884.svg?style=flat)
 [![Issues](https://img.shields.io/github/issues-raw/justintaddei/v-wave.svg?style=flat)](https://github.com/justintaddei/v-wave/issues)
 ![NPM version](https://img.shields.io/npm/v/v-wave.svg?style=flat)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/v-wave?color=%234c1&label=gzipped)
 ![Downloads per month](https://img.shields.io/npm/dm/v-wave.svg?style=flat)
 ![Total downloads](https://img.shields.io/npm/dt/v-wave.svg?style=flat&label=total+downloads)
+![Language](https://img.shields.io/badge/types-included-blue.svg?style=flat)
 ![License](https://img.shields.io/npm/l/v-wave.svg?style=flat)
-![Language](https://img.shields.io/badge/language-typescript-blue.svg?style=flat)
 
 <sub>Also available for React: [use-wave](https://github.com/justintaddei/use-wave)</sub>
 
