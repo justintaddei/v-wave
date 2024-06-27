@@ -1,4 +1,4 @@
-import { App, Directive, DirectiveBinding } from 'vue'
+import type { App, Directive, DirectiveBinding } from 'vue'
 import { DEFAULT_PLUGIN_OPTIONS, IVWaveDirectiveOptions, IVWavePluginOptions } from './options'
 import { getHooks } from './utils/hookKeys'
 import { markWaveBoundary } from './utils/markWaveBoundary'
@@ -44,9 +44,9 @@ const createDirective = (
       markWaveBoundary(el, (value && value.trigger) ?? globalOptions.trigger)
 
       el.addEventListener('pointerdown', (event) => {
-        if (optionMap.get(el) === false) return
+        if (!optionMap.has(el)) return
 
-        const options = { ...globalOptions, ...optionMap.get(el)! }
+        const options = { ...globalOptions, ...optionMap.get(el) }
 
         if (options.trigger === false) return wave(event, el, options)
 
@@ -61,7 +61,7 @@ const createDirective = (
     [hooks.updated](el: HTMLElement, { value = {} }: DirectiveBinding<Partial<IVWaveDirectiveOptions> | false>) {
       optionMap.set(el, value)
       markWaveBoundary(el, (value && value.trigger) ?? globalOptions.trigger)
-    }
+    },
   }
 
   const triggerDirective: Directive = {
@@ -76,14 +76,14 @@ const createDirective = (
 
       if (trigger === 'true') el.removeEventListener('pointerdown', handleTrigger)
       else el.addEventListener('pointerdown', handleTrigger)
-    }
+    },
   }
 
   return {
     wave: waveDirective,
     vWave: waveDirective,
     waveTrigger: triggerDirective,
-    vWaveTrigger: triggerDirective
+    vWaveTrigger: triggerDirective,
   }
 }
 
@@ -101,7 +101,7 @@ const VWave: VWaveInstallObject & { createLocalWaveDirective: typeof createDirec
     app.directive(`${globalOptions.directive}-trigger`, vWaveTrigger)
   },
   installed: false,
-  createLocalWaveDirective: createDirective
+  createLocalWaveDirective: createDirective,
 }
 
 export default VWave

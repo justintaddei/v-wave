@@ -1,4 +1,4 @@
-import { IVWaveDirectiveOptions } from '../options'
+import type { IVWaveDirectiveOptions } from '../options'
 
 export const createWaveElement = (x: number, y: number, size: number, options: IVWaveDirectiveOptions) => {
   const waveElement = document.createElement('div')
@@ -11,7 +11,7 @@ export const createWaveElement = (x: number, y: number, size: number, options: I
   waveElement.style.background = options.color
   waveElement.style.borderRadius = '50%'
   waveElement.style.opacity = `${options.initialOpacity}`
-  waveElement.style.transform = `translate(-50%,-50%) scale(0)`
+  waveElement.style.transform = 'translate(-50%,-50%) scale(0)'
   waveElement.style.transition = `transform ${options.duration}s ${options.easing}, opacity ${options.duration}s ${options.easing}`
 
   return waveElement

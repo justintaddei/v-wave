@@ -110,7 +110,7 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   easing: 'ease-out',
   cancellationPeriod: 75,
   trigger: 'auto',
-  tagName: 'div'
+  tagName: 'div',
 }
 
-export { DEFAULT_PLUGIN_OPTIONS, IVWavePluginOptions, IVWaveDirectiveOptions }
+export { DEFAULT_PLUGIN_OPTIONS, type IVWavePluginOptions, type IVWaveDirectiveOptions }

@@ -1,5 +1,5 @@
 import * as _vue from 'vue'
-import { App } from 'vue'
+import type { App } from 'vue'
 
 interface Vue2 {
   default: {

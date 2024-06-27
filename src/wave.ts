@@ -1,4 +1,4 @@
-import { IVWaveDirectiveOptions } from './options'
+import type { IVWaveDirectiveOptions } from './options'
 import { createContainer } from './utils/createContainerElement'
 import { createWaveElement } from './utils/createWaveElement'
 import { getDistanceToFurthestCorner } from './utils/getDistanceToFurthestCorner'
@@ -32,7 +32,7 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
   el.appendChild(waveContainer)
 
   let shouldDissolveWave = false
-  const releaseWave = (e?: any) => {
+  const releaseWave = (e?: PointerEvent) => {
     if (typeof e !== 'undefined') {
       document.removeEventListener('pointerup', releaseWave)
       document.removeEventListener('pointercancel', releaseWave)
@@ -66,7 +66,7 @@ const wave = (event: PointerEvent, el: HTMLElement, options: IVWaveDirectiveOpti
     document.removeEventListener('pointercancel', cancelWave)
 
     requestAnimationFrame(() => {
-      waveEl.style.transform = `translate(-50%,-50%) scale(1)`
+      waveEl.style.transform = 'translate(-50%,-50%) scale(1)'
       waveEl.style.opacity = `${options.finalOpacity}`
 
       setTimeout(() => releaseWave(), options.duration * 1000)

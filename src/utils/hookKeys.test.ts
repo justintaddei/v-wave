@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test, vi } from 'vitest'
-import { getHooks } from './hookKeys'
 import type { App } from 'vue'
+import { getHooks } from './hookKeys'
 
 describe('hookKeys', () => {
   beforeAll(() => {
