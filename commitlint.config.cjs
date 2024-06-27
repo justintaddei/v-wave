@@ -3,6 +3,7 @@ module.exports = {
   rules: {
     'body-max-length': [0],
     'body-max-line-length': [0],
+    'footer-max-line-length': [0],
   },
   ignores: [
     (commit) => {
