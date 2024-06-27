@@ -76,8 +76,31 @@ interface IVWaveDirectiveOptions {
    * Sets the tag name of the element used as the wave container. This is is useful in scenarios where the default `div` may interfere with `:last-of-type` selectors.
    *
    * @default
+   * 'div'
    */
   tagName: string
+
+  /**
+   * Disables the wave effect on the element.
+   *
+   * @default
+   * false
+   */
+  disabled: boolean
+
+  /**
+   * If `true`, the wave effect will be disabled if the html `disabled` attribute is present on the element.
+   *
+   * @example
+   * ```html
+   * <!-- The wave will not appear on this button -->
+   * <button v-wave disabled>Click me!</button>
+   * ```
+   *
+   * @default
+   * true
+   */
+  respectDisabledAttribute: boolean
 }
 
 interface IVWavePluginOptions extends IVWaveDirectiveOptions {
@@ -111,6 +134,8 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   cancellationPeriod: 75,
   trigger: 'auto',
   tagName: 'div',
+  disabled: false,
+  respectDisabledAttribute: true,
 }
 
 export { DEFAULT_PLUGIN_OPTIONS, type IVWavePluginOptions, type IVWaveDirectiveOptions }

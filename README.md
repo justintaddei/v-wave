@@ -72,9 +72,10 @@ After installing and registering the plugin, this is all you need to get started
     - [easing](#easing)
     - [cancellationPeriod](#cancellationperiod)
     - [trigger](#trigger)
+    - [disabled](#disabled)
+    - [respectDisabledAttribute](#respectdisabledattribute)
     - [tagName](#tagname)
   - [Using triggers](#using-triggers)
-  - [Disabling the directive](#disabling-the-directive)
 - [Advanced](#advanced)
   - [Registering the directive locally](#registering-the-directive-locally)
     - [Local registration with Composition API:](#local-registration-with-composition-api)
@@ -519,6 +520,27 @@ export default {
 
 </details>
 
+#### disabled
+
+- **type:** `boolean`
+- _default:_ `false`
+
+> Disables the wave effect on the element regardless of [`respectDisabledAttribute`](#respectdisabledattribute).
+
+#### respectDisabledAttribute
+
+- **type:** `boolean`
+- _default:_ `true`
+
+> When `true`, the wave effect will be disabled if the html `disabled` attribute is present on the element.
+
+```html
+<!-- The wave will *not* appear on this button -->
+<button v-wave disabled>Click me!</button>
+<!-- The wave *will* appear on this button -->
+<button v-wave="{respectDisabledAttribute: false}" disabled>Click me!</button>
+```
+
 #### tagName
 
 - **type:** `string`
@@ -551,17 +573,6 @@ In this next example, clicking one of the buttons will activate the wave on the 
 ```
 
 > Triggers that use an ID support many-to-many relationships. See the grid example on the [example page](https://justintaddei.github.io/v-wave).
-
-### Disabling the directive
-
-If you need to temporarily disable the wave effect, simply pass `false` to the directive.
-
-> Note that v-wave checks for strict `false` equality (`=== false`).  
-> Using any other _falsely_ value will **not** disable the directive.
-
-```html
-<button v-wave="false">Click me!</button>
-```
 
 ## Advanced
 

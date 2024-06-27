@@ -5,11 +5,13 @@ exports[`has documented default options 1`] = `
   "cancellationPeriod": 75,
   "color": "currentColor",
   "directive": "wave",
+  "disabled": false,
   "dissolveDuration": 0.15,
   "duration": 0.4,
   "easing": "ease-out",
   "finalOpacity": 0.1,
   "initialOpacity": 0.2,
+  "respectDisabledAttribute": true,
   "tagName": "div",
   "trigger": "auto",
 }
