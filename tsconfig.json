@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "ES2016",
     "module": "es2015",
-    "lib": ["DOM", "es2015"],
+    "lib": ["DOM", "es2016"],
     "removeComments": false,
     "moduleResolution": "Bundler",
     "declaration": true,
