@@ -12,10 +12,12 @@
   "files": ["dist/**/*", "nuxt/**/*"],
   "scripts": {
     "build": "tsup src/index.ts --clean --dts --format esm,cjs,iife --global-name VWave",
+    "dev": "tsup src/index.ts --watch --dts --format esm,cjs,iife --global-name VWave",
     "lint": "biome check --write && tsc",
     "lint:no-write": "biome check && tsc",
     "test": "vitest run --run",
-    "test:watch": "vitest --coverage",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --run --coverage",
     "prepare": "husky"
   },
   "devDependencies": {

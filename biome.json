@@ -4,7 +4,7 @@
     "enabled": true,
     "formatWithErrors": false,
     "indentStyle": "space",
-    "lineEnding": "lf",
+    "lineEnding": "crlf",
     "lineWidth": 120
   },
   "organizeImports": { "enabled": true },

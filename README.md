@@ -81,6 +81,7 @@ After installing and registering the plugin, this is all you need to get started
     - [Local registration with Composition API:](#local-registration-with-composition-api)
     - [Local registration with Options API:](#local-registration-with-options-api)
   - [Changing the directive's name](#changing-the-directives-name)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
@@ -657,6 +658,10 @@ Now you can use the plugin like so:
 ```
 
 > Keep in mind that this option can only be set globally (i.e. it cannot be set on individual directives).
+
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](https://github.com/justintaddei/v-wave/blob/master/CONTRIBUTING.md) for more details.
 
 ## License
 
