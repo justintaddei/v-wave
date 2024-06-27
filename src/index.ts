@@ -48,6 +48,8 @@ const createDirective = (
 
         const options = { ...globalOptions, ...optionMap.get(el) }
 
+        if (options.stopPropagation) event.stopPropagation()
+
         if (options.trigger === false) return wave(event, el, options)
 
         if (triggerIsID(options.trigger)) return

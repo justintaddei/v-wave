@@ -101,6 +101,14 @@ interface IVWaveDirectiveOptions {
    * true
    */
   respectDisabledAttribute: boolean
+
+  /**
+   * Prevents the pointerdown event from propagating to parent elements
+   *
+   * @default
+   * false
+   */
+  stopPropagation: boolean
 }
 
 interface IVWavePluginOptions extends IVWaveDirectiveOptions {
@@ -136,6 +144,7 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   tagName: 'div',
   disabled: false,
   respectDisabledAttribute: true,
+  stopPropagation: false,
 }
 
 export { DEFAULT_PLUGIN_OPTIONS, type IVWavePluginOptions, type IVWaveDirectiveOptions }

@@ -12,6 +12,7 @@ exports[`has documented default options 1`] = `
   "finalOpacity": 0.1,
   "initialOpacity": 0.2,
   "respectDisabledAttribute": true,
+  "stopPropagation": false,
   "tagName": "div",
   "trigger": "auto",
 }
