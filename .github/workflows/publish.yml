@@ -31,7 +31,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           cache: "pnpm"
         if: ${{ steps.release.outputs.release_created }}
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         with:
           version: 9
       - run: pnpm install --frozen-lockfile
