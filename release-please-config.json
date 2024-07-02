@@ -5,9 +5,15 @@
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false,
+      "include-component-in-tag": false,
       "draft": false,
       "prerelease": false
     }
   },
+  "plugins": [
+    {
+      "type": "sentence-case"
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
