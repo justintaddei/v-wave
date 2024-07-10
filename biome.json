@@ -7,17 +7,22 @@
     "lineEnding": "crlf",
     "lineWidth": 120
   },
-  "organizeImports": { "enabled": true },
+  "organizeImports": {
+    "enabled": true
+  },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
       "complexity": {
-        "noForEach": { "level": "off" },
-        "useOptionalChain": { "level": "off" }
+        "noForEach": {
+          "level": "off"
+        }
       },
       "suspicious": {
-        "noExplicitAny": { "level": "off" }
+        "noExplicitAny": {
+          "level": "off"
+        }
       }
     }
   },
@@ -30,6 +35,6 @@
     }
   },
   "files": {
-    "ignore": ["dist/**", "node_modules/**", "nuxt/**", "coverage/**"]
+    "ignore": ["dist/**", "node_modules/**", "nuxt/**", "coverage/**", ".vscode/**"]
   }
 }

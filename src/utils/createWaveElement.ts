@@ -1,6 +1,7 @@
 import type { IVWaveDirectiveOptions } from '../options'
+import type { Vector } from '../types'
 
-export const createWaveElement = (x: number, y: number, size: number, options: IVWaveDirectiveOptions) => {
+export const createWaveElement = ({ x, y }: Vector, size: number, options: IVWaveDirectiveOptions) => {
   const waveElement = document.createElement('div')
 
   waveElement.style.position = 'absolute'

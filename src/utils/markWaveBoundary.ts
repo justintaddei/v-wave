@@ -1,5 +1,5 @@
 import { triggerIsID } from './triggerIsID'
 
-export const markWaveBoundary = (el: HTMLElement, trigger: any) => {
-  el.dataset.vWaveBoundary = triggerIsID(trigger) ? (trigger as string) : 'true'
+export const markWaveBoundary = (el: HTMLElement, trigger: string | boolean) => {
+  el.dataset.vWaveBoundary = triggerIsID(trigger) ? trigger : 'true'
 }
