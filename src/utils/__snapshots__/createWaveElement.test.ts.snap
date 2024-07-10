@@ -1,7 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`createWaveElement returns a <div> 1`] = `
-<div
-  style="position: absolute; width: 0px; height: 0px; top: 0px; left: 0px; border-radius: 50%; transform: translate(-50%,-50%) scale(0); transition: transform undefineds undefined, opacity undefineds undefined;"
-/>
-`;

@@ -41,7 +41,7 @@ const createDirective = (
     [hooks.mounted](el, { value = {} }) {
       optionMap.set(el, value)
 
-      markWaveBoundary(el, (value && value.trigger) ?? globalOptions.trigger)
+      markWaveBoundary(el, value?.trigger ?? globalOptions.trigger)
 
       el.addEventListener('pointerdown', (event) => {
         if (!optionMap.has(el)) return
@@ -62,7 +62,7 @@ const createDirective = (
     },
     [hooks.updated](el, { value = {} }) {
       optionMap.set(el, value)
-      markWaveBoundary(el, (value && value.trigger) ?? globalOptions.trigger)
+      markWaveBoundary(el, value?.trigger ?? globalOptions.trigger)
     },
   }
 

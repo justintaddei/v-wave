@@ -1,1 +1,2 @@
-export const triggerIsID = (trigger: string | boolean) => typeof trigger === 'string' && trigger !== 'auto'
+export const triggerIsID = (trigger: string | boolean): trigger is string /* and not 'auto' */ =>
+  typeof trigger === 'string' && trigger !== 'auto'
