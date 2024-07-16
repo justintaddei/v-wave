@@ -103,6 +103,14 @@ interface IVWaveDirectiveOptions {
   respectDisabledAttribute: boolean
 
   /**
+   * If `true`, the wave effect will be disabled if the user's `prefers-reduced-motion` preference is set to `reduce`.
+   *
+   * @default
+   * true
+   */
+  respectPrefersReducedMotion: boolean
+
+  /**
    * Prevents the pointerdown event from propagating to parent elements
    *
    * @default
@@ -144,6 +152,7 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   tagName: 'div',
   disabled: false,
   respectDisabledAttribute: true,
+  respectPrefersReducedMotion: true,
   stopPropagation: false,
 }
 

@@ -16,6 +16,7 @@ const SCALE_FACTOR = 2.05
 const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOptions) => {
   if (options.disabled) return
   if (options.respectDisabledAttribute && el.hasAttribute('disabled')) return
+  if (options.respectPrefersReducedMotion && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
   const rect = el.getBoundingClientRect()
   const computedStyles = window.getComputedStyle(el)
