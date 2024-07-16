@@ -74,6 +74,7 @@ After installing and registering the plugin, this is all you need to get started
     - [trigger](#trigger)
     - [disabled](#disabled)
     - [respectDisabledAttribute](#respectdisabledattribute)
+    - [respectPrefersReducedMotion](#respectprefersreducedmotion)
     - [stopPropagation](#stoppropagation)
     - [tagName](#tagname)
   - [Using triggers](#using-triggers)
@@ -240,20 +241,21 @@ export default {
 
 ### Summary
 
-| Name                                                  |     Default      | Type                          |
-| ----------------------------------------------------- | :--------------: | ----------------------------- |
-| [color](#color)                                       | `"currentColor"` | `string`                      |
-| [initialOpacity](#initialopacity)                     |      `0.2`       | `number`                      |
-| [finalOpacity](#finalopacity)                         |      `0.1`       | `number`                      |
-| [duration](#duration)                                 |      `0.4`       | `number`                      |
-| [dissolveDuration](#dissolveduration)                 |      `0.15`      | `number`                      |
-| [easing](#easing)                                     |    `ease-out`    | `string`                      |
-| [cancellationPeriod](#cancellationperiod)             |       `75`       | `number`                      |
-| [trigger](#trigger)                                   |     `"auto"`     | `string \| boolean \| "auto"` |
-| [disabled](#disabled)                                 |     `false`      | `boolean`                     |
-| [respectDisabledAttribute](#respectdisabledattribute) |      `true`      | `boolean`                     |
-| [stopPropagation](#stoppropagation)                   |     `false`      | `boolean`                     |
-| [tagName](#tagname)                                   |     `"div"`      | `string`                      |
+| Name                                                   |     Default      | Type                          |
+| ------------------------------------------------------ | :--------------: | ----------------------------- |
+| [color](#color)                                        | `"currentColor"` | `string`                      |
+| [initialOpacity](#initialopacity)                      |      `0.2`       | `number`                      |
+| [finalOpacity](#finalopacity)                          |      `0.1`       | `number`                      |
+| [duration](#duration)                                  |      `0.4`       | `number`                      |
+| [dissolveDuration](#dissolveduration)                  |      `0.15`      | `number`                      |
+| [easing](#easing)                                      |    `ease-out`    | `string`                      |
+| [cancellationPeriod](#cancellationperiod)              |       `75`       | `number`                      |
+| [trigger](#trigger)                                    |     `"auto"`     | `string \| boolean \| "auto"` |
+| [disabled](#disabled)                                  |     `false`      | `boolean`                     |
+| [respectDisabledAttribute](#respectdisabledattribute)  |      `true`      | `boolean`                     |
+| [respectPrefersReducedMotion](#respectpreferredmotion) |      `true`      | `boolean`                     |
+| [stopPropagation](#stoppropagation)                    |     `false`      | `boolean`                     |
+| [tagName](#tagname)                                    |     `"div"`      | `string`                      |
 
 ### Details
 
@@ -544,6 +546,13 @@ export default {
 <!-- The wave *will* appear on this button -->
 <button v-wave="{respectDisabledAttribute: false}" disabled>Click me!</button>
 ```
+
+#### respectPrefersReducedMotion 
+
+- **type:** `boolean`
+- _default:_ `true`
+
+> If `true`, the wave effect will be disabled if the user's [`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) preference is set to `reduce`.
 
 #### stopPropagation
 
