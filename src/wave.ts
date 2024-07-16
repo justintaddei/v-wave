@@ -39,7 +39,7 @@ const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOption
   waveContainer.appendChild(waveEl)
   el.appendChild(waveContainer)
 
-  let shouldDissolveWave = false
+  let shouldDissolveWave = !options.waitForRelease
   const releaseWave = (e?: PointerEvent) => {
     if (typeof e !== 'undefined') {
       document.removeEventListener('pointerup', releaseWave)
@@ -67,8 +67,10 @@ const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOption
     }, options.dissolveDuration * 1000)
   }
 
-  document.addEventListener('pointerup', releaseWave)
-  document.addEventListener('pointercancel', releaseWave)
+  if (options.waitForRelease) {
+    document.addEventListener('pointerup', releaseWave)
+    document.addEventListener('pointercancel', releaseWave)
+  }
 
   const token = setTimeout(() => {
     document.removeEventListener('pointercancel', cancelWave)

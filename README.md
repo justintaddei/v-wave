@@ -69,6 +69,7 @@ After installing and registering the plugin, this is all you need to get started
     - [finalOpacity](#finalopacity)
     - [duration](#duration)
     - [dissolveDuration](#dissolveduration)
+    - [waitForRelease](#waitforrelease)
     - [easing](#easing)
     - [cancellationPeriod](#cancellationperiod)
     - [trigger](#trigger)
@@ -248,6 +249,7 @@ export default {
 | [finalOpacity](#finalopacity)                          |      `0.1`       | `number`                      |
 | [duration](#duration)                                  |      `0.4`       | `number`                      |
 | [dissolveDuration](#dissolveduration)                  |      `0.15`      | `number`                      |
+| [waitForRelease](#waitforrelease)                      |      `true`      | `boolean`                     |
 | [easing](#easing)                                      |    `ease-out`    | `string`                      |
 | [cancellationPeriod](#cancellationperiod)              |       `75`       | `number`                      |
 | [trigger](#trigger)                                    |     `"auto"`     | `string \| boolean \| "auto"` |
@@ -454,6 +456,13 @@ export default {
 ![](https://raw.githubusercontent.com/justintaddei/v-wave/assets/dissolve-duration-3s.gif)
 
 </details>
+
+#### waitForRelease
+
+- **type:** `boolean`
+- _default:_ `true`
+
+> When `true`, the wave will not dissolve until the user releases the pointer.
 
 #### easing
 

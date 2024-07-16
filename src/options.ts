@@ -38,6 +38,12 @@ interface IVWaveDirectiveOptions {
    * 0.15
    */
   dissolveDuration: number
+  /* When `true`, the wave will not dissolve until the user releases the pointer.
+   *
+   * @default
+   * true
+   */
+  waitForRelease: boolean
   /**
    * Any valid CSS `<timing-function>`
    *
@@ -146,6 +152,7 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   finalOpacity: 0.1,
   duration: 0.4,
   dissolveDuration: 0.15,
+  waitForRelease: true,
   easing: 'ease-out',
   cancellationPeriod: 75,
   trigger: 'auto',
