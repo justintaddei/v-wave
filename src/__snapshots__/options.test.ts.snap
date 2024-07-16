@@ -16,5 +16,6 @@ exports[`has documented default options 1`] = `
   "stopPropagation": false,
   "tagName": "div",
   "trigger": "auto",
+  "waitForRelease": true,
 }
 `;
