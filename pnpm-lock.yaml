@@ -23,13 +23,13 @@ importers:
         version: 19.2.2
       '@vitest/coverage-v8':
         specifier: ^2.0.1
-        version: 2.0.5(vitest@2.0.5(@types/node@20.14.9)(jsdom@24.1.1))
+        version: 2.0.5(vitest@2.0.5(@types/node@20.14.9)(jsdom@25.0.0))
       husky:
         specifier: ^9.0.11
         version: 9.1.5
       jsdom:
-        specifier: ^24.1.0
-        version: 24.1.1
+        specifier: ^25.0.0
+        version: 25.0.0
       tsup:
         specifier: ^8.1.0
         version: 8.2.4(jiti@1.21.6)(postcss@8.4.40)(typescript@5.5.4)(yaml@2.4.5)
@@ -38,7 +38,7 @@ importers:
         version: 5.5.4
       vitest:
         specifier: ^2.0.1
-        version: 2.0.5(@types/node@20.14.9)(jsdom@24.1.1)
+        version: 2.0.5(@types/node@20.14.9)(jsdom@25.0.0)
       vue:
         specifier: ^3.4.30
         version: 3.4.38(typescript@5.5.4)
@@ -1308,8 +1308,8 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
-  jsdom@24.1.1:
-    resolution: {integrity: sha512-5O1wWV99Jhq4DV7rCLIoZ/UIhyQeDR7wHVyZAHAshbrvZsLs+Xzz7gtwnlJTJDjleiTKh54F4dXrX70vJQTyJQ==}
+  jsdom@25.0.0:
+    resolution: {integrity: sha512-OhoFVT59T7aEq75TVw9xxEfkXgacpqAhQaYgP9y/fDqWQCMB/b1H66RfmPm/MaeaAIU9nDwMOVTlPN51+ao6CQ==}
     engines: {node: '>=18'}
     peerDependencies:
       canvas: ^2.11.2
@@ -2675,7 +2675,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@vitest/coverage-v8@2.0.5(vitest@2.0.5(@types/node@20.14.9)(jsdom@24.1.1))':
+  '@vitest/coverage-v8@2.0.5(vitest@2.0.5(@types/node@20.14.9)(jsdom@25.0.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -2689,7 +2689,7 @@ snapshots:
       std-env: 3.7.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.0.5(@types/node@20.14.9)(jsdom@24.1.1)
+      vitest: 2.0.5(@types/node@20.14.9)(jsdom@25.0.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3356,7 +3356,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsdom@24.1.1:
+  jsdom@25.0.0:
     dependencies:
       cssstyle: 4.0.1
       data-urls: 5.0.0
@@ -3967,7 +3967,7 @@ snapshots:
       '@types/node': 20.14.9
       fsevents: 2.3.3
 
-  vitest@2.0.5(@types/node@20.14.9)(jsdom@24.1.1):
+  vitest@2.0.5(@types/node@20.14.9)(jsdom@25.0.0):
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@vitest/expect': 2.0.5
@@ -3990,7 +3990,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.14.9
-      jsdom: 24.1.1
+      jsdom: 25.0.0
     transitivePeerDependencies:
       - less
       - lightningcss
