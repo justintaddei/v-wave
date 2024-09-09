@@ -19,5 +19,7 @@ export const createContainer = (
   // Meet Safari, the new IE 💩
   waveContainer.style.webkitMaskImage = '-webkit-radial-gradient(white, black)'
 
+  waveContainer.dataset.vWaveContainerInternal = 'true'
+
   return waveContainer
 }

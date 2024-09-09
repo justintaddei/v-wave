@@ -10,7 +10,7 @@ import { decrementWaveCount, deleteWaveCount, getWaveCount, incrementWaveCount }
 // 2.05 is magic.
 // Values smaller than this seem to cause the wave to stop
 // just short of the edge of the element sometimes.
-// (probably to floating point precision)
+// (probably due to floating point precision)
 const SCALE_FACTOR = 2.05
 
 const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOptions) => {
@@ -27,17 +27,20 @@ const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOption
   // We're creating a container for the "wave" with `overflow: hidden`
   // because if we were to set `overflow: hidden` on `el` we
   // risk altering its appearance.
-  const waveContainer = createContainer(computedStyles, options.tagName)
+  const existingWaveContainer = el.querySelector('[data-v-wave-container-internal]')
+  const waveContainer = existingWaveContainer ?? createContainer(computedStyles, options.tagName)
   const waveEl = createWaveElement(relativePos, size, options)
 
   // Keep track of how many waves are active on this element.
+  // We use this to know when it's safe to remove the wave container.
   incrementWaveCount(el)
 
-  // We reply on absolute positioning, so we need to make sure `el`'s position is non-static
+  // We rely on absolute positioning, so we need to make sure `el`'s position is non-static
   saveParentElementStyles(el, computedStyles)
 
   waveContainer.appendChild(waveEl)
-  el.appendChild(waveContainer)
+
+  if (!existingWaveContainer) el.appendChild(waveContainer)
 
   let shouldDissolveWave = !options.waitForRelease
   const releaseWave = (e?: PointerEvent) => {
@@ -55,13 +58,12 @@ const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOption
     waveEl.style.opacity = '0'
 
     setTimeout(() => {
-      waveContainer.remove()
-
+      waveEl.remove()
       decrementWaveCount(el)
 
       if (getWaveCount(el) === 0) {
         deleteWaveCount(el)
-        // Only reset the style after all active waves have been removed
+        waveContainer.remove()
         restoreParentElementStyles(el)
       }
     }, options.dissolveDuration * 1000)
@@ -86,7 +88,16 @@ const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOption
   const cancelWave = () => {
     clearTimeout(token)
 
-    waveContainer.remove()
+    waveEl.remove()
+    decrementWaveCount(el)
+
+    if (getWaveCount(el) === 0) {
+      deleteWaveCount(el)
+      // Only reset the style after all active waves have been removed
+      waveContainer.remove()
+      restoreParentElementStyles(el)
+    }
+
     document.removeEventListener('pointerup', releaseWave)
     document.removeEventListener('pointercancel', releaseWave)
     document.removeEventListener('pointercancel', cancelWave)
