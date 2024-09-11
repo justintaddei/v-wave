@@ -9,7 +9,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "unpkg": "dist/index.global.js",
-  "files": ["dist/**/*", "nuxt/**/*"],
+  "files": ["dist/**/*", "nuxt/**/*", "src/options.ts"],
   "exports": {
     "./nuxt": {
       "import": "./nuxt/index.ts",
