@@ -1,5 +1,55 @@
 # Changelog
 
+## 1.0.0 (2024-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* the wave effect will be disabled if `prefers-reduced-motion:` set to `reduce` unless `respectPrefersReducedMotion` is `false`.
+* the disabled attr now disables the wave effect on the element and removed the ability to disable the wave effect by passing `false` to the directive
+* Nuxt 2 module entry moved from `v-wave/nuxt` to `v-wave/nuxt/v2`
+
+### Features
+
+* add disabled and respectDisabledAttribute options ([3a1fc6a](https://github.com/justintaddei/v-wave/commit/3a1fc6a00929057e283256eb198723b307701393)), closes [#543](https://github.com/justintaddei/v-wave/issues/543)
+* add support Nuxt 3 ([c3b8576](https://github.com/justintaddei/v-wave/commit/c3b857633daf5b5a912562d711e4a50c1ab7388d))
+* added waitForRelease (to let waves dissolve immediately) ([#746](https://github.com/justintaddei/v-wave/issues/746)) ([3efecb3](https://github.com/justintaddei/v-wave/commit/3efecb357c0ca1e8578b4b937a29f3cc2eaa1381)), closes [#604](https://github.com/justintaddei/v-wave/issues/604)
+* option to stop propagation of waves to parent elements ([e2a3dd9](https://github.com/justintaddei/v-wave/commit/e2a3dd9adc0fef441290f30359bfdf0db5c3871b)), closes [#544](https://github.com/justintaddei/v-wave/issues/544)
+* respectPrefersReducedMotion ([#745](https://github.com/justintaddei/v-wave/issues/745)) ([5edc0a5](https://github.com/justintaddei/v-wave/commit/5edc0a54d12c094497cf24cf21655c6cce73666c)), closes [#740](https://github.com/justintaddei/v-wave/issues/740)
+
+
+### Bug Fixes
+
+* **deps:** bump @nuxt/kit from 3.10.0 to 3.10.1 ([a3cddb0](https://github.com/justintaddei/v-wave/commit/a3cddb0769751f7354954d174958ef96bddc6bbc))
+* **deps:** bump @nuxt/kit from 3.10.1 to 3.10.2 ([f5ab3f0](https://github.com/justintaddei/v-wave/commit/f5ab3f0effb7863dac9016e75f35bf1de1cfe2fe))
+* **deps:** bump @nuxt/kit from 3.10.2 to 3.10.3 ([384cec7](https://github.com/justintaddei/v-wave/commit/384cec7246fbfdbad404921c501759628979fda6))
+* **deps:** bump @nuxt/kit from 3.10.3 to 3.11.0 ([6491b64](https://github.com/justintaddei/v-wave/commit/6491b64ae3a62814b2884107744405593e2bf74d))
+* **deps:** bump @nuxt/kit from 3.11.0 to 3.11.1 ([8c36a57](https://github.com/justintaddei/v-wave/commit/8c36a57c47569b3f2fbabc9aca9438d05da30967))
+* **deps:** bump @nuxt/kit from 3.11.1 to 3.11.2 ([de7b11d](https://github.com/justintaddei/v-wave/commit/de7b11d9fb3f9c952dc8d7d9699cc317fc2641b6))
+* **deps:** bump @nuxt/kit from 3.11.2 to 3.12.1 ([a2c7602](https://github.com/justintaddei/v-wave/commit/a2c7602af65b7b53f51cfc9fce99d6e88b643fb3))
+* **deps:** bump @nuxt/kit from 3.12.1 to 3.12.2 ([e61e144](https://github.com/justintaddei/v-wave/commit/e61e14485b3ea36e19581916b957adaf765bf085))
+* **deps:** bump @nuxt/kit from 3.8.2 to 3.9.0 ([0892877](https://github.com/justintaddei/v-wave/commit/0892877f06b26b299141b516ddf8763592de99cd))
+* **deps:** bump @nuxt/kit from 3.9.0 to 3.9.1 ([3d5c566](https://github.com/justintaddei/v-wave/commit/3d5c5662386bd0982163ff9dcfcdf121bcd840d3))
+* **deps:** bump @nuxt/kit from 3.9.1 to 3.9.2 ([8dab91f](https://github.com/justintaddei/v-wave/commit/8dab91faaeb31e26f16fe59335d886c529920be4))
+* **deps:** bump @nuxt/kit from 3.9.2 to 3.9.3 ([88c4ecf](https://github.com/justintaddei/v-wave/commit/88c4ecf8f18c34a5ce35e8cfc7d5709f849f9bd2))
+* **deps:** bump @nuxt/kit from 3.9.3 to 3.10.0 ([a2ddcce](https://github.com/justintaddei/v-wave/commit/a2ddcce607c2c765c5e8e89962ca8feb8ebb1211))
+* **deps:** bump actions/cache from 3 to 4 ([eef04f1](https://github.com/justintaddei/v-wave/commit/eef04f123e519afa56e0e9fb942e66f2aade4fb8))
+* **deps:** bump actions/checkout from 3 to 4 ([41753a0](https://github.com/justintaddei/v-wave/commit/41753a08281fe1d7577f50af099aba6bd378484d))
+* **deps:** bump actions/setup-node from 3.7.0 to 3.8.0 ([5d0418e](https://github.com/justintaddei/v-wave/commit/5d0418eff59606c869592f6a287afd8a51386295))
+* **deps:** bump actions/setup-node from 3.8.0 to 3.8.1 ([06b684f](https://github.com/justintaddei/v-wave/commit/06b684fb9a4b7ee943abdc412c60835a1ba14e4e))
+* **deps:** bump actions/setup-node from 3.8.1 to 4.0.0 ([5d1fca2](https://github.com/justintaddei/v-wave/commit/5d1fca28b3289aea937ff879c3d682443e9261ad))
+* **deps:** bump actions/setup-node from 4.0.0 to 4.0.1 ([f0f55aa](https://github.com/justintaddei/v-wave/commit/f0f55aa32b071edefac39ed92e7f10afc89ee59d))
+* **deps:** bump actions/setup-node from 4.0.1 to 4.0.2 ([c6c7dc3](https://github.com/justintaddei/v-wave/commit/c6c7dc3cb292a9e979a3433bf8d106b3a088091c))
+* **deps:** bump braces from 3.0.2 to 3.0.3 ([6d0cf8c](https://github.com/justintaddei/v-wave/commit/6d0cf8c39164037e12e5afdef39b2b864bb22c1f))
+* **deps:** bump dependabot/fetch-metadata from 1 to 2 ([4bea55f](https://github.com/justintaddei/v-wave/commit/4bea55fcbc9c42f080d3e1a4452e5112976e590f))
+* **deps:** bump dependabot/fetch-metadata from 1.6.0 to 2.0.0 ([4dce01e](https://github.com/justintaddei/v-wave/commit/4dce01eeb707e4bcab842cf43999451374a9d4af))
+* **deps:** bump dependabot/fetch-metadata from 2.0.0 to 2.1.0 ([e42ad21](https://github.com/justintaddei/v-wave/commit/e42ad217d9b7a9fd12dcf52fbf159cbf1daf1da2))
+* **deps:** bump pnpm/action-setup from 2 to 4 ([461d3a2](https://github.com/justintaddei/v-wave/commit/461d3a2c446601e0c731a96770031ba48e61489a))
+* **deps:** bump tar from 6.2.0 to 6.2.1 ([c06fa35](https://github.com/justintaddei/v-wave/commit/c06fa35416232ae84942702d2fd5de7b1bc1ae94))
+* error in projects without both deps and devDeps ([f0e8d17](https://github.com/justintaddei/v-wave/commit/f0e8d1718c2176e62de1bb019a6ea7fbe9944524))
+* nuxt3 typescript support in nuxt.config.ts ([9aa28ec](https://github.com/justintaddei/v-wave/commit/9aa28ec583cd2842e12b84dabb14d7a35f510f6b))
+* wave container not being reused ([24c56d8](https://github.com/justintaddei/v-wave/commit/24c56d89f92d747b73acd7aad9ddc8db8410fb98))
+
 ## [2.0.0](https://github.com/justintaddei/v-wave/compare/v1.5.1...v2.0.0) (2023-12-07)
 
 ### ⚠ BREAKING CHANGES
