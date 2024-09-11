@@ -36,7 +36,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: pnpm install --frozen-lockfile
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm publish
+      - run: pnpm run lint && pnpm run test && pnpm run build && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}
