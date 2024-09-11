@@ -1,6 +1,6 @@
 {
   "name": "v-wave",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "license": "MIT",
   "description": "The material-ripple directive for Vue that actually works",
   "author": "Justin Taddei <justin@justintaddei.com> (https://justintaddei.com/)",
@@ -9,7 +9,11 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "unpkg": "dist/index.global.js",
-  "files": ["dist/**/*", "nuxt/**/*", "src/options.ts"],
+  "files": [
+    "dist/**/*",
+    "nuxt/**/*",
+    "src/options.ts"
+  ],
   "exports": {
     "./nuxt": {
       "import": "./nuxt/index.ts",

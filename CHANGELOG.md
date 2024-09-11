@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.2](https://github.com/justintaddei/v-wave/compare/v3.0.1...v3.0.2) (2024-09-11)
+
+
+### Bug Fixes
+
+* incorrect mapping of mjs files in nuxt3 ([#790](https://github.com/justintaddei/v-wave/issues/790)) ([7a918d1](https://github.com/justintaddei/v-wave/commit/7a918d1fed124142e931cd35bcc6203c59fab0b2))
+* typescript errors in nuxt3 module ([#792](https://github.com/justintaddei/v-wave/issues/792)) ([02543de](https://github.com/justintaddei/v-wave/commit/02543de646c53b643f7a9a2280a6313f96d358cc))
+
 ## [3.0.1](https://github.com/justintaddei/v-wave/compare/v3.0.0...v3.0.1) (2024-09-11)
 
 
