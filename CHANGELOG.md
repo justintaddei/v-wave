@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/justintaddei/v-wave/compare/v3.0.0...v3.0.1) (2024-09-11)
+
+
+### Miscellaneous Chores
+
+* release 3.0.1 ([9116a00](https://github.com/justintaddei/v-wave/commit/9116a00ca2fe94821a02a53cd76f3f02a10e4391))
+
 ## 3.0.0 (2024-09-11)
 
 
