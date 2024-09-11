@@ -29,6 +29,7 @@ The material-ripple directive for Vue that actually works
 - It works ([see for yourself](https://justintaddei.github.io/v-wave)).
 - The wave appears on `pointerdown` instead of `pointerup`  
   _(you might think that's an obvious choice... but you'd be wrong)._
+- The wave responds to keyboard events on keyboard-accessible elements (i.e. <kbd>Enter</kbd> and <kbd>Space</kbd> on `<button>`).
 - There is a small delay before the ripple appears, during which the animation will be canceled if the user moves the pointer (e.g. scrolling on a mobile phone). This is similar to how native Android ripples work.
 - Uses CSS transforms instead of `width` and `height`.
 - Doesn't affect the appearance of the element you apply it to (won't explode when used on an element with `display: flex`).
