@@ -9,10 +9,17 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "unpkg": "dist/index.global.js",
-  "files": [
-    "dist/**/*",
-    "nuxt/**/*"
-  ],
+  "files": ["dist/**/*", "nuxt/**/*"],
+  "exports": {
+    "./nuxt": {
+      "import": "./nuxt/index.ts",
+      "require": "./nuxt/v2/index.cjs"
+    },
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "build": "tsup src/index.ts --clean --dts --format esm,cjs,iife --global-name VWave",
     "dev": "tsup src/index.ts --watch --dts --format esm,cjs,iife --global-name VWave",
