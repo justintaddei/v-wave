@@ -1,26 +1,31 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-let example1 = ref(`
+const example1 = ref(`
 <!-- Edit me (all options are set to their default) -->
 <div
   class="box"
   v-wave="{
     color: 'currentColor',
-    easing: 'ease-out',
-    duration: 0.4,
-    dissolveDuration: 0.15,
     initialOpacity: 0.2,
     finalOpacity: 0.1,
+    duration: 0.4,
+    dissolveDuration: 0.15,
+    waitForRelease: true,
+    easing: 'ease-out',
     cancellationPeriod: 75,
     trigger: 'auto',
-    tagName: 'div'
+    tagName: 'div',
+    disabled: false,
+    respectDisabledAttribute: true,
+    respectPrefersReducedMotion: true,
+    stopPropagation: false,
   }"
 >
   Click here
-</div>`)
+</div>`);
 
-let example2 = ref(`
+const example2 = ref(`
 <label
   v-wave
   class="text-input"
@@ -29,16 +34,23 @@ let example2 = ref(`
   
   <!-- Only show the wave when the trigger is clicked -->
   <img v-wave-trigger src="./imgs/search.svg" />
-</label>`)
+</label>`);
 
-let updateExample1 = (_code: string) => (example1.value = _code)
-let updateExample2 = (_code: string) => (example2.value = _code)
+const updateExample1 = (_code: string) => (example1.value = _code);
+const updateExample2 = (_code: string) => (example2.value = _code);
 
-let randomColorValue = () => Math.random() * 255
+const randomColorValue = () => Math.random() * 255;
 
-let randomColor = () => `rgb(${randomColorValue()}, ${randomColorValue()}, ${randomColorValue()})`
+const randomColor = () =>
+	`rgb(${randomColorValue()}, ${randomColorValue()}, ${randomColorValue()})`;
 
-let gridDemoWaveOptions = { color: '#09f', duration: 2, initialOpacity: 0.1, finalOpacity: 0.7, trigger: 'gridDemo' }
+const gridDemoWaveOptions = {
+	color: "#09f",
+	duration: 2,
+	initialOpacity: 0.1,
+	finalOpacity: 0.7,
+	trigger: "gridDemo",
+};
 </script>
 
 <template>
