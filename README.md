@@ -505,7 +505,7 @@ export default {
 - **type:** `"auto" | string | boolean`
 - _default:_ `"auto"`
 
-> Sets the behavior of the wave when used with triggers. (See the [dedication section](#using-triggers) on triggers for more details).
+> Sets the behavior of the wave when used with triggers. (See the [dedicated section](#using-triggers) on triggers for more details).
 
 - `false`  
    Disables the use of triggers. If a `v-wave-trigger` (without an ID) is present in the dom tree of this element, it will be ignored (i.e. `v-wave` always behaves as if there's no trigger).
