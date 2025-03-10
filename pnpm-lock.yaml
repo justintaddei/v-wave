@@ -17,13 +17,13 @@ importers:
         version: 1.9.4
       '@commitlint/cli':
         specifier: ^19.4.1
-        version: 19.7.1(@types/node@22.5.4)(typescript@5.8.2)
+        version: 19.7.1(@types/node@22.13.10)(typescript@5.8.2)
       '@commitlint/config-conventional':
         specifier: ^19.4.1
-        version: 19.7.1
+        version: 19.8.0
       '@vitest/coverage-v8':
         specifier: ^3.0.5
-        version: 3.0.5(vitest@3.0.5(@types/node@22.5.4)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5))
+        version: 3.0.5(vitest@3.0.5(@types/node@22.13.10)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5))
       husky:
         specifier: ^9.1.5
         version: 9.1.7
@@ -38,7 +38,7 @@ importers:
         version: 5.8.2
       vitest:
         specifier: ^3.0.5
-        version: 3.0.5(@types/node@22.5.4)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5)
+        version: 3.0.5(@types/node@22.13.10)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5)
       vue:
         specifier: ^3.5.4
         version: 3.5.13(typescript@5.8.2)
@@ -186,8 +186,8 @@ packages:
     engines: {node: '>=v18'}
     hasBin: true
 
-  '@commitlint/config-conventional@19.7.1':
-    resolution: {integrity: sha512-fsEIF8zgiI/FIWSnykdQNj/0JE4av08MudLTyYHm4FlLWemKoQvPNUYU2M/3tktWcCEyq7aOkDDgtjrmgWFbvg==}
+  '@commitlint/config-conventional@19.8.0':
+    resolution: {integrity: sha512-9I2kKJwcAPwMoAj38hwqFXG0CzS2Kj+SAByPUQ0SlHTfb7VUhYVmo7G2w2tBrqmOf7PFd6MpZ/a1GQJo8na8kw==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-validator@19.5.0':
@@ -248,6 +248,10 @@ packages:
 
   '@commitlint/types@19.5.0':
     resolution: {integrity: sha512-DSHae2obMSMkAtTBSOulg5X7/z+rGLxcXQIkg3OmWvY6wifojge5uVMydfhUvs7yQj+V7jNmRZ2Xzl8GJyqRgg==}
+    engines: {node: '>=v18'}
+
+  '@commitlint/types@19.8.0':
+    resolution: {integrity: sha512-LRjP623jPyf3Poyfb0ohMj8I3ORyBDOwXAgxxVPbSD0unJuW2mJWeiRfaQinjtccMqC5Wy1HOMfa4btKjbNxbg==}
     engines: {node: '>=v18'}
 
   '@csstools/color-helpers@5.0.1':
@@ -735,8 +739,14 @@ packages:
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
+  '@types/conventional-commits-parser@5.0.1':
+    resolution: {integrity: sha512-7uz5EHdzz2TqoMfV7ee61Egf5y6NkcO4FB/1iCCQnbeiI1F3xzv3vK5dBCXUCLQgGYS+mUeigK1iKQzvED+QnQ==}
+
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
+
+  '@types/node@22.13.10':
+    resolution: {integrity: sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==}
 
   '@types/node@22.5.4':
     resolution: {integrity: sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==}
@@ -1821,6 +1831,9 @@ packages:
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+
   unicorn-magic@0.1.0:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
     engines: {node: '>=18'}
@@ -2173,11 +2186,11 @@ snapshots:
   '@biomejs/cli-win32-x64@1.9.4':
     optional: true
 
-  '@commitlint/cli@19.7.1(@types/node@22.5.4)(typescript@5.8.2)':
+  '@commitlint/cli@19.7.1(@types/node@22.13.10)(typescript@5.8.2)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.7.1
-      '@commitlint/load': 19.6.1(@types/node@22.5.4)(typescript@5.8.2)
+      '@commitlint/load': 19.6.1(@types/node@22.13.10)(typescript@5.8.2)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.2
@@ -2186,9 +2199,9 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@commitlint/config-conventional@19.7.1':
+  '@commitlint/config-conventional@19.8.0':
     dependencies:
-      '@commitlint/types': 19.5.0
+      '@commitlint/types': 19.8.0
       conventional-changelog-conventionalcommits: 7.0.2
 
   '@commitlint/config-validator@19.5.0':
@@ -2224,7 +2237,7 @@ snapshots:
       '@commitlint/rules': 19.6.0
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.6.1(@types/node@22.5.4)(typescript@5.8.2)':
+  '@commitlint/load@19.6.1(@types/node@22.13.10)(typescript@5.8.2)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
@@ -2232,7 +2245,7 @@ snapshots:
       '@commitlint/types': 19.5.0
       chalk: 5.4.1
       cosmiconfig: 9.0.0(typescript@5.8.2)
-      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.5.4)(cosmiconfig@9.0.0(typescript@5.8.2))(typescript@5.8.2)
+      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.13.10)(cosmiconfig@9.0.0(typescript@5.8.2))(typescript@5.8.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2282,6 +2295,11 @@ snapshots:
     dependencies:
       '@types/conventional-commits-parser': 5.0.0
       chalk: 5.3.0
+
+  '@commitlint/types@19.8.0':
+    dependencies:
+      '@types/conventional-commits-parser': 5.0.1
+      chalk: 5.4.1
 
   '@csstools/color-helpers@5.0.1': {}
 
@@ -2594,13 +2612,21 @@ snapshots:
     dependencies:
       '@types/node': 22.5.4
 
+  '@types/conventional-commits-parser@5.0.1':
+    dependencies:
+      '@types/node': 22.13.10
+
   '@types/estree@1.0.6': {}
+
+  '@types/node@22.13.10':
+    dependencies:
+      undici-types: 6.20.0
 
   '@types/node@22.5.4':
     dependencies:
       undici-types: 6.19.8
 
-  '@vitest/coverage-v8@3.0.5(vitest@3.0.5(@types/node@22.5.4)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5))':
+  '@vitest/coverage-v8@3.0.5(vitest@3.0.5(@types/node@22.13.10)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 1.0.2
@@ -2614,7 +2640,7 @@ snapshots:
       std-env: 3.8.0
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
-      vitest: 3.0.5(@types/node@22.5.4)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5)
+      vitest: 3.0.5(@types/node@22.13.10)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5)
     transitivePeerDependencies:
       - supports-color
 
@@ -2625,13 +2651,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.0.5(vite@6.0.11(@types/node@22.5.4)(jiti@2.4.2)(yaml@2.4.5))':
+  '@vitest/mocker@3.0.5(vite@6.0.11(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.4.5))':
     dependencies:
       '@vitest/spy': 3.0.5
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 6.0.11(@types/node@22.5.4)(jiti@2.4.2)(yaml@2.4.5)
+      vite: 6.0.11(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.4.5)
 
   '@vitest/pretty-format@3.0.5':
     dependencies:
@@ -2867,9 +2893,9 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  cosmiconfig-typescript-loader@6.1.0(@types/node@22.5.4)(cosmiconfig@9.0.0(typescript@5.8.2))(typescript@5.8.2):
+  cosmiconfig-typescript-loader@6.1.0(@types/node@22.13.10)(cosmiconfig@9.0.0(typescript@5.8.2))(typescript@5.8.2):
     dependencies:
-      '@types/node': 22.5.4
+      '@types/node': 22.13.10
       cosmiconfig: 9.0.0(typescript@5.8.2)
       jiti: 2.4.2
       typescript: 5.8.2
@@ -3691,6 +3717,8 @@ snapshots:
 
   undici-types@6.19.8: {}
 
+  undici-types@6.20.0: {}
+
   unicorn-magic@0.1.0: {}
 
   unimport@4.0.0(rollup@4.34.8):
@@ -3736,13 +3764,13 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vite-node@3.0.5(@types/node@22.5.4)(jiti@2.4.2)(yaml@2.4.5):
+  vite-node@3.0.5(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.4.5):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0
       es-module-lexer: 1.6.0
       pathe: 2.0.2
-      vite: 6.0.11(@types/node@22.5.4)(jiti@2.4.2)(yaml@2.4.5)
+      vite: 6.0.11(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.4.5)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -3757,21 +3785,21 @@ snapshots:
       - tsx
       - yaml
 
-  vite@6.0.11(@types/node@22.5.4)(jiti@2.4.2)(yaml@2.4.5):
+  vite@6.0.11(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.4.5):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
       rollup: 4.34.8
     optionalDependencies:
-      '@types/node': 22.5.4
+      '@types/node': 22.13.10
       fsevents: 2.3.3
       jiti: 2.4.2
       yaml: 2.4.5
 
-  vitest@3.0.5(@types/node@22.5.4)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5):
+  vitest@3.0.5(@types/node@22.13.10)(jiti@2.4.2)(jsdom@26.0.0)(yaml@2.4.5):
     dependencies:
       '@vitest/expect': 3.0.5
-      '@vitest/mocker': 3.0.5(vite@6.0.11(@types/node@22.5.4)(jiti@2.4.2)(yaml@2.4.5))
+      '@vitest/mocker': 3.0.5(vite@6.0.11(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.4.5))
       '@vitest/pretty-format': 3.0.5
       '@vitest/runner': 3.0.5
       '@vitest/snapshot': 3.0.5
@@ -3787,11 +3815,11 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
-      vite: 6.0.11(@types/node@22.5.4)(jiti@2.4.2)(yaml@2.4.5)
-      vite-node: 3.0.5(@types/node@22.5.4)(jiti@2.4.2)(yaml@2.4.5)
+      vite: 6.0.11(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.4.5)
+      vite-node: 3.0.5(@types/node@22.13.10)(jiti@2.4.2)(yaml@2.4.5)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.5.4
+      '@types/node': 22.13.10
       jsdom: 26.0.0
     transitivePeerDependencies:
       - jiti
