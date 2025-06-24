@@ -1,4 +1,3 @@
-import * as _vue from 'vue'
 import type { App } from 'vue'
 
 interface Vue2 {
