@@ -13,7 +13,7 @@ importers:
         version: 2.1.1
       '@nuxt/kit':
         specifier: ^3.13.1
-        version: 3.17.6(magicast@0.3.5)
+        version: 3.17.7(magicast@0.3.5)
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.4.1
@@ -570,8 +570,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@nuxt/kit@3.17.6':
-    resolution: {integrity: sha512-8PKRwoEF70IXVrpGEJZ4g4V2WtE9RjSMgSZLLa0HZCoyT+QczJcJe3kho/XKnJOnNnHep4WqciTD7p4qRRtBqw==}
+  '@nuxt/kit@3.17.7':
+    resolution: {integrity: sha512-JLno3ur7Pix2o/StxIMlEHRkMawA6h7uzjZBDgxdeKXRWTYY8ID9YekSkN4PBlEFGXBfCBOcPd5+YqcyBUAMkw==}
     engines: {node: '>=18.12.0'}
 
   '@pkgjs/parseargs@0.11.0':
@@ -914,8 +914,8 @@ packages:
     peerDependencies:
       esbuild: '>=0.18'
 
-  c12@3.0.4:
-    resolution: {integrity: sha512-t5FaZTYbbCtvxuZq9xxIruYydrAGsJ+8UdP0pZzMiK2xl/gNiSOy0OxhLzHUEEb0m1QXYqfzfvyIFEmz/g9lqg==}
+  c12@3.1.0:
+    resolution: {integrity: sha512-uWoS8OU1MEIsOv8p/5a82c3H31LsWVR5qiyXVfBNOzfffjUWtPnhAb4BYI2uG2HfGmZmFjCtui5XNWaps+iFuw==}
     peerDependencies:
       magicast: ^0.3.5
     peerDependenciesMeta:
@@ -2314,9 +2314,9 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@nuxt/kit@3.17.6(magicast@0.3.5)':
+  '@nuxt/kit@3.17.7(magicast@0.3.5)':
     dependencies:
-      c12: 3.0.4(magicast@0.3.5)
+      c12: 3.1.0(magicast@0.3.5)
       consola: 3.4.2
       defu: 6.1.4
       destr: 2.0.5
@@ -2633,7 +2633,7 @@ snapshots:
       esbuild: 0.25.4
       load-tsconfig: 0.2.5
 
-  c12@3.0.4(magicast@0.3.5):
+  c12@3.1.0(magicast@0.3.5):
     dependencies:
       chokidar: 4.0.3
       confbox: 0.2.2
