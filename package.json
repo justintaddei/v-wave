@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@biomejs/biome": "^2.0.5",
-    "@nuxt/kit": "^3.13.1"
+    "@nuxt/kit": "^4.0.0"
   },
   "repository": {
     "type": "git",
