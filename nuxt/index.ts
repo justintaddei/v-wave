@@ -9,7 +9,6 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'vWave',
     compatibility: {
       nuxt: '>=3.0.0',
-      bridge: true,
     },
   },
   defaults: {
