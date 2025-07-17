@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/justintaddei/v-wave/compare/v3.0.2...v3.0.3) (2025-07-17)
+
+
+### Bug Fixes
+
+* remove `bridge` option from Nuxt module's compatibility meta ([#876](https://github.com/justintaddei/v-wave/issues/876)) ([21d94a5](https://github.com/justintaddei/v-wave/commit/21d94a57fe9ea07cddbebbe138c555f0e2a9a34a))
+
 ## [3.0.2](https://github.com/justintaddei/v-wave/compare/v3.0.1...v3.0.2) (2024-09-11)
 
 
