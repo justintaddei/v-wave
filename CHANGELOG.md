@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.4](https://github.com/justintaddei/v-wave/compare/v3.0.3...v3.0.4) (2025-08-14)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 4 to 5 ([#886](https://github.com/justintaddei/v-wave/issues/886)) ([dfacd95](https://github.com/justintaddei/v-wave/commit/dfacd95535c0ce0388c03b069e46d0b29a0bafa8))
+
 ## [3.0.3](https://github.com/justintaddei/v-wave/compare/v3.0.2...v3.0.3) (2025-07-17)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "v-wave",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "license": "MIT",
   "description": "The material-ripple directive for Vue that actually works",
   "author": "Justin Taddei <justin@justintaddei.com> (https://justintaddei.com/)",
