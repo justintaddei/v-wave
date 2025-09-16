@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.0.4](https://github.com/justintaddei/v-wave/compare/v3.0.3...v3.0.4) (2025-09-16)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 4 to 5 ([#886](https://github.com/justintaddei/v-wave/issues/886)) ([dfacd95](https://github.com/justintaddei/v-wave/commit/dfacd95535c0ce0388c03b069e46d0b29a0bafa8))
+* **deps:** bump actions/setup-node from 4 to 5 ([#895](https://github.com/justintaddei/v-wave/issues/895)) ([45a3499](https://github.com/justintaddei/v-wave/commit/45a3499fa6542533574236746ddab5864ddd8e55))
+* **deps:** move @biomejs/biome to devDeps ([#902](https://github.com/justintaddei/v-wave/issues/902)) ([6b8e8e0](https://github.com/justintaddei/v-wave/commit/6b8e8e003c9d5806c94d6a42c16a3002b523c2b1))
+
 ## [3.0.3](https://github.com/justintaddei/v-wave/compare/v3.0.2...v3.0.3) (2025-07-17)
 
 
