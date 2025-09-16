@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
@@ -20,12 +20,14 @@
       "recommended": true,
       "complexity": {
         "noForEach": {
-          "level": "off"
+          "level": "off",
+          "options": {}
         }
       },
       "suspicious": {
         "noExplicitAny": {
-          "level": "off"
+          "level": "off",
+          "options": {}
         }
       },
       "style": {
@@ -53,11 +55,11 @@
   "files": {
     "includes": [
       "**",
-      "!**/dist/**",
-      "!**/node_modules/**",
-      "!**/nuxt/**",
-      "!**/coverage/**",
-      "!**/.vscode/**",
+      "!**/dist",
+      "!**/node_modules",
+      "!**/nuxt",
+      "!**/coverage",
+      "!**/.vscode",
       "!**/package-lock.json",
       "!**/package.json"
     ]
