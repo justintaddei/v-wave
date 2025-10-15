@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.5](https://github.com/justintaddei/v-wave/compare/v3.0.4...v3.0.5) (2025-10-15)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 5 to 6 ([#903](https://github.com/justintaddei/v-wave/issues/903)) ([9f8e394](https://github.com/justintaddei/v-wave/commit/9f8e394337c0d0e18ba593b0ae7a4aa52dfaa63d))
+
 ## [3.0.4](https://github.com/justintaddei/v-wave/compare/v3.0.3...v3.0.4) (2025-09-16)
 
 
