@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
-    "@commitlint/cli": "^19.4.1",
+    "@commitlint/cli": "^20.4.1",
     "@commitlint/config-conventional": "^20.4.1",
     "@vitest/coverage-v8": "^3.0.5",
     "husky": "^9.1.5",
