@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.5](https://github.com/justintaddei/v-wave/compare/v3.0.4...v3.0.5) (2026-02-06)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 5 to 6 ([#905](https://github.com/justintaddei/v-wave/issues/905)) ([667fed9](https://github.com/justintaddei/v-wave/commit/667fed96f305c5a2f18a95f1145831745eba359e))
+* **deps:** bump actions/setup-node from 5 to 6 ([#903](https://github.com/justintaddei/v-wave/issues/903)) ([9f8e394](https://github.com/justintaddei/v-wave/commit/9f8e394337c0d0e18ba593b0ae7a4aa52dfaa63d))
+
 ## [3.0.4](https://github.com/justintaddei/v-wave/compare/v3.0.3...v3.0.4) (2025-09-16)
 
 
