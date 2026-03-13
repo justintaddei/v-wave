@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@nuxt/kit':
         specifier: ^4.0.0
-        version: 4.3.1(magicast@0.3.5)
+        version: 4.4.2(magicast@0.3.5)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.2.4
@@ -619,8 +619,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@nuxt/kit@4.3.1':
-    resolution: {integrity: sha512-UjBFt72dnpc+83BV3OIbCT0YHLevJtgJCHpxMX0YRKWLDhhbcDdUse87GtsQBrjvOzK7WUNUYLDS/hQLYev5rA==}
+  '@nuxt/kit@4.4.2':
+    resolution: {integrity: sha512-5+IPRNX2CjkBhuWUwz0hBuLqiaJPRoKzQ+SvcdrQDbAyE+VDeFt74VpSFr5/R0ujrK4b+XnSHUJWdS72w6hsog==}
     engines: {node: '>=18.12.0'}
 
   '@pkgjs/parseargs@0.11.0':
@@ -829,8 +829,8 @@ packages:
   '@vue/shared@3.5.30':
     resolution: {integrity: sha512-YXgQ7JjaO18NeK2K9VTbDHaFy62WrObMa6XERNfNOkAhD1F1oDSf3ZJ7K6GqabZ0BvSDHajp8qfS5Sa2I9n8uQ==}
 
-  acorn@8.15.0:
-    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
+  acorn@8.16.0:
+    resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -920,8 +920,8 @@ packages:
   citty@0.1.6:
     resolution: {integrity: sha512-tskPPKEs8D2KPafUypv2gxwJP8h/OaJmC82QQGGDQcHvXX43xF2VDACcJVmZ0EuSxkpO9Kc4MlrA3q0+FG58AQ==}
 
-  citty@0.2.0:
-    resolution: {integrity: sha512-8csy5IBFI2ex2hTVpaHN2j+LNE199AgiI7y4dMintrr8i0lQiFn+0AWMZrWdHKIgMOer65f8IThysYhoReqjWA==}
+  citty@0.2.1:
+    resolution: {integrity: sha512-kEV95lFBhQgtogAPlQfJJ0WGVSokvLr/UEoFPiKKOXF7pl98HfUVUD0ejsuTCld/9xH9vogSywZ5KqHzXrZpqg==}
 
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
@@ -1048,8 +1048,8 @@ packages:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
 
-  dotenv@17.2.4:
-    resolution: {integrity: sha512-mudtfb4zRB4bVvdj0xRo+e6duH1csJRM8IukBqfTRvHotn9+LBXB8ynAidP9zHqoRC/fsllXgk4kCKlR21fIhw==}
+  dotenv@17.3.1:
+    resolution: {integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==}
     engines: {node: '>=12'}
 
   eastasianwidth@0.2.0:
@@ -1357,8 +1357,8 @@ packages:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
-  mlly@1.8.0:
-    resolution: {integrity: sha512-l8D9ODSRWLe2KHJSifWGwBqpTZXIXTeo8mlKjY+E2HAakaTeNpqAyBZ8GSqLzHgw4XmHmC8whvpjJNMbFZN7/g==}
+  mlly@1.8.1:
+    resolution: {integrity: sha512-SnL6sNutTwRWWR/vcmCYHSADjiEesp5TGQQ0pXyLhW5IoeibRlF/CbSLailbB3CNqJUk9cVJ9dUDnbD7GrcHBQ==}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -2261,7 +2261,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@nuxt/kit@4.3.1(magicast@0.3.5)':
+  '@nuxt/kit@4.4.2(magicast@0.3.5)':
     dependencies:
       c12: 3.3.3(magicast@0.3.5)
       consola: 3.4.2
@@ -2272,7 +2272,7 @@ snapshots:
       ignore: 7.0.5
       jiti: 2.6.1
       klona: 2.0.6
-      mlly: 1.8.0
+      mlly: 1.8.1
       ohash: 2.0.11
       pathe: 2.0.3
       pkg-types: 2.3.0
@@ -2484,7 +2484,7 @@ snapshots:
 
   '@vue/shared@3.5.30': {}
 
-  acorn@8.15.0: {}
+  acorn@8.16.0: {}
 
   agent-base@7.1.4: {}
 
@@ -2533,7 +2533,7 @@ snapshots:
       chokidar: 5.0.0
       confbox: 0.2.4
       defu: 6.1.4
-      dotenv: 17.2.4
+      dotenv: 17.3.1
       exsolve: 1.0.8
       giget: 2.0.0
       jiti: 2.6.1
@@ -2571,7 +2571,7 @@ snapshots:
     dependencies:
       consola: 3.4.2
 
-  citty@0.2.0: {}
+  citty@0.2.1: {}
 
   cliui@8.0.1:
     dependencies:
@@ -2680,7 +2680,7 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
-  dotenv@17.2.4: {}
+  dotenv@17.3.1: {}
 
   eastasianwidth@0.2.0: {}
 
@@ -2787,7 +2787,7 @@ snapshots:
   fix-dts-default-cjs-exports@1.0.1:
     dependencies:
       magic-string: 0.30.21
-      mlly: 1.8.0
+      mlly: 1.8.1
       rollup: 4.55.1
 
   foreground-child@3.3.1:
@@ -3005,9 +3005,9 @@ snapshots:
 
   minipass@7.1.2: {}
 
-  mlly@1.8.0:
+  mlly@1.8.1:
     dependencies:
-      acorn: 8.15.0
+      acorn: 8.16.0
       pathe: 2.0.3
       pkg-types: 1.3.1
       ufo: 1.6.3
@@ -3026,7 +3026,7 @@ snapshots:
 
   nypm@0.6.5:
     dependencies:
-      citty: 0.2.0
+      citty: 0.2.1
       pathe: 2.0.3
       tinyexec: 1.0.2
 
@@ -3075,7 +3075,7 @@ snapshots:
   pkg-types@1.3.1:
     dependencies:
       confbox: 0.1.8
-      mlly: 1.8.0
+      mlly: 1.8.1
       pathe: 2.0.3
 
   pkg-types@2.3.0:
@@ -3311,7 +3311,7 @@ snapshots:
 
   unctx@2.5.0:
     dependencies:
-      acorn: 8.15.0
+      acorn: 8.16.0
       estree-walker: 3.0.3
       magic-string: 0.30.21
       unplugin: 2.3.11
@@ -3323,7 +3323,7 @@ snapshots:
   unplugin@2.3.11:
     dependencies:
       '@jridgewell/remapping': 2.3.5
-      acorn: 8.15.0
+      acorn: 8.16.0
       picomatch: 4.0.3
       webpack-virtual-modules: 0.6.2
 
