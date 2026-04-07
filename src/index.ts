@@ -1,5 +1,5 @@
 import type { App, Directive } from 'vue'
-import { DEFAULT_PLUGIN_OPTIONS, IVWaveDirectiveOptions, IVWavePluginOptions } from './options'
+import { DEFAULT_PLUGIN_OPTIONS, type IVWaveDirectiveOptions, type IVWavePluginOptions } from './options'
 import type { Vector } from './types'
 import { getHooks } from './utils/hookKeys'
 import { markWaveBoundary } from './utils/markWaveBoundary'
@@ -154,4 +154,4 @@ const VWave: VWaveInstallObject & { createLocalWaveDirective: typeof createDirec
 }
 
 export default VWave
-export { IVWaveDirectiveOptions, IVWavePluginOptions }
+export type { IVWaveDirectiveOptions, IVWavePluginOptions }
