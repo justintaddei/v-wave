@@ -163,4 +163,4 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   stopPropagation: false,
 }
 
-export { DEFAULT_PLUGIN_OPTIONS, type IVWavePluginOptions, type IVWaveDirectiveOptions }
+export { DEFAULT_PLUGIN_OPTIONS, type IVWaveDirectiveOptions, type IVWavePluginOptions }
