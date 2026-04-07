@@ -12,7 +12,7 @@ describe('parentElementStyles', () => {
     expect(el.dataset.originalPositionValue).toBe('static')
   })
 
-  test('restoreParentElementStyles', () => {
+  test('restoreParentElementStyles restores the saved position and removes the dataset entry', () => {
     const el = document.createElement('div')
     el.style.position = 'relative'
     el.dataset.originalPositionValue = 'static'
@@ -20,6 +20,16 @@ describe('parentElementStyles', () => {
     restoreParentElementStyles(el)
 
     expect(el.style.position).toBe('static')
+    expect(el.dataset.originalPositionValue).toBe(undefined)
+  })
+
+  test('restoreParentElementStyles clears position when no originalPositionValue was saved', () => {
+    const el = document.createElement('div')
+    el.style.position = 'relative'
+
+    restoreParentElementStyles(el)
+
+    expect(el.style.position).toBe('')
     expect(el.dataset.originalPositionValue).toBe(undefined)
   })
 
