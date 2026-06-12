@@ -6,9 +6,9 @@
   "author": "Justin Taddei <justin@justintaddei.com> (https://justintaddei.com/)",
   "type": "module",
   "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "unpkg": "dist/index.global.js",
+  "unpkg": "dist/index.iife.js",
   "files": [
     "dist/**/*",
     "nuxt/**/*",
@@ -20,7 +20,7 @@
       "require": "./nuxt/v2/index.cjs"
     },
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
