@@ -11,6 +11,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 jobs:
   release-please:
@@ -31,12 +32,10 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 20
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
         if: ${{ steps.release.outputs.release_created }}
       - run: pnpm install --frozen-lockfile
         if: ${{ steps.release.outputs.release_created }}
-      - run: pnpm run lint && pnpm run test && pnpm run build && npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: pnpm run lint && pnpm run test && pnpm run build && npm publish --provenance
         if: ${{ steps.release.outputs.release_created }}
