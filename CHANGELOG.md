@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.1.0](https://github.com/justintaddei/v-wave/compare/v3.0.4...v3.1.0) (2026-06-12)
+
+
+### Features
+
+* add support for programmatically triggering waves ([f2d422f](https://github.com/justintaddei/v-wave/commit/f2d422f4fb4e207022e85cc1c67d26655396a4f6))
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 5 to 6 ([#905](https://github.com/justintaddei/v-wave/issues/905)) ([667fed9](https://github.com/justintaddei/v-wave/commit/667fed96f305c5a2f18a95f1145831745eba359e))
+* **deps:** bump actions/setup-node from 5 to 6 ([#903](https://github.com/justintaddei/v-wave/issues/903)) ([9f8e394](https://github.com/justintaddei/v-wave/commit/9f8e394337c0d0e18ba593b0ae7a4aa52dfaa63d))
+* **deps:** bump dependabot/fetch-metadata from 2 to 3 ([#962](https://github.com/justintaddei/v-wave/issues/962)) ([97cac55](https://github.com/justintaddei/v-wave/commit/97cac551e72633d55e2ed134a156ee7c33c80dbb))
+* **deps:** bump googleapis/release-please-action from 4 to 5 ([#969](https://github.com/justintaddei/v-wave/issues/969)) ([9802a07](https://github.com/justintaddei/v-wave/commit/9802a0771364dd2f46c589cb13a491970145c1cc))
+* **deps:** bump pnpm/action-setup from 4 to 5 ([#952](https://github.com/justintaddei/v-wave/issues/952)) ([433fe4b](https://github.com/justintaddei/v-wave/commit/433fe4b77bd2001c8322b7b542f4e958d73102cb))
+* **deps:** bump pnpm/action-setup from 5 to 6 ([#964](https://github.com/justintaddei/v-wave/issues/964)) ([c893cdc](https://github.com/justintaddei/v-wave/commit/c893cdc9d083587a16481c725b7be281a1386543))
+* incorrect dist files after migration to tsdown ([3195e43](https://github.com/justintaddei/v-wave/commit/3195e437d846a27b87e3b56aab2048fc9359906f))
+
 ## [3.0.4](https://github.com/justintaddei/v-wave/compare/v3.0.3...v3.0.4) (2025-09-16)
 
 
