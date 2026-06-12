@@ -160,6 +160,37 @@ describe('VWave plugin', () => {
       expect(waveTrigger).toBe(vWaveTrigger)
     })
   })
+
+  // -------------------------------------------------------------------------
+  // createTrigger
+  // -------------------------------------------------------------------------
+
+  describe('createTrigger()', () => {
+    test('is exposed on the VWave object', () => {
+      expect(typeof VWave.createTrigger).toBe('function')
+    })
+
+    test('returns an object with press, cancel, and release methods', () => {
+      const trigger = VWave.createTrigger()
+      expect(typeof trigger.press).toBe('function')
+      expect(typeof trigger.cancel).toBe('function')
+      expect(typeof trigger.release).toBe('function')
+    })
+
+    test('press, cancel, and release are no-ops before the directive mounts', () => {
+      const trigger = VWave.createTrigger()
+      // Should not throw when called before being bound to a directive
+      expect(() => trigger.press()).not.toThrow()
+      expect(() => trigger.cancel()).not.toThrow()
+      expect(() => trigger.release()).not.toThrow()
+    })
+
+    test('multiple calls return independent triggers', () => {
+      const a = VWave.createTrigger()
+      const b = VWave.createTrigger()
+      expect(a).not.toBe(b)
+    })
+  })
 })
 
 describe('wave directive', () => {
@@ -393,6 +424,121 @@ describe('wave directive', () => {
       // Click on el body (not the trigger)
       firePointerDown(el)
       expect(getWaveContainer(el)).toBeNull()
+    })
+
+    // -----------------------------------------------------------------------
+    // trigger: VWaveTrigger (controller)
+    // -----------------------------------------------------------------------
+
+    describe('trigger: VWaveTrigger controller', () => {
+      test('does NOT set data-v-wave-boundary when trigger is a controller', () => {
+        const d = makeDirective({ cancellationPeriod: 0 })
+        const el = createElement()
+        const trigger = VWave.createTrigger()
+        mount(d, el, { trigger })
+
+        expect(el.dataset.vWaveBoundary).toBeUndefined()
+      })
+
+      test('pointerdown on the element does NOT create a wave', () => {
+        const d = makeDirective({ cancellationPeriod: 0 })
+        const el = createElement()
+        const trigger = VWave.createTrigger()
+        mount(d, el, { trigger })
+
+        firePointerDown(el)
+        expect(getWaveContainer(el)).toBeNull()
+      })
+
+      test('press() without position fires a wave from the center of the element', () => {
+        // el rect: top:0, left:0, width:100, height:100 → center: { x:50, y:50 }
+        const d = makeDirective({ cancellationPeriod: 0 })
+        const el = createElement()
+        const trigger = VWave.createTrigger()
+        mount(d, el, { trigger })
+
+        trigger.press()
+
+        const waveEl = getWaveContainer(el)?.firstElementChild as HTMLElement
+        expect(waveEl).not.toBeNull()
+        expect(waveEl.style.left).toBe('50px')
+        expect(waveEl.style.top).toBe('50px')
+      })
+
+      test('press(position) fires a wave from the given position', () => {
+        const d = makeDirective({ cancellationPeriod: 0 })
+        const el = createElement()
+        const trigger = VWave.createTrigger()
+        mount(d, el, { trigger })
+
+        // el rect: top:0, left:0, so clientX/Y maps 1:1 to element-relative coords
+        trigger.press({ x: 25, y: 75 })
+
+        const waveEl = getWaveContainer(el)?.firstElementChild as HTMLElement
+        expect(waveEl).not.toBeNull()
+        expect(waveEl.style.left).toBe('25px')
+        expect(waveEl.style.top).toBe('75px')
+      })
+
+      test('with waitForRelease: true, pointerup does NOT dissolve the wave', () => {
+        const d = makeDirective({ cancellationPeriod: 0 })
+        const el = createElement()
+        const trigger = VWave.createTrigger()
+        mount(d, el, { trigger, waitForRelease: true })
+
+        trigger.press()
+        vi.advanceTimersByTime(500)
+
+        // Release via pointer (should have no effect with a controller trigger)
+        document.dispatchEvent(new PointerEvent('pointerup'))
+
+        const container = getWaveContainer(el)
+        expect(container).not.toBeNull()
+        const waveEl = container?.firstElementChild as HTMLElement
+        expect(waveEl.style.opacity).not.toBe('0')
+      })
+
+      test('with waitForRelease: true, trigger.release() dissolves the wave', () => {
+        const d = makeDirective({ cancellationPeriod: 0 })
+        const el = createElement()
+        const trigger = VWave.createTrigger()
+        mount(d, el, { trigger, waitForRelease: true })
+
+        trigger.press()
+        vi.advanceTimersByTime(500)
+
+        trigger.release()
+
+        const waveEl = getWaveContainer(el)?.firstElementChild as HTMLElement
+        expect(waveEl.style.opacity).toBe('0')
+      })
+
+      test('trigger.cancel() during cancellation period removes the wave', () => {
+        const d = makeDirective({ cancellationPeriod: 75 })
+        const el = createElement()
+        const trigger = VWave.createTrigger()
+        mount(d, el, { trigger, cancellationPeriod: 75 })
+
+        trigger.press()
+        trigger.cancel()
+
+        expect(getWaveContainer(el)).toBeNull()
+      })
+
+      test('pointercancel does NOT cancel the wave when trigger is a controller', () => {
+        const d = makeDirective({ cancellationPeriod: 75 })
+        const el = createElement()
+        const trigger = VWave.createTrigger()
+        mount(d, el, { trigger, cancellationPeriod: 75 })
+
+        trigger.press()
+
+        // pointercancel on the document should have no effect
+        document.dispatchEvent(new PointerEvent('pointercancel'))
+
+        // The container should still exist (wave was NOT cancelled)
+        expect(getWaveContainer(el)).not.toBeNull()
+      })
     })
   })
 })

@@ -1,14 +1,12 @@
-import { beforeAll, describe, expect, test, vi } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import type { App } from 'vue'
 import { getHooks } from './hookKeys'
 
-describe('hookKeys', () => {
-  beforeAll(() => {
-    vi.mock('./isVue3', () => ({
-      isVue3: (vue: string) => vue === '3',
-    }))
-  })
+vi.mock('./isVue3', () => ({
+  isVue3: (vue: string) => vue === '3',
+}))
 
+describe('hookKeys', () => {
   test('uses Vue 2 lifecycle hooks when in Vue 2 runtime', () => {
     expect(getHooks('2' as unknown as App<unknown>)).toEqual({
       mounted: 'inserted',

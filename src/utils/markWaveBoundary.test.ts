@@ -12,4 +12,10 @@ describe('markWaveBoundary', () => {
     markWaveBoundary(div, 'stringId')
     expect(div.dataset.vWaveBoundary).toBe('stringId')
   })
+  test('sets dataset to true when trigger is a VWaveTrigger controller', () => {
+    const div = document.createElement('div')
+    const controller = { press: () => {}, cancel: () => {}, release: () => {} }
+    markWaveBoundary(div, controller)
+    expect(div.dataset.vWaveBoundary).toBe('true')
+  })
 })

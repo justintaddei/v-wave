@@ -1,3 +1,49 @@
+import type { Vector } from './types'
+
+/**
+ * A controller object returned by `VWave.createTrigger()` that can be passed
+ * as the `trigger` option. When a programmatic trigger is used, v-wave stops
+ * listening for pointer events entirely. Use this if you need a wave to trigger
+ * as the result of some other action, or an event other than `pointerdown`.
+ *
+ * Because `MouseEvent`s and `PointerEvent`s have `x` and `y` properties, you
+ * can pass the event directly to `trigger.press()`.
+ *
+ * @remarks
+ * You must call `createTrigger()` once per element. A single trigger cannot be
+ * shared across multiple elements.
+ *
+ * @see [VWaveTrigger documentation](https://github.com/justintaddei/v-wave#programmatic-control)
+ */
+interface VWaveTrigger {
+  /**
+   * Starts the wave on the bound element.
+   *
+   * Optionally accepts an `{ x, y }` position. Because `MouseEvent` and
+   * `PointerEvent` both expose `x` and `y` properties, you can pass the event
+   * object directly. When omitted, the wave originates from the center of the
+   * element.
+   *
+   * @see [press documentation](https://github.com/justintaddei/v-wave#programmatic-control)
+   */
+  press: (position?: Vector) => void
+  /**
+   * Cancels the wave immediately. This mirrors the internal behavior when the
+   * user scrolls away (or otherwise triggers a `pointercancel` event) during
+   * the cancellation period.
+   *
+   * @see [cancel documentation](https://github.com/justintaddei/v-wave#programmatic-control)
+   */
+  cancel: () => void
+  /**
+   * When `waitForRelease` is `true` this triggers
+   * the dissolve animation.
+   *
+   * @see [release documentation](https://github.com/justintaddei/v-wave#programmatic-control)
+   */
+  release: () => void
+}
+
 interface IVWaveDirectiveOptions {
   /**
    * The `background-color` of the wave.
@@ -7,6 +53,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * 'currentColor'
+   *
+   * @see [color documentation](https://github.com/justintaddei/v-wave#color)
    */
   color: string
   /**
@@ -14,6 +62,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * 0.2
+   *
+   * @see [initialOpacity documentation](https://github.com/justintaddei/v-wave#initialopacity)
    */
   initialOpacity: number
   /**
@@ -21,6 +71,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * 0.1
+   *
+   * @see [finalOpacity documentation](https://github.com/justintaddei/v-wave#finalopacity)
    */
   finalOpacity: number
   /**
@@ -28,6 +80,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * 0.4
+   *
+   * @see [duration documentation](https://github.com/justintaddei/v-wave#duration)
    */
   duration: number
   /**
@@ -36,12 +90,16 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * 0.15
+   *
+   * @see [dissolveDuration documentation](https://github.com/justintaddei/v-wave#dissolveduration)
    */
   dissolveDuration: number
-  /* When `true`, the wave will not dissolve until the user releases the pointer.
+  /** When `true`, the wave will not dissolve until the user releases the pointer.
    *
    * @default
    * true
+   *
+   * @see [waitForRelease documentation](https://github.com/justintaddei/v-wave#waitforrelease)
    */
   waitForRelease: boolean
   /**
@@ -49,6 +107,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * 'ease-out'
+   *
+   * @see [easing documentation](https://github.com/justintaddei/v-wave#easing)
    */
   easing: string
   /**
@@ -59,6 +119,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * 75
+   *
+   * @see [cancellationPeriod documentation](https://github.com/justintaddei/v-wave#cancellationperiod)
    */
   cancellationPeriod: number
 
@@ -72,17 +134,22 @@ interface IVWaveDirectiveOptions {
    *   - `v-wave` assumes the presence of a `v-wave-trigger` (without an ID) in its dom tree. The wave will only active for `pointerdown` events on the trigger element.
    * - `"auto"`: if a `v-wave-trigger` (without an ID) is present in the dom-tree of the v-wave element, it behaves as `trigger: true`, otherwise it behaves as `trigger: false`.
    * - `string`: any string other than `"auto"` will be treated as an ID. `v-wave` will only activate when a `v-wave-trigger` with a matching ID receives a `pointerdown` event.
+   * - `VWaveTrigger`: a controller object returned by `VWave.createTrigger()`. No pointer events are listened to; the wave is activated by calling `trigger.press()` directly. This is useful for programmatic or accessibility-driven interactions.
    *
    * @default
    * "auto"
+   *
+   * @see [trigger documentation](https://github.com/justintaddei/v-wave#trigger)
    */
-  trigger: string | boolean
+  trigger: string | boolean | VWaveTrigger
 
   /**
    * Sets the tag name of the element used as the wave container. This is is useful in scenarios where the default `div` may interfere with `:last-of-type` selectors.
    *
    * @default
    * 'div'
+   *
+   * @see [tagName documentation](https://github.com/justintaddei/v-wave#tagname)
    */
   tagName: string
 
@@ -91,6 +158,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * false
+   *
+   * @see [disabled documentation](https://github.com/justintaddei/v-wave#disabled)
    */
   disabled: boolean
 
@@ -105,6 +174,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * true
+   *
+   * @see [respectDisabledAttribute documentation](https://github.com/justintaddei/v-wave#respectdisabledattribute)
    */
   respectDisabledAttribute: boolean
 
@@ -113,6 +184,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * true
+   *
+   * @see [respectPrefersReducedMotion documentation](https://github.com/justintaddei/v-wave#respectprefersreducedmotion)
    */
   respectPrefersReducedMotion: boolean
 
@@ -121,6 +194,8 @@ interface IVWaveDirectiveOptions {
    *
    * @default
    * false
+   *
+   * @see [stopPropagation documentation](https://github.com/justintaddei/v-wave#stoppropagation)
    */
   stopPropagation: boolean
 }
@@ -141,6 +216,8 @@ interface IVWavePluginOptions extends IVWaveDirectiveOptions {
    *
    * @default
    * 'wave'
+   *
+   * @see [directive documentation](https://github.com/justintaddei/v-wave#changing-the-directives-name)
    */
   directive: string
 }
@@ -163,4 +240,4 @@ const DEFAULT_PLUGIN_OPTIONS: IVWavePluginOptions = {
   stopPropagation: false,
 }
 
-export { DEFAULT_PLUGIN_OPTIONS, type IVWaveDirectiveOptions, type IVWavePluginOptions }
+export { DEFAULT_PLUGIN_OPTIONS, type IVWaveDirectiveOptions, type IVWavePluginOptions, type VWaveTrigger }

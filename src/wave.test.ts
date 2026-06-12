@@ -394,6 +394,99 @@ describe('wave()', () => {
   })
 
   // -------------------------------------------------------------------------
+  // VWaveTrigger controller (programmatic control)
+  // -------------------------------------------------------------------------
+
+  /**
+   * Creates a minimal controller object that satisfies triggerIsController()
+   * and exposes the internal callbacks so tests can invoke them directly.
+   */
+  function makeController() {
+    let cancelCb: (() => void) | undefined
+    let releaseCb: (() => void) | undefined
+
+    return {
+      press: () => {},
+      cancel: () => cancelCb?.(),
+      release: () => releaseCb?.(),
+      _set_press: () => {},
+      _set_cancel: (cb: () => void) => {
+        cancelCb = cb
+      },
+      _set_release: (cb: () => void) => {
+        releaseCb = cb
+      },
+    }
+  }
+
+  describe('VWaveTrigger controller', () => {
+    test('pointercancel does NOT cancel the wave when trigger is a controller', () => {
+      const el = createElement()
+      const trigger = makeController()
+      const o = opts({ cancellationPeriod: 75, trigger })
+      wave(CENTER, el, o)
+
+      document.dispatchEvent(new PointerEvent('pointercancel'))
+
+      // Container should still exist — controller owns cancellation, not pointer events
+      expect(getWaveContainer(el)).not.toBeNull()
+    })
+
+    test('trigger.cancel() cancels the wave during the cancellation period', () => {
+      const el = createElement()
+      const trigger = makeController()
+      const o = opts({ cancellationPeriod: 75, trigger })
+      wave(CENTER, el, o)
+
+      trigger.cancel()
+
+      expect(getWaveContainer(el)).toBeNull()
+    })
+
+    describe('waitForRelease: true', () => {
+      test('pointerup does NOT dissolve the wave when trigger is a controller', () => {
+        const el = createElement()
+        const trigger = makeController()
+        const o = opts({ waitForRelease: true, trigger })
+        wave(CENTER, el, o)
+
+        advancePastDuration(o)
+        document.dispatchEvent(new PointerEvent('pointerup'))
+
+        const waveEl = getWaveContainer(el)?.firstElementChild as HTMLElement
+        expect(waveEl.style.opacity).not.toBe('0')
+      })
+
+      test('trigger.release() dissolves the wave after duration', () => {
+        const el = createElement()
+        const trigger = makeController()
+        const o = opts({ waitForRelease: true, trigger })
+        wave(CENTER, el, o)
+
+        advancePastDuration(o)
+        trigger.release()
+
+        const waveEl = getWaveContainer(el)?.firstElementChild as HTMLElement
+        expect(waveEl.style.opacity).toBe('0')
+      })
+
+      test('trigger.release() dissolves the wave when released before duration ends', () => {
+        const el = createElement()
+        const trigger = makeController()
+        const o = opts({ waitForRelease: true, trigger })
+        wave(CENTER, el, o)
+
+        advancePastCancellationPeriod(o)
+        trigger.release()
+        advancePastDuration(o)
+
+        const waveEl = getWaveContainer(el)?.firstElementChild as HTMLElement
+        expect(waveEl.style.opacity).toBe('0')
+      })
+    })
+  })
+
+  // -------------------------------------------------------------------------
   // Dissolve animation
   // -------------------------------------------------------------------------
 

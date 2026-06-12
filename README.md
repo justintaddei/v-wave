@@ -80,6 +80,7 @@ After installing and registering the plugin, this is all you need to get started
     - [stopPropagation](#stoppropagation)
     - [tagName](#tagname)
   - [Using triggers](#using-triggers)
+    - [Programmatic control](#programmatic-control)
 - [Advanced](#advanced)
   - [Registering the directive locally](#registering-the-directive-locally)
     - [Local registration with Composition API:](#local-registration-with-composition-api)
@@ -243,22 +244,22 @@ export default {
 
 ### Summary
 
-| Name                                                   |     Default      | Type                          |
-| ------------------------------------------------------ | :--------------: | ----------------------------- |
-| [color](#color)                                        | `"currentColor"` | `string`                      |
-| [initialOpacity](#initialopacity)                      |      `0.2`       | `number`                      |
-| [finalOpacity](#finalopacity)                          |      `0.1`       | `number`                      |
-| [duration](#duration)                                  |      `0.4`       | `number`                      |
-| [dissolveDuration](#dissolveduration)                  |      `0.15`      | `number`                      |
-| [waitForRelease](#waitforrelease)                      |      `true`      | `boolean`                     |
-| [easing](#easing)                                      |    `ease-out`    | `string`                      |
-| [cancellationPeriod](#cancellationperiod)              |       `75`       | `number`                      |
-| [trigger](#trigger)                                    |     `"auto"`     | `string \| boolean \| "auto"` |
-| [disabled](#disabled)                                  |     `false`      | `boolean`                     |
-| [respectDisabledAttribute](#respectdisabledattribute)  |      `true`      | `boolean`                     |
-| [respectPrefersReducedMotion](#respectpreferredmotion) |      `true`      | `boolean`                     |
-| [stopPropagation](#stoppropagation)                    |     `false`      | `boolean`                     |
-| [tagName](#tagname)                                    |     `"div"`      | `string`                      |
+| Name                                                   |     Default      | Type                                |
+| ------------------------------------------------------ | :--------------: | ----------------------------------- |
+| [color](#color)                                        | `"currentColor"` | `string`                            |
+| [initialOpacity](#initialopacity)                      |      `0.2`       | `number`                            |
+| [finalOpacity](#finalopacity)                          |      `0.1`       | `number`                            |
+| [duration](#duration)                                  |      `0.4`       | `number`                            |
+| [dissolveDuration](#dissolveduration)                  |      `0.15`      | `number`                            |
+| [waitForRelease](#waitforrelease)                      |      `true`      | `boolean`                           |
+| [easing](#easing)                                      |    `ease-out`    | `string`                            |
+| [cancellationPeriod](#cancellationperiod)              |       `75`       | `number`                            |
+| [trigger](#trigger)                                    |     `"auto"`     | `string \| boolean \| VWaveTrigger` |
+| [disabled](#disabled)                                  |     `false`      | `boolean`                           |
+| [respectDisabledAttribute](#respectdisabledattribute)  |      `true`      | `boolean`                           |
+| [respectPrefersReducedMotion](#respectpreferredmotion) |      `true`      | `boolean`                           |
+| [stopPropagation](#stoppropagation)                    |     `false`      | `boolean`                           |
+| [tagName](#tagname)                                    |     `"div"`      | `string`                            |
 
 ### Details
 
@@ -502,7 +503,7 @@ export default {
 
 #### trigger
 
-- **type:** `"auto" | string | boolean`
+- **type:** `"auto" | string | boolean | VWaveTrigger`
 - _default:_ `"auto"`
 
 > Sets the behavior of the wave when used with triggers. (See the [dedicated section](#using-triggers) on triggers for more details).
@@ -517,6 +518,9 @@ export default {
    Any string other than `"auto"` will be treated as an ID. `v-wave` will only activate when a `v-wave-trigger` with a matching ID receives a `pointerdown` event.
 
   > This is different from the other values as it allows you to place the trigger element anywhere in the dom, while the others require the trigger to be a descendant.
+
+- `VWaveTrigger`  
+   A controller object returned by `VWave.createTrigger()`. This gives you full programmatic control over the wave. No pointer events are listened to, and the wave is activated by calling `trigger.press()` directly. See [Programmatic control](#programmatic-control) for details.
 
 <details>
     <summary>Expand example</summary>
@@ -557,7 +561,7 @@ export default {
 <button v-wave="{respectDisabledAttribute: false}" disabled>Click me!</button>
 ```
 
-#### respectPrefersReducedMotion 
+#### respectPrefersReducedMotion
 
 - **type:** `boolean`
 - _default:_ `true`
@@ -590,7 +594,11 @@ In the following example, the wave will only activate for the label element when
 <label v-wave>
   <span>Password</span>
   <input :type="showPassword ? 'text' : 'password'" />
-  <img v-wave-trigger src="eye.svg" @click="() => showPassword = !showPassword" />
+  <img
+    v-wave-trigger
+    src="eye.svg"
+    @click="() => showPassword = !showPassword"
+  />
 </label>
 ```
 
@@ -603,6 +611,74 @@ In this next example, clicking one of the buttons will activate the wave on the 
 ```
 
 > Triggers that use an ID support many-to-many relationships. See the grid example on the [example page](https://justintaddei.github.io/v-wave).
+
+#### Programmatic control
+
+`VWave.createTrigger()` returns a `VWaveTrigger` object that can be passed as the `trigger` option.
+When a programmatic trigger is used, v-wave stops listening for pointer events entirely.
+Use this if you need a wave to trigger as the resolve of some other action,
+or an event other than pointerdown.
+
+```js
+import wave from "v-wave";
+
+const trigger = wave.createTrigger();
+```
+
+```html
+<button v-wave="{ trigger }">Click me!</button>
+```
+
+> [!NOTE]  
+> You cannot use the name `VWave` to `import VWave from 'v-wave'` from
+> a `<script setup>` because Vue will treat this as a directive registration.
+> You must `import anotherName from 'v-wave'` instead.  
+> See https://vuejs.org/guide/reusability/custom-directives#custom-directives
+
+The returned object has three methods:
+
+| Method                     | Description                                                                                                                                                          |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `trigger.press(position?)` | Starts the wave. Optionally accepts `{ x: number, y: number }` from a mouse event or other source. When omitted, the wave originates from the center of the element. |
+| `trigger.release()`        | Signals that the pointer has been released. When `waitForRelease: true`, this triggers the dissolve animation.                                                       |
+| `trigger.cancel()`         | Cancels the wave immediately. This is used internally when the user scrolls away (or otherwise triggers a pointercancel event) during the cancellation period.       |
+
+```js
+// Fire the wave from a specific position
+trigger.press({ x: 120, y: 80 });
+
+// Fire the wave from the center of the element
+trigger.press();
+
+// Later, dissolve the wave (only meaningful when waitForRelease: true)
+trigger.release();
+
+// Or cancel it entirely
+trigger.cancel();
+```
+
+Because `MouseEvent`s and `PointerEvent`s have [`x`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/x) and [`y`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/y) properties, you can pass the event directly to `trigger.press()`.  
+This example starts the wave when the user hovers the button, and dissolves the wave when the user stops hovering it.
+
+```html
+<script setup>
+  import wave from "v-wave";
+  const trigger = wave.createTrigger();
+</script>
+
+<template>
+  <button
+    v-wave="{trigger}"
+    @pointerenter="trigger.press"
+    @pointerleave="trigger.release"
+  >
+    Click me!
+  </button>
+</template>
+```
+
+> Note: you must acquire a trigger from `createTrigger()` for each element you wish to control.
+> You cannot use one trigger for multiple elements.
 
 ## Advanced
 

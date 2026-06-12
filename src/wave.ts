@@ -5,6 +5,7 @@ import { createWaveElement } from './utils/createWaveElement'
 import { getDistanceToFurthestCorner } from './utils/getDistanceToFurthestCorner'
 import { getRelativePointer } from './utils/getRelativePointer'
 import { restoreParentElementStyles, saveParentElementStyles } from './utils/parentElementStyles'
+import { triggerIsController } from './utils/triggerIsController'
 import { decrementWaveCount, deleteWaveCount, getWaveCount, incrementWaveCount } from './utils/wave-count'
 
 // 2.05 is magic.
@@ -70,8 +71,12 @@ const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOption
   }
 
   if (options.waitForRelease) {
-    document.addEventListener('pointerup', releaseWave)
-    document.addEventListener('pointercancel', releaseWave)
+    if (triggerIsController(options.trigger)) {
+      options.trigger._set_release(releaseWave)
+    } else {
+      document.addEventListener('pointerup', releaseWave)
+      document.addEventListener('pointercancel', releaseWave)
+    }
   }
 
   const token = setTimeout(() => {
@@ -103,7 +108,11 @@ const wave = (screenPos: Vector, el: HTMLElement, options: IVWaveDirectiveOption
     document.removeEventListener('pointercancel', cancelWave)
   }
 
-  document.addEventListener('pointercancel', cancelWave)
+  if (triggerIsController(options.trigger)) {
+    options.trigger._set_cancel(cancelWave)
+  } else {
+    document.addEventListener('pointercancel', cancelWave)
+  }
 }
 
 export { wave }
