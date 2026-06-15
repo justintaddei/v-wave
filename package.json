@@ -12,7 +12,8 @@
   "files": [
     "dist/**/*",
     "nuxt/**/*",
-    "src/options.ts"
+    "src/options.ts",
+    "src/types.ts"
   ],
   "exports": {
     "./nuxt": {
