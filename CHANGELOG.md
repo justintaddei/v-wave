@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/justintaddei/v-wave/compare/v3.1.0...v3.1.1) (2026-06-15)
+
+
+### Bug Fixes
+
+* add src/types.ts to package.json files list ([#1005](https://github.com/justintaddei/v-wave/issues/1005)) ([43d5adb](https://github.com/justintaddei/v-wave/commit/43d5adb5ba5c5ea3be11d58a71f27b30a8493fda)), closes [#1002](https://github.com/justintaddei/v-wave/issues/1002)
+
 ## [3.1.0](https://github.com/justintaddei/v-wave/compare/v3.0.4...v3.1.0) (2026-06-12)
 
 
