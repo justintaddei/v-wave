@@ -17,7 +17,7 @@ jobs:
         uses: dependabot/fetch-metadata@v3
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Approve a PR
         run: 
           gh pr review --approve "$PR_URL"
