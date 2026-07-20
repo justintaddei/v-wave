@@ -32,7 +32,7 @@ importers:
         version: 29.1.1
       tsdown:
         specifier: ^0.22.0
-        version: 0.22.9(@volar/typescript@2.4.28)(typescript@7.0.2)
+        version: 0.22.12(@volar/typescript@2.4.28)(typescript@7.0.2)
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
@@ -59,15 +59,6 @@ packages:
 
   '@asamuzakjp/nwsapi@2.3.9':
     resolution: {integrity: sha512-n8GuYSrI9bF7FFZ/SjhwevlHc8xaVlb/7HmHelnc/PZXBD2ZR49NnN9sMMuDdEGPeeRQ5d0hqlSlEpgCX3Wl0Q==}
-
-  '@astrojs/compiler@2.13.1':
-    resolution: {integrity: sha512-f3FN83d2G/v32ipNClRKgYv30onQlMZX1vCeZMjPsMMPl1mDpmbl0+N5BYo4S/ofzqJyS5hvwacEo0CCVDn/Qg==}
-
-  '@astrojs/ts-plugin@1.10.10':
-    resolution: {integrity: sha512-US1czRBD43THzzwSyWJwPRX9VDBYbHmJKnpJAsmqT7Uun5UYvcMNNOfDyZxp5bKTNiApvA8HrjwUhYso8CE2Iw==}
-
-  '@astrojs/yaml2ts@0.2.4':
-    resolution: {integrity: sha512-8oddpOae35pJsXPQXhTkM0ypfKPskVsh2bCxRtbf7e+/Epw2nReakFYpLKjZMEr75CsoF203PMnCocpfz0s69A==}
 
   '@babel/code-frame@7.29.7':
     resolution: {integrity: sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw==}
@@ -736,118 +727,118 @@ packages:
   '@vue/shared@3.5.40':
     resolution: {integrity: sha512-WxnBtruIqOoV3rA4jeKDWzrYI5h7Cp4+pjwDi8kWGHz+IslhiN+wguLVVhtv2l8VoU02rzDCVfDjgCl1lNpZVg==}
 
-  '@yuku-codegen/binding-darwin-arm64@0.6.5':
-    resolution: {integrity: sha512-uR1OCnftxC89GP6ZLPbaAXU9wdycmXt5BUQAOaDUmU/b38WJefse4RcL793rsOw1rkb8UC3UqP9F8hQ0lDB5xg==}
+  '@yuku-codegen/binding-darwin-arm64@0.7.0':
+    resolution: {integrity: sha512-RLfjSuJUolQJ04zYq3kM2vSUk9BkFFSOhmOWARb7Pc7Gnf0vMLfj/fepnn9IdsyE2FsJjoCJPKM5bBze4ld5pQ==}
     cpu: [arm64]
     os: [darwin]
 
-  '@yuku-codegen/binding-darwin-x64@0.6.5':
-    resolution: {integrity: sha512-b5m/NymPwAV8OYmWPK0GwVeXw/D7EMIr1GkgL9fW/JCFDvkSkBTz8cbGl5Jkoxr+bamOZy4C1ySngpU///4CFQ==}
+  '@yuku-codegen/binding-darwin-x64@0.7.0':
+    resolution: {integrity: sha512-OI9z6U69j2TvaWgDzheUNlMPSrlNQs8PD3isfyuGxQVbO8Dqi3F7PRT1JnG7pkId+IKvmEu+40sjXWDHRbtlMA==}
     cpu: [x64]
     os: [darwin]
 
-  '@yuku-codegen/binding-freebsd-x64@0.6.5':
-    resolution: {integrity: sha512-wLTe/QeBF37qb4bR++t/jLP3LQ7oS76lsZigk7J10IR2GwD4w8GJqhIm1NsAwho6OjWDNnfxkkw/Oadf/jex4Q==}
+  '@yuku-codegen/binding-freebsd-x64@0.7.0':
+    resolution: {integrity: sha512-nhoH3yXu2e6itB1Hbpj1+kZJ6yTJtsXBN5dWYm20TKvs1Iq79di6hdCKBlHE12RHFW39aQKcnn+vlFF1J1RGsw==}
     cpu: [x64]
     os: [freebsd]
 
-  '@yuku-codegen/binding-linux-arm-gnu@0.6.5':
-    resolution: {integrity: sha512-Clah7LByDMBFkHKeRsUrqoftiyocoYaAmDc7aM14S9qghvKPnbTAtvrG8QOLMkWviWS+rQ94YWFGqzk1cRxAnA==}
+  '@yuku-codegen/binding-linux-arm-gnu@0.7.0':
+    resolution: {integrity: sha512-bgmapvrk/f/1bOSl+XA9KTLKb7vmxuXhqgCchlhTvgNOWnHB4rPLfzu0TkQU5CjVFzZQmHoEmhObf9DKUzcDMA==}
     cpu: [arm]
     os: [linux]
 
-  '@yuku-codegen/binding-linux-arm-musl@0.6.5':
-    resolution: {integrity: sha512-3ghZT7Dtp5tzIyfSFWcLFxtwnXjrrqLhO+MTuw3Am03K9Coo2NQICwwA9DN2HBrb8KXES1U43an1rNgzRw9xog==}
+  '@yuku-codegen/binding-linux-arm-musl@0.7.0':
+    resolution: {integrity: sha512-HpVSId+bxtqSkIsbBUP78J0j4ZUnCvqj14WGmAjKDP25oaQ0SZuFtVIZJmTisuKVSM4AIx1CVBYlJ2CCIm/vsQ==}
     cpu: [arm]
     os: [linux]
 
-  '@yuku-codegen/binding-linux-arm64-gnu@0.6.5':
-    resolution: {integrity: sha512-9zT+uVEtVJkvm0Ba5BkUgBXNqw3kcolV9RAf0kSgIe44bi5Lp6MPqCRm9JrWnJTZOySzPII3oRNRl9dtBlOdLg==}
+  '@yuku-codegen/binding-linux-arm64-gnu@0.7.0':
+    resolution: {integrity: sha512-oL8OGWo99U0arObIl5UKov3ZvsoNGWUMWRJrlXP99P4LpVz+gZC9KwfYCzxlhGnNk9rpp/fcTUUHYHbTskuZwQ==}
     cpu: [arm64]
     os: [linux]
 
-  '@yuku-codegen/binding-linux-arm64-musl@0.6.5':
-    resolution: {integrity: sha512-Uyi/vT++0gyVsyan3XvEii8AWbc+yFJ3M0GEloup7eBx1j4FtK7oq23F6mbQD1gNaozGKkN74fCJpIxF176hZA==}
+  '@yuku-codegen/binding-linux-arm64-musl@0.7.0':
+    resolution: {integrity: sha512-ULsFt9PnI5vBMCG5pGir1YQtJ03o0Sb5SsRTDYRSeKaVaxdog+kA9Guwnk8q8OMPFsI3s40Fhu/+45cQXHSZ8Q==}
     cpu: [arm64]
     os: [linux]
 
-  '@yuku-codegen/binding-linux-x64-gnu@0.6.5':
-    resolution: {integrity: sha512-JZzAbPDh5eQ2GRAAbo7cKcFabPQ9UEAQglk1BE0psoWUDt1wktp4ZX9ZJgDgF9EbSH3UUACo0lIkWUtSjRyRoQ==}
+  '@yuku-codegen/binding-linux-x64-gnu@0.7.0':
+    resolution: {integrity: sha512-l1TP6G39gnF4eiHEApjViyA12n+YHT18A0y3FDUy1jF5hkZt2RWlBNrU4HPhzTd6kQlozJEWyjhVNja2J3/eBw==}
     cpu: [x64]
     os: [linux]
 
-  '@yuku-codegen/binding-linux-x64-musl@0.6.5':
-    resolution: {integrity: sha512-Dmh6Qhoo1UNM10eDLs/DND8E3cLfQQboFfZgnnNNIJ2RQ/G0GXGh7Kzff1QmglUNuRami42NkTrsF9VrkCttZg==}
+  '@yuku-codegen/binding-linux-x64-musl@0.7.0':
+    resolution: {integrity: sha512-h8GZdSNSaBWySA4p8eYFWkH8OWdqA4peOAFeWs+DltJo8r9ZXSvVB0XBypMxkLwA0qLDqwtWoVssg2LK1zJKdw==}
     cpu: [x64]
     os: [linux]
 
-  '@yuku-codegen/binding-win32-arm64@0.6.5':
-    resolution: {integrity: sha512-UAq2wLFT0mRN2rzJfZjmaqVMJD9kYywARc6Wk8Ggnm4p8yJYigNxMkJ0gt3bpd0MOnvre4LFEDyAMr4esRubuQ==}
+  '@yuku-codegen/binding-win32-arm64@0.7.0':
+    resolution: {integrity: sha512-hVkxv4UTPXex7q5ldvqelSMvvYc6bCAYlDSMMg3wmttHZF9yQzPb4yYw69eWvR4coEMFaUv63ADJNjiGjNxkYg==}
     cpu: [arm64]
     os: [win32]
 
-  '@yuku-codegen/binding-win32-x64@0.6.5':
-    resolution: {integrity: sha512-hlEo+UIMHaEoLHe8woLr9eI6fz+8LRwdRrid/iegVU1N+53zkh4WMkI8N7e4vUNKKMVN2kJo6Z73J+JfskHO1g==}
+  '@yuku-codegen/binding-win32-x64@0.7.0':
+    resolution: {integrity: sha512-g3YQpqvsTbDHjjBDnNGhaO4ejN+m2GpsWc50dcGPR/RUx+yt++uDEXKSEyiAaCpEM2p5PuDIW/YEjXx0oVdsoQ==}
     cpu: [x64]
     os: [win32]
 
-  '@yuku-parser/binding-darwin-arm64@0.6.5':
-    resolution: {integrity: sha512-QVdaZzj9T3KdaprM8VYpiYIFJrcJB347P2U3bg683nPQaDNmX733CFtCqpkc1KHccFf199EXx4OazkJlnHvImA==}
+  '@yuku-parser/binding-darwin-arm64@0.7.0':
+    resolution: {integrity: sha512-LoZ945MxFzc6+ltMenaFtXhJ4rdj11j1IwkRWLR7WPim2jdXUURTfWhAm7VzQDtSCHtnDz8PAH55eIHmNilTlA==}
     cpu: [arm64]
     os: [darwin]
 
-  '@yuku-parser/binding-darwin-x64@0.6.5':
-    resolution: {integrity: sha512-9omiEXwzJo3hsJiaohFek44wKRmnNy8o8acf8PXJdVo19I9O5eY7c3Nhca1DRTozoLqIJEI68CH8OoR2/Dv7ww==}
+  '@yuku-parser/binding-darwin-x64@0.7.0':
+    resolution: {integrity: sha512-HVS2bgNGqCl5oU5wP16tZUMmXAO1avgxp/uzDOJcNqA7WOlV1PqTWD3P/1GXaMAijIZNu3VLSXkU1dovwwPpVA==}
     cpu: [x64]
     os: [darwin]
 
-  '@yuku-parser/binding-freebsd-x64@0.6.5':
-    resolution: {integrity: sha512-0BZ14CHc8H3EHmlAMhxTDVMYijsT1nNZUhl6JTm/xzl+Gaun/vahgdaJaFESuweLeZ1WnwVfPVPvjsdfnbTN8g==}
+  '@yuku-parser/binding-freebsd-x64@0.7.0':
+    resolution: {integrity: sha512-nVZgLmiuEdkRb8oJsXBoQphfZwsMTcatSEB5t1QL9aH92/hx2TxAGayZy/g326l5rGVMmieCHc9FYxu/MnVFHQ==}
     cpu: [x64]
     os: [freebsd]
 
-  '@yuku-parser/binding-linux-arm-gnu@0.6.5':
-    resolution: {integrity: sha512-VidTdzelGosQDkVkU4X/9qrILPT5HunzL5shW9jrq860naAEjGS/41a4s3J5KBRsKRHscwOsbtSzUev1TMdgfg==}
+  '@yuku-parser/binding-linux-arm-gnu@0.7.0':
+    resolution: {integrity: sha512-rIq85RCqwMQFtQSBIvUbmEAkNw0pu89PsrikSt+uVMCxjN1ZjbekTWw4hi0NVax8kAb5t2Xgs6kQrFoapyQ3Xg==}
     cpu: [arm]
     os: [linux]
 
-  '@yuku-parser/binding-linux-arm-musl@0.6.5':
-    resolution: {integrity: sha512-Xes/SwXQiPFPqLMhnwjRv0s6mlm6V7+jpw/kmCMkal9Q0UfS4hVpFo2T5NNIKNLCj5qAZ+2EPtgDBz0S1lH4xg==}
+  '@yuku-parser/binding-linux-arm-musl@0.7.0':
+    resolution: {integrity: sha512-BNoI0mP8o3iV6dJEgfJq1U6cAMn7iSYe3gSYkN05DL1FyOU6ni2NwcDScsV6RBBQHj4V1s5123F85JLPhhXfqA==}
     cpu: [arm]
     os: [linux]
 
-  '@yuku-parser/binding-linux-arm64-gnu@0.6.5':
-    resolution: {integrity: sha512-MaFn3Vh+kBETYXtPYBaCQUMsUk5SqSatM+mp9Vz7COuCKXim7cG8kGcUpqq93wegLEkkEnv8pyiDFFx/gmNOiQ==}
+  '@yuku-parser/binding-linux-arm64-gnu@0.7.0':
+    resolution: {integrity: sha512-YrFNrrc0bq5B+cV2EuxDU4VPhuH0RHkV0M1rne8UTxPbqjPmarWxLcl1JEeyaXcL0856kwnaV728GMeB1o/Gdg==}
     cpu: [arm64]
     os: [linux]
 
-  '@yuku-parser/binding-linux-arm64-musl@0.6.5':
-    resolution: {integrity: sha512-s7GAjJ7kzmnEBVAq5c5B+h/DCOSZG7WqTNpFRYUVGQU+D8wf1gMnfDQ5v8zFdByhpHiW+HNerxI8sml5dl47Rw==}
+  '@yuku-parser/binding-linux-arm64-musl@0.7.0':
+    resolution: {integrity: sha512-WaDi6BsjZ/vrO7EgX36C4sLN9fUPZd/vM0Nh+82uOjygCxgFtiRf5NsFxdaLSzqMi+sbGsg+hWM/De4vkana3A==}
     cpu: [arm64]
     os: [linux]
 
-  '@yuku-parser/binding-linux-x64-gnu@0.6.5':
-    resolution: {integrity: sha512-5/+mLrZdCtGoKOw/zNJC0+fSy4aKI97JvPm5rr8DXui/l3+BrvU5g7czp1DVHN67I7VzTLizu2n2y5cz2CjzEg==}
+  '@yuku-parser/binding-linux-x64-gnu@0.7.0':
+    resolution: {integrity: sha512-gxlbaqglGr7ir9UZLF0945JKTImI9MFDZiny57mRiqktCTDVQPnb5Lmj0okKJ6w0nBX1NzwviMX6v4i+rwLSWw==}
     cpu: [x64]
     os: [linux]
 
-  '@yuku-parser/binding-linux-x64-musl@0.6.5':
-    resolution: {integrity: sha512-Svj4h/WZQ1VdAxaFJrakVi85IzUJPYWcNw15gNPoeNg+/SGGTTkTeUzODiMRY/8ioJ/k3+/K7zQwASIEBF7L3Q==}
+  '@yuku-parser/binding-linux-x64-musl@0.7.0':
+    resolution: {integrity: sha512-n7pCgW5iNoaKEpt8K3UTkg7ACX87MueWkJQD7cQSOgxyu/Qx0BCdwi0iOs60Gjj88wyKwqkYIBPMN3wKE5P7Yw==}
     cpu: [x64]
     os: [linux]
 
-  '@yuku-parser/binding-win32-arm64@0.6.5':
-    resolution: {integrity: sha512-N96G8zoKihVwhMaH+kLp8MFIA1i3+dRaBO4KYK0otTPVdX+3uS2wpUY5vDLj4JbkKARuQA/DUmfgjleoXL6ugA==}
+  '@yuku-parser/binding-win32-arm64@0.7.0':
+    resolution: {integrity: sha512-kyuC7W1mGIMbJp6t86hIhDjnptFxZiTaOrbHhYkCpfsXPF6pszWNK03DUMc//Udnw3Af3d5w93CRJlRNpCb5eg==}
     cpu: [arm64]
     os: [win32]
 
-  '@yuku-parser/binding-win32-x64@0.6.5':
-    resolution: {integrity: sha512-RP7rz120SodZI/vUc1H4uzIMEZrxeG//d11qWUI5inMbU4YSnufJAScwjV+qQHxD3FAwoueNxsPjrVxagwAymg==}
+  '@yuku-parser/binding-win32-x64@0.7.0':
+    resolution: {integrity: sha512-xEm5rwtETud7iNbxSocACgXzPrv2x4vkk339BtAqZAKoCS+edaO767EKAGcUO3xo8STBgCud1cAA5oIyzN8APA==}
     cpu: [x64]
     os: [win32]
 
-  '@yuku-toolchain/types@0.5.43':
-    resolution: {integrity: sha512-kSpvPntnXw5+lYjO71ffBEnQ5ycQ74KGIYknh0TS4xeyCuBkOqxyJumxZkMhLBBUCLjDAbx2+Icnr3Zh4ftjpQ==}
+  '@yuku-toolchain/types@0.7.0':
+    resolution: {integrity: sha512-kKleXJmXcZnJ5LUDTeYvK350SB+BXdpoHUwT78GGyOXOhCZ0tWf+seDPAvVnCrjoJhf+FhqtR5HRUfWW+yILQw==}
 
   acorn@8.17.0:
     resolution: {integrity: sha512-xRQbDb9BnwDafYNn6Vwl839DYVjqXYb1XVGtWAZ1kcDc6iwAL4hg3B1dZlRiuENFeO2H53gFG3in621AdERVAg==}
@@ -1341,6 +1332,10 @@ packages:
     resolution: {integrity: sha512-Mz8SaolMd8nB+G13WkORcxQKHZ/NE4xXevtkJHVuG+guo9/wYKlIMTKAqGdEmYOXR2ijPjTYNHssizdaVSUNdQ==}
     engines: {node: ^10 || ^12 || >=14}
 
+  postcss@8.5.20:
+    resolution: {integrity: sha512-lW616l85ucIQL+FocMmL7pQFPqBmwejrCMg+iPxyImlrANNJG9NHq/RkyCZopDhd8C3LA03PHRJDjkbGu8vvug==}
+    engines: {node: ^10 || ^12 || >=14}
+
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -1370,8 +1365,8 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
-  rolldown-plugin-dts@0.27.10:
-    resolution: {integrity: sha512-ngxgc85YD6BV5O6MjYsMU/XzuP9AVfxriQgfrNtxAmG1E4kZAbnUAl4Gx6zGd2PbkND6j0mFwTd3HS3MTQq57g==}
+  rolldown-plugin-dts@0.27.12:
+    resolution: {integrity: sha512-DJg5ELVEdLAVhirvtak7GS4nbNvBzLNAtYL1M8hLghDURBFKU2MwEH6ncHibYs6khq1NaRQ97iFMiHvzw+WoSw==}
     engines: {node: ^22.18.0 || >=24.11.0}
     peerDependencies:
       '@typescript/native-preview': '*'
@@ -1473,14 +1468,14 @@ packages:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
 
-  tsdown@0.22.9:
-    resolution: {integrity: sha512-/0QEjQEhOU1t1YxOIAGzFN7bIssd8P0pBpkOmNLCQi3c5UtrcMF5bvq3f30xHJNW9QCA9aUNcNAorMr2CTd6Lg==}
+  tsdown@0.22.12:
+    resolution: {integrity: sha512-IzGRfGwSsufXJWOcQ0tmECKMG/dbxhUwDOySTS7JE1AM8pkB9+bpcTPs8bTxxSNrSvGocSczrBlOh97tZObq9Q==}
     engines: {node: ^22.18.0 || >=24.11.0}
     hasBin: true
     peerDependencies:
       '@arethetypeswrong/core': ^0.18.1
-      '@tsdown/css': 0.22.9
-      '@tsdown/exe': 0.22.9
+      '@tsdown/css': 0.22.12
+      '@tsdown/exe': 0.22.12
       '@vitejs/devtools': '*'
       publint: ^0.3.8
       tsx: '*'
@@ -1538,6 +1533,10 @@ packages:
   untyped@2.0.0:
     resolution: {integrity: sha512-nwNCjxJTjNuLCgFr42fEak5OcLuB3ecca+9ksPFNvtfYSLpjf+iJqSIaSnIile6ZPbKYxI5k2AfXqeopGudK/g==}
     hasBin: true
+
+  verkit@0.1.2:
+    resolution: {integrity: sha512-WqkT8n3hqizuCu71W3bUzf5fjBmkbXcudsehe/NbxA8PgqoKnSOY5K0Ba2ckg1qaRaSpSz7as/n9K1R9JXjQKg==}
+    engines: {node: '>=18.12.0'}
 
   vite@8.1.2:
     resolution: {integrity: sha512-6YYPbRXTxx6bRXmOn7XdnQAy5DQNHhDgtjhDHI13oe4pY93kkcdGJWxpGwOm++/Wh0QpQhDrpIoVMrmrsI5AGQ==}
@@ -1623,9 +1622,6 @@ packages:
       jsdom:
         optional: true
 
-  vscode-languageserver-textdocument@1.0.12:
-    resolution: {integrity: sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA==}
-
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
@@ -1689,14 +1685,14 @@ packages:
     resolution: {integrity: sha512-4UEqdc2RYGHZc7Doyqkrqiln3p9X2DZVxaGbwhn2pi7MrRagKaOcIKe8L3OxYcbhXLgLFUS3zAYuQjKBQgmuNg==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=23}
 
-  yuku-ast@0.1.7:
-    resolution: {integrity: sha512-2RiMEWv500TixY5rJy6OZd4fSy9WYZKWh6gGbIJ7y7vAGcuCugWOWwOLGaQcRZrXcPUfqtLtvpaJ3SdXtWlhKA==}
+  yuku-ast@0.7.0:
+    resolution: {integrity: sha512-W5UzqYg/Xuyz41cAyxwo/TIPpDX221OuC9U5f44+NulDAHDwtzvGE3M3Xz3mdcLEutWOmTc/WP/y7NO6ANA2gw==}
 
-  yuku-codegen@0.6.5:
-    resolution: {integrity: sha512-g8gbp05j2NNSKe0Uu2ViBRvawzXaWggxS9YwcVJ2d3I99VxbeOeENSUseA8AXPCZj/gcLkQxl7uhTmtK36qh8Q==}
+  yuku-codegen@0.7.0:
+    resolution: {integrity: sha512-RJgoLaIU2AGKRkUHqMtw6gQhYm+NXZm/AFnfn+5YAHgRfApIc/PNJABJHihHoxWltayjbwEOCa68zqxdJafgfA==}
 
-  yuku-parser@0.6.5:
-    resolution: {integrity: sha512-9A5zaOqE3X3wcPOTK97CYInpKwaUGYnwfHWasJaI2Je1OhI4pQmRA6YCSh7oKewEb2iJM4xlJdbwwj4Aydty7w==}
+  yuku-parser@0.7.0:
+    resolution: {integrity: sha512-72HXJhlPOolJN4ER0xZy1wtAeWZEG4uXfZnzEm2uD7yAWt32VE/52FwIfVGi2Hs2P0JRZK2+sPwULQMTuEzYtw==}
 
 snapshots:
 
@@ -1719,22 +1715,6 @@ snapshots:
   '@asamuzakjp/generational-cache@1.0.1': {}
 
   '@asamuzakjp/nwsapi@2.3.9': {}
-
-  '@astrojs/compiler@2.13.1': {}
-
-  '@astrojs/ts-plugin@1.10.10':
-    dependencies:
-      '@astrojs/compiler': 2.13.1
-      '@astrojs/yaml2ts': 0.2.4
-      '@jridgewell/sourcemap-codec': 1.5.5
-      '@volar/language-core': 2.4.28
-      '@volar/typescript': 2.4.28
-      semver: 7.8.5
-      vscode-languageserver-textdocument: 1.0.12
-
-  '@astrojs/yaml2ts@0.2.4':
-    dependencies:
-      yaml: 2.9.0
 
   '@babel/code-frame@7.29.7':
     dependencies:
@@ -2280,14 +2260,17 @@ snapshots:
   '@volar/language-core@2.4.28':
     dependencies:
       '@volar/source-map': 2.4.28
+    optional: true
 
-  '@volar/source-map@2.4.28': {}
+  '@volar/source-map@2.4.28':
+    optional: true
 
   '@volar/typescript@2.4.28':
     dependencies:
       '@volar/language-core': 2.4.28
       path-browserify: 1.0.1
       vscode-uri: 3.1.0
+    optional: true
 
   '@vue/compiler-core@3.5.40':
     dependencies:
@@ -2343,73 +2326,73 @@ snapshots:
 
   '@vue/shared@3.5.40': {}
 
-  '@yuku-codegen/binding-darwin-arm64@0.6.5':
+  '@yuku-codegen/binding-darwin-arm64@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-darwin-x64@0.6.5':
+  '@yuku-codegen/binding-darwin-x64@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-freebsd-x64@0.6.5':
+  '@yuku-codegen/binding-freebsd-x64@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-linux-arm-gnu@0.6.5':
+  '@yuku-codegen/binding-linux-arm-gnu@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-linux-arm-musl@0.6.5':
+  '@yuku-codegen/binding-linux-arm-musl@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-linux-arm64-gnu@0.6.5':
+  '@yuku-codegen/binding-linux-arm64-gnu@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-linux-arm64-musl@0.6.5':
+  '@yuku-codegen/binding-linux-arm64-musl@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-linux-x64-gnu@0.6.5':
+  '@yuku-codegen/binding-linux-x64-gnu@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-linux-x64-musl@0.6.5':
+  '@yuku-codegen/binding-linux-x64-musl@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-win32-arm64@0.6.5':
+  '@yuku-codegen/binding-win32-arm64@0.7.0':
     optional: true
 
-  '@yuku-codegen/binding-win32-x64@0.6.5':
+  '@yuku-codegen/binding-win32-x64@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-darwin-arm64@0.6.5':
+  '@yuku-parser/binding-darwin-arm64@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-darwin-x64@0.6.5':
+  '@yuku-parser/binding-darwin-x64@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-freebsd-x64@0.6.5':
+  '@yuku-parser/binding-freebsd-x64@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-linux-arm-gnu@0.6.5':
+  '@yuku-parser/binding-linux-arm-gnu@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-linux-arm-musl@0.6.5':
+  '@yuku-parser/binding-linux-arm-musl@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-linux-arm64-gnu@0.6.5':
+  '@yuku-parser/binding-linux-arm64-gnu@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-linux-arm64-musl@0.6.5':
+  '@yuku-parser/binding-linux-arm64-musl@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-linux-x64-gnu@0.6.5':
+  '@yuku-parser/binding-linux-x64-gnu@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-linux-x64-musl@0.6.5':
+  '@yuku-parser/binding-linux-x64-musl@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-win32-arm64@0.6.5':
+  '@yuku-parser/binding-win32-arm64@0.7.0':
     optional: true
 
-  '@yuku-parser/binding-win32-x64@0.6.5':
+  '@yuku-parser/binding-win32-x64@0.7.0':
     optional: true
 
-  '@yuku-toolchain/types@0.5.43': {}
+  '@yuku-toolchain/types@0.7.0': {}
 
   acorn@8.17.0: {}
 
@@ -2795,7 +2778,8 @@ snapshots:
     dependencies:
       entities: 8.0.0
 
-  path-browserify@1.0.1: {}
+  path-browserify@1.0.1:
+    optional: true
 
   pathe@2.0.3: {}
 
@@ -2825,6 +2809,12 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  postcss@8.5.20:
+    dependencies:
+      nanoid: 3.3.16
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
   punycode@2.3.1: {}
 
   quansync@1.0.0: {}
@@ -2844,16 +2834,15 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
-  rolldown-plugin-dts@0.27.10(@volar/typescript@2.4.28)(rolldown@1.2.0)(typescript@7.0.2):
+  rolldown-plugin-dts@0.27.12(@volar/typescript@2.4.28)(rolldown@1.2.0)(typescript@7.0.2):
     dependencies:
-      '@astrojs/ts-plugin': 1.10.10
       dts-resolver: 3.0.0
       get-tsconfig: 5.0.0-beta.5
       obug: 2.1.4
       rolldown: 1.2.0
-      yuku-ast: 0.1.7
-      yuku-codegen: 0.6.5
-      yuku-parser: 0.6.5
+      yuku-ast: 0.7.0
+      yuku-codegen: 0.7.0
+      yuku-parser: 0.7.0
     optionalDependencies:
       '@volar/typescript': 2.4.28
       typescript: 7.0.2
@@ -2961,7 +2950,7 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  tsdown@0.22.9(@volar/typescript@2.4.28)(typescript@7.0.2):
+  tsdown@0.22.12(@volar/typescript@2.4.28)(typescript@7.0.2):
     dependencies:
       ansis: 4.3.1
       cac: 7.0.0
@@ -2972,12 +2961,12 @@ snapshots:
       obug: 2.1.4
       picomatch: 4.0.5
       rolldown: 1.2.0
-      rolldown-plugin-dts: 0.27.10(@volar/typescript@2.4.28)(rolldown@1.2.0)(typescript@7.0.2)
-      semver: 7.8.5
+      rolldown-plugin-dts: 0.27.12(@volar/typescript@2.4.28)(rolldown@1.2.0)(typescript@7.0.2)
       tinyexec: 1.2.4
       tinyglobby: 0.2.17
       tree-kill: 1.2.2
       unconfig-core: 7.5.0
+      verkit: 0.1.2
     optionalDependencies:
       typescript: 7.0.2
     transitivePeerDependencies:
@@ -3045,11 +3034,13 @@ snapshots:
       knitwork: 1.3.0
       scule: 1.3.0
 
+  verkit@0.1.2: {}
+
   vite@8.1.2(@types/node@26.1.0)(jiti@2.7.0)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.5
-      postcss: 8.5.19
+      postcss: 8.5.20
       rolldown: 1.1.5
       tinyglobby: 0.2.17
     optionalDependencies:
@@ -3087,9 +3078,8 @@ snapshots:
     transitivePeerDependencies:
       - msw
 
-  vscode-languageserver-textdocument@1.0.12: {}
-
-  vscode-uri@3.1.0: {}
+  vscode-uri@3.1.0:
+    optional: true
 
   vue@3.5.40(typescript@7.0.2):
     dependencies:
@@ -3136,7 +3126,8 @@ snapshots:
 
   y18n@5.0.8: {}
 
-  yaml@2.9.0: {}
+  yaml@2.9.0:
+    optional: true
 
   yargs-parser@22.0.0: {}
 
@@ -3149,38 +3140,39 @@ snapshots:
       y18n: 5.0.8
       yargs-parser: 22.0.0
 
-  yuku-ast@0.1.7:
+  yuku-ast@0.7.0:
     dependencies:
-      '@yuku-toolchain/types': 0.5.43
+      '@yuku-toolchain/types': 0.7.0
 
-  yuku-codegen@0.6.5:
+  yuku-codegen@0.7.0:
     dependencies:
-      '@yuku-toolchain/types': 0.5.43
+      '@yuku-toolchain/types': 0.7.0
     optionalDependencies:
-      '@yuku-codegen/binding-darwin-arm64': 0.6.5
-      '@yuku-codegen/binding-darwin-x64': 0.6.5
-      '@yuku-codegen/binding-freebsd-x64': 0.6.5
-      '@yuku-codegen/binding-linux-arm-gnu': 0.6.5
-      '@yuku-codegen/binding-linux-arm-musl': 0.6.5
-      '@yuku-codegen/binding-linux-arm64-gnu': 0.6.5
-      '@yuku-codegen/binding-linux-arm64-musl': 0.6.5
-      '@yuku-codegen/binding-linux-x64-gnu': 0.6.5
-      '@yuku-codegen/binding-linux-x64-musl': 0.6.5
-      '@yuku-codegen/binding-win32-arm64': 0.6.5
-      '@yuku-codegen/binding-win32-x64': 0.6.5
+      '@yuku-codegen/binding-darwin-arm64': 0.7.0
+      '@yuku-codegen/binding-darwin-x64': 0.7.0
+      '@yuku-codegen/binding-freebsd-x64': 0.7.0
+      '@yuku-codegen/binding-linux-arm-gnu': 0.7.0
+      '@yuku-codegen/binding-linux-arm-musl': 0.7.0
+      '@yuku-codegen/binding-linux-arm64-gnu': 0.7.0
+      '@yuku-codegen/binding-linux-arm64-musl': 0.7.0
+      '@yuku-codegen/binding-linux-x64-gnu': 0.7.0
+      '@yuku-codegen/binding-linux-x64-musl': 0.7.0
+      '@yuku-codegen/binding-win32-arm64': 0.7.0
+      '@yuku-codegen/binding-win32-x64': 0.7.0
 
-  yuku-parser@0.6.5:
+  yuku-parser@0.7.0:
     dependencies:
-      '@yuku-toolchain/types': 0.5.43
+      '@yuku-toolchain/types': 0.7.0
+      yuku-ast: 0.7.0
     optionalDependencies:
-      '@yuku-parser/binding-darwin-arm64': 0.6.5
-      '@yuku-parser/binding-darwin-x64': 0.6.5
-      '@yuku-parser/binding-freebsd-x64': 0.6.5
-      '@yuku-parser/binding-linux-arm-gnu': 0.6.5
-      '@yuku-parser/binding-linux-arm-musl': 0.6.5
-      '@yuku-parser/binding-linux-arm64-gnu': 0.6.5
-      '@yuku-parser/binding-linux-arm64-musl': 0.6.5
-      '@yuku-parser/binding-linux-x64-gnu': 0.6.5
-      '@yuku-parser/binding-linux-x64-musl': 0.6.5
-      '@yuku-parser/binding-win32-arm64': 0.6.5
-      '@yuku-parser/binding-win32-x64': 0.6.5
+      '@yuku-parser/binding-darwin-arm64': 0.7.0
+      '@yuku-parser/binding-darwin-x64': 0.7.0
+      '@yuku-parser/binding-freebsd-x64': 0.7.0
+      '@yuku-parser/binding-linux-arm-gnu': 0.7.0
+      '@yuku-parser/binding-linux-arm-musl': 0.7.0
+      '@yuku-parser/binding-linux-arm64-gnu': 0.7.0
+      '@yuku-parser/binding-linux-arm64-musl': 0.7.0
+      '@yuku-parser/binding-linux-x64-gnu': 0.7.0
+      '@yuku-parser/binding-linux-x64-musl': 0.7.0
+      '@yuku-parser/binding-win32-arm64': 0.7.0
+      '@yuku-parser/binding-win32-x64': 0.7.0
