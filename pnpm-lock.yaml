@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@nuxt/kit':
         specifier: ^4.4.2
-        version: 4.5.0(magic-string@0.30.21)(magicast@0.5.3)(rolldown@1.2.0)
+        version: 4.5.1(magic-string@0.30.21)(magicast@0.5.3)(rolldown@1.2.0)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.4.10
@@ -307,8 +307,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@nuxt/kit@4.5.0':
-    resolution: {integrity: sha512-VD4GjRjbh7r7ILoXYbiKeQgZuYP/vJ7iMk6fSRak1+xEyXHpQ+OIq/EfIjfsHv7DVimddOB+I6W/wGXjRVZ+Ng==}
+  '@nuxt/kit@4.5.1':
+    resolution: {integrity: sha512-xDXQspE2blxaZwxwGknL/BqaIbkLizl85Ov+pbSlPPd/rw2KjJGx88RHU5SwoQNwCiSC5hWZBnVAznIsq1xNHQ==}
     engines: {node: '>=18.12.0'}
 
   '@oxc-project/types@0.139.0':
@@ -1032,8 +1032,8 @@ packages:
     resolution: {integrity: sha512-KfYbmpRm0VbLjEvVa9yGwCi9GI34xvi7A/HXYWQO65CSD2u3MczUJSuwXKFIxlGsgBQizV9q5J9NHj4VG0n+pA==}
     engines: {node: '>=12.0.0'}
 
-  exsolve@1.1.0:
-    resolution: {integrity: sha512-D+42+T12DdIlJM3uepa55qGiL3sYdLBOxIl2ifQCzCHz4c7eiolaHsi3BIqEr7JxBzxv2pYZQX9kw16ziMcEmw==}
+  exsolve@1.1.1:
+    resolution: {integrity: sha512-9U/jZUgjnSGyntRr6y5Muu1MJcwFl6kPu7k8qLF0IMNfLqvw0NZ4nnVDq0RVoZ0RvCyumib4Ez3KYrVfilrw+g==}
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -1067,8 +1067,8 @@ packages:
     resolution: {integrity: sha512-/6gFNr0N04nob252sTQxyFLi3eKFRqIg1I87YcqAMT1i6SQrSF6KujUEQrtrjMV0H/eejTCltLdDSTEMzHbnsQ==}
     engines: {node: '>=20.20.0'}
 
-  giget@3.3.0:
-    resolution: {integrity: sha512-gzi2D96p+AMfDcmJHGDj3KJ9NRiwvlFAU5yfa3ROwWZmFUjX4P43x3BcyRaOMMLto1vUo7C+86+MFhYTl6Ryiw==}
+  giget@3.3.1:
+    resolution: {integrity: sha512-r+mvuDjrjMpsdw46Kmeydb8bdHm7wOKw8wNBtTndkjbPjgAp5oUJUxRE76wZFknxIPokfWvep2qSXK37aXE6zg==}
     hasBin: true
 
   global-directory@5.0.0:
@@ -1329,8 +1329,8 @@ packages:
     resolution: {integrity: sha512-Mz8SaolMd8nB+G13WkORcxQKHZ/NE4xXevtkJHVuG+guo9/wYKlIMTKAqGdEmYOXR2ijPjTYNHssizdaVSUNdQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.22:
-    resolution: {integrity: sha512-KBDEIpLrvpv16pp3K0Fw+UCoZfopFjjgeB+0tA/aaThfEE74kKDLrgg603YvOWJyg3+WYtyq3xYsQWsIyZlPqQ==}
+  postcss@8.5.23:
+    resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
     engines: {node: ^10 || ^12 || >=14}
 
   punycode@2.3.1:
@@ -1540,6 +1540,10 @@ packages:
   untyped@2.0.0:
     resolution: {integrity: sha512-nwNCjxJTjNuLCgFr42fEak5OcLuB3ecca+9ksPFNvtfYSLpjf+iJqSIaSnIile6ZPbKYxI5k2AfXqeopGudK/g==}
     hasBin: true
+
+  verkit@0.2.0:
+    resolution: {integrity: sha512-6M8R2xSKplkQ+0mAm07IMh548GLLPUnRQZJCCe/W4rfk/SXW2bs8ZJSWa5kjdIdsx3hLG5oLWROJ4+N5hpX08g==}
+    engines: {node: '>=18.12.0'}
 
   verkit@0.3.0:
     resolution: {integrity: sha512-Njrh4U8UODGajoZ44QS2C/BsoEM9DTI/aCqY5swsizb+/ap0FamvnCMcZAxrR5+aoC0ZqkawEfpC/N2SBc+xeA==}
@@ -1977,14 +1981,14 @@ snapshots:
       '@tybys/wasm-util': 0.10.3
     optional: true
 
-  '@nuxt/kit@4.5.0(magic-string@0.30.21)(magicast@0.5.3)(rolldown@1.2.0)':
+  '@nuxt/kit@4.5.1(magic-string@0.30.21)(magicast@0.5.3)(rolldown@1.2.0)':
     dependencies:
       c12: 3.3.4(magicast@0.5.3)
       consola: 3.4.2
       defu: 6.1.7
       destr: 2.0.5
       errx: 0.1.0
-      exsolve: 1.1.0
+      exsolve: 1.1.1
       ignore: 7.0.6
       jiti: 2.7.0
       klona: 2.0.6
@@ -1995,11 +1999,11 @@ snapshots:
       pkg-types: 2.3.1
       rc9: 3.0.1
       scule: 1.3.0
-      semver: 7.8.5
       tinyglobby: 0.2.17
       ufo: 1.6.4
       unctx: 3.0.0(magic-string@0.30.21)(rolldown@1.2.0)
       untyped: 2.0.0
+      verkit: 0.2.0
     transitivePeerDependencies:
       - magic-string
       - magicast
@@ -2430,8 +2434,8 @@ snapshots:
       confbox: 0.2.4
       defu: 6.1.7
       dotenv: 17.4.2
-      exsolve: 1.1.0
-      giget: 3.3.0
+      exsolve: 1.1.1
+      giget: 3.3.1
       jiti: 2.7.0
       ohash: 2.0.11
       pathe: 2.0.3
@@ -2559,7 +2563,7 @@ snapshots:
 
   expect-type@1.4.0: {}
 
-  exsolve@1.1.0: {}
+  exsolve@1.1.1: {}
 
   fast-deep-equal@3.1.3: {}
 
@@ -2580,7 +2584,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  giget@3.3.0: {}
+  giget@3.3.1: {}
 
   global-directory@5.0.0:
     dependencies:
@@ -2801,7 +2805,7 @@ snapshots:
   pkg-types@2.3.1:
     dependencies:
       confbox: 0.2.4
-      exsolve: 1.1.0
+      exsolve: 1.1.1
       pathe: 2.0.3
 
   postcss@8.5.19:
@@ -2810,7 +2814,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.22:
+  postcss@8.5.23:
     dependencies:
       nanoid: 3.3.16
       picocolors: 1.1.1
@@ -3026,13 +3030,15 @@ snapshots:
       knitwork: 1.3.0
       scule: 1.3.0
 
+  verkit@0.2.0: {}
+
   verkit@0.3.0: {}
 
   vite@8.1.2(@types/node@26.1.0)(jiti@2.7.0)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.5
-      postcss: 8.5.22
+      postcss: 8.5.23
       rolldown: 1.1.5
       tinyglobby: 0.2.17
     optionalDependencies:
