@@ -1,0 +1,15 @@
+# Normalize line endings to LF on checkout, so Biome (`lineEnding: "lf"`)
+# and Git agree. Prevents phantom "modified" files on Windows (`core.autocrlf=true`).
+* text=auto eol=lf
+
+# Never touch line endings in binary files.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.zip binary
