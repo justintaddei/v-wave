@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.1.2](https://github.com/justintaddei/v-wave/compare/v3.1.1...v3.1.2) (2026-10-12)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 6 to 7 ([#1008](https://github.com/justintaddei/v-wave/issues/1008)) ([bb8c150](https://github.com/justintaddei/v-wave/commit/bb8c1506971dc5068c58d1609380daa055a715a0))
+* **deps:** bump actions/setup-node from 6 to 7 ([#1020](https://github.com/justintaddei/v-wave/issues/1020)) ([5fef0b7](https://github.com/justintaddei/v-wave/commit/5fef0b7d692b679d2cdcc5cca288d98c8e95a609))
+* **deps:** bump pnpm/action-setup from 6 to 6.0.9 ([221fe36](https://github.com/justintaddei/v-wave/commit/221fe36e0912da74bf14b3bb60134f141af898e9))
+* **deps:** bump pnpm/action-setup from 6 to 6.0.9 ([77dadd7](https://github.com/justintaddei/v-wave/commit/77dadd7d949d509eba0c858f1d9f66acea3ce5fe))
+* **deps:** bump pnpm/action-setup from 6.0.10 to 6.1.0 ([c3d6345](https://github.com/justintaddei/v-wave/commit/c3d6345cb577f7b09b545b58da891c6223b955a2))
+* **deps:** bump pnpm/action-setup from 6.0.10 to 6.1.0 ([118fe72](https://github.com/justintaddei/v-wave/commit/118fe729753c14837a7677880680092c38506308))
+* **deps:** bump pnpm/action-setup from 6.0.9 to 6.0.10 ([2d36f04](https://github.com/justintaddei/v-wave/commit/2d36f04c79a7446814277123b6061ce81a0970aa))
+* **deps:** bump pnpm/action-setup from 6.0.9 to 6.0.10 ([fdc44a8](https://github.com/justintaddei/v-wave/commit/fdc44a80ed228734a84da4b048430736c66d6b0d))
+
 ## [3.1.1](https://github.com/justintaddei/v-wave/compare/v3.1.0...v3.1.1) (2026-06-15)
 
 
