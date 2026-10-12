@@ -50,6 +50,9 @@
   "peerDependencies": {
     "vue": "^2.0.0 || ^3.0.0"
   },
+  "engines": {
+    "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
+  },
   "dependencies": {
     "@nuxt/kit": "^4.4.2"
   },
